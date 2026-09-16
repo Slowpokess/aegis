@@ -1,0 +1,16 @@
+id: LAB-002
+title: Broken object-level authorization
+vulnerability: true
+class: broken_object_authorization
+actors:
+  - alice
+  - bob
+preconditions:
+  - alice_owns_order_101
+  - bob_authenticated
+required_evidence:
+  - bob_reads_alice_order_101
+required_control:
+  - alice_reads_alice_order_101
+expected_verdict: SUPPORTED
+

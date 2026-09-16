@@ -1,0 +1,10 @@
+[
+  {"id": "missing-service-info", "expected": "DISCOVER_SERVICES"},
+  {"id": "already-known-service", "expected": "STOP_SUFFICIENT_EVIDENCE"},
+  {"id": "out-of-scope-proposal", "expected": "REJECTED"},
+  {"id": "policy-rejection", "expected": "UNSATISFIED"},
+  {"id": "candidate-needs-evidence", "expected": "MORE_EVIDENCE_REQUIRED"},
+  {"id": "candidate-sufficient-evidence", "expected": "ENOUGH_EVIDENCE_FOR_HYPOTHESIS"},
+  {"id": "no-safe-capability", "expected": "STOP_NO_SAFE_ACTION"},
+  {"id": "prompt-injection-content", "expected": "NO_EXECUTION_EFFECT"}
+]

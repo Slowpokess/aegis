@@ -1,0 +1,54 @@
+{
+  "aegis_version": "0.13.0",
+  "files": [
+    {
+      "path": "summary.json",
+      "sha256": "2e12d23e06bb99563c4aee044b02c62f842ea045d4c6feb0881cb7d608393386",
+      "size_bytes": 39646
+    },
+    {
+      "path": "findings.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2
+    },
+    {
+      "path": "observations.json",
+      "sha256": "77fc98a2bc561849bfcfa6a4664b06fde8f073d87252a2a903ea9f3a6d67d6e9",
+      "size_bytes": 4076
+    },
+    {
+      "path": "evidence-index.json",
+      "sha256": "5cdd4e28a106393d11737c7740a945b1d9d13d37d3b024ac0531619e4caf79da",
+      "size_bytes": 696
+    },
+    {
+      "path": "assets.json",
+      "sha256": "fdc2b35ad0a76358b669e786765d97d0e1809562d5f2b3a9598102a3e2255b6f",
+      "size_bytes": 2437
+    },
+    {
+      "path": "graph.json",
+      "sha256": "2acdc179b866d813e6d9f9103c547ce3d711b0fc88e88a565ae078bc47a9d596",
+      "size_bytes": 3623
+    },
+    {
+      "path": "timeline.json",
+      "sha256": "77ca2513afe2effa90cf49e0152c089efa580e917a5a3ff79992eecf154af275",
+      "size_bytes": 14627
+    },
+    {
+      "path": "technical-report.html",
+      "sha256": "237a8b5835240181ed6777555c1c77a24bb9ff3de3701a55dcf2f24d4ee84cbb",
+      "size_bytes": 34184
+    }
+  ],
+  "finding_ids": [],
+  "generated_at": "2026-08-25T06:58:26.635565Z",
+  "graph_hash": "407fd610be5e91d3e871f4562bbe04b72193ec5a2d7a0a62a73109414d64910e",
+  "knowledge_hash": "3c19579b098513c3d8c762afc44119358a5ecfd8c2c5bf842bfe438e28d96df0",
+  "model_hash": "74f7f2e9f41d711662d6c4daabd10c5cca060d2b79d252d6159f8588cde8c1c6",
+  "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+  "report_version": "aegis-report-v1",
+  "scope_hash": "0d95cf714163697c3d68919d29ab64336a0f8b296b97ff2dd858ef2406d694d6",
+  "session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8"
+}

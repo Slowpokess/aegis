@@ -1,0 +1,15 @@
+import logging
+
+research_log = logging.getLogger("aegis.research")
+execution_log = logging.getLogger("aegis.execution")
+storage_log = logging.getLogger("aegis.storage")
+llm_log = logging.getLogger("aegis.llm")
+experiment_log = logging.getLogger("aegis.experiment")
+policy_log = logging.getLogger("aegis.policy")
+verification_log = logging.getLogger("aegis.verification")
+system_model_log = logging.getLogger("aegis.system_model")
+tool_registry_log = logging.getLogger("aegis.tool_registry")
+discovery_log = logging.getLogger("aegis.discovery")
+tool_execution_log = logging.getLogger("aegis.tool_execution")
+artifact_log = logging.getLogger("aegis.artifact")
+research_planner_log = logging.getLogger("aegis.research_planner")

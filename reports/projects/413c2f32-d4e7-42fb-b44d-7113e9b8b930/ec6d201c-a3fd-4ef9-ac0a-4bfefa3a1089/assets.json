@@ -1,0 +1,80 @@
+[
+  {
+    "asset_type": "APPLICATION",
+    "canonical_identifier": "application:http://127.0.0.1:8001",
+    "classification": "OBSERVED",
+    "confidence": 1.0,
+    "created_at": "2026-08-27T03:33:16.967889Z",
+    "evidence_ids": [
+      "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+    ],
+    "first_seen": "2026-08-27T03:33:16.945151Z",
+    "id": "fed2004c-e5ef-4961-a148-78310aae0dd2",
+    "last_seen": "2026-08-27T03:33:16.945401Z",
+    "metadata": {
+      "base_url": "http://127.0.0.1:8001"
+    },
+    "name": "Phase 15.2 browser proof",
+    "observation_ids": [
+      "00baadf7-b66d-4d20-842a-a36c0ca1e50a",
+      "237e5b36-2ebc-451b-b1da-23e3a72f09fd",
+      "4b0398eb-6087-49a8-9dad-c447bef1f54a",
+      "6e51cfc1-11f7-4efe-9915-7f5a9a453667",
+      "bb5223d8-e4a0-4e40-8cb6-e708b1a75fc4",
+      "c52acc85-f8be-49a0-a603-2d419bc01506"
+    ],
+    "parent_asset_id": "ba54f169-dd44-42a7-a3e6-7085287fae84",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.967855Z",
+      "collector": "aegis-system-model-builder",
+      "metadata": {
+        "evidence_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "00baadf7-b66d-4d20-842a-a36c0ca1e50a",
+      "source_type": "web_content_discovery"
+    },
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source_type": "web_content_discovery",
+    "updated_at": "2026-08-27T03:33:17.103923Z"
+  },
+  {
+    "asset_type": "HOST",
+    "canonical_identifier": "host:127.0.0.1",
+    "classification": "OBSERVED",
+    "confidence": 1.0,
+    "created_at": "2026-08-27T03:33:16.965579Z",
+    "evidence_ids": [
+      "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+    ],
+    "first_seen": "2026-08-27T03:33:16.945151Z",
+    "id": "ba54f169-dd44-42a7-a3e6-7085287fae84",
+    "last_seen": "2026-08-27T03:33:16.945401Z",
+    "metadata": {
+      "host": "127.0.0.1"
+    },
+    "name": "127.0.0.1",
+    "observation_ids": [
+      "00baadf7-b66d-4d20-842a-a36c0ca1e50a",
+      "237e5b36-2ebc-451b-b1da-23e3a72f09fd",
+      "4b0398eb-6087-49a8-9dad-c447bef1f54a",
+      "6e51cfc1-11f7-4efe-9915-7f5a9a453667",
+      "bb5223d8-e4a0-4e40-8cb6-e708b1a75fc4",
+      "c52acc85-f8be-49a0-a603-2d419bc01506"
+    ],
+    "parent_asset_id": null,
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.965534Z",
+      "collector": "aegis-system-model-builder",
+      "metadata": {
+        "evidence_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "00baadf7-b66d-4d20-842a-a36c0ca1e50a",
+      "source_type": "web_content_discovery"
+    },
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source_type": "web_content_discovery",
+    "updated_at": "2026-08-27T03:33:17.102745Z"
+  }
+]

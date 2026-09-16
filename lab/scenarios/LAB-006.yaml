@@ -1,0 +1,15 @@
+id: LAB-006
+title: Restricted settings with insufficient baseline evidence
+vulnerability: null
+class: insufficient_evidence
+actors:
+  - alice
+  - admin
+preconditions:
+  - alice_authenticated
+required_evidence:
+  - alice_receives_403_for_restricted_settings
+required_control:
+  - privileged_identity_baseline_is_missing_from_research_input
+expected_verdict: INCONCLUSIVE
+

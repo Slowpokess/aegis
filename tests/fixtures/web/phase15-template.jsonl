@@ -1,0 +1,1 @@
+{"template-id":"passive-header-check","info":{"name":"<script>alert(1)</script>","severity":"medium"},"matcher-name":"headers","matched-at":"http://127.0.0.1:8001/admin","type":"http","timestamp":"2026-08-25T10:01:00Z","unknown-secret":"PHASE15_LIVE_SECRET"}

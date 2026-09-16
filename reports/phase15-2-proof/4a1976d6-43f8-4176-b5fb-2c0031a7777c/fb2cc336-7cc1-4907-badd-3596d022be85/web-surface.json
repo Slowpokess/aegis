@@ -1,0 +1,475 @@
+{
+  "parameters": [
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.189011Z",
+      "first_seen": "2026-08-26T07:19:28.007471Z",
+      "id": "793fa2e1-a3b4-4d1e-b067-f1f60ba05ed8",
+      "last_seen": "2026-08-26T07:19:28.007471Z",
+      "location": "HEADER_METADATA",
+      "name": "Content-Type",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.188986Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.485541Z",
+      "web_resource_id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.166825Z",
+      "first_seen": "2026-08-26T07:19:28.007386Z",
+      "id": "28b0113b-c014-4e44-873f-99261b859533",
+      "last_seen": "2026-08-26T07:19:28.007436Z",
+      "location": "HEADER_METADATA",
+      "name": "Host",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.166790Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "c344e243-3753-402d-9698-336694faca93",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.474240Z",
+      "web_resource_id": "ee302c6b-d9db-410c-9cc8-1d65e008a0e1"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.190088Z",
+      "first_seen": "2026-08-26T07:19:28.007471Z",
+      "id": "34447286-bac6-49fb-814c-86fe5bd6ea6e",
+      "last_seen": "2026-08-26T07:19:28.007471Z",
+      "location": "HEADER_METADATA",
+      "name": "Host",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.190065Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.486944Z",
+      "web_resource_id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.197041Z",
+      "first_seen": "2026-08-26T07:19:28.007501Z",
+      "id": "5a767820-eb5b-4336-9914-1083f178f264",
+      "last_seen": "2026-08-26T07:19:28.007501Z",
+      "location": "HEADER_METADATA",
+      "name": "Host",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.197000Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "a9d662ec-02a4-4d25-9e83-1d617790dab4",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.492370Z",
+      "web_resource_id": "b503684f-b0f3-49e1-bdc7-457787d1a4a6"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.186857Z",
+      "first_seen": "2026-08-26T07:19:28.007471Z",
+      "id": "965eeb2e-7c75-4e38-a7ce-f440d77d2081",
+      "last_seen": "2026-08-26T07:19:28.007471Z",
+      "location": "BODY_FIELD",
+      "name": "password",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.186832Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.482542Z",
+      "web_resource_id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.211247Z",
+      "first_seen": "2026-08-26T07:19:28.007617Z",
+      "id": "40f7e5ad-1a30-47aa-ae6b-86ec7ef0f44d",
+      "last_seen": "2026-08-26T07:19:28.007617Z",
+      "location": "FORM_FIELD",
+      "name": "password",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.211219Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "714fb193-68ab-4a5b-b983-1e9c94643c5e",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.505823Z",
+      "web_resource_id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.168844Z",
+      "first_seen": "2026-08-26T07:19:28.007386Z",
+      "id": "05c5bb7f-d655-48ed-aedf-a8e26052004d",
+      "last_seen": "2026-08-26T07:19:28.007436Z",
+      "location": "QUERY",
+      "name": "q",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.168804Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "c344e243-3753-402d-9698-336694faca93",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.475800Z",
+      "web_resource_id": "ee302c6b-d9db-410c-9cc8-1d65e008a0e1"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.187905Z",
+      "first_seen": "2026-08-26T07:19:28.007471Z",
+      "id": "2018ba65-1b2b-4631-93ea-017294cd682f",
+      "last_seen": "2026-08-26T07:19:28.007471Z",
+      "location": "BODY_FIELD",
+      "name": "username",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.187882Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.484069Z",
+      "web_resource_id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef"
+    },
+    {
+      "classification": "OBSERVED",
+      "created_at": "2026-08-26T07:19:28.212665Z",
+      "first_seen": "2026-08-26T07:19:28.007617Z",
+      "id": "fd16b70c-3c46-479f-83c0-2d4971facc97",
+      "last_seen": "2026-08-26T07:19:28.007617Z",
+      "location": "FORM_FIELD",
+      "name": "username",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.212597Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "714fb193-68ab-4a5b-b983-1e9c94643c5e",
+        "source_type": "web_parameter"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "updated_at": "2026-08-26T07:19:28.507281Z",
+      "web_resource_id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef"
+    }
+  ],
+  "request_templates": [
+    {
+      "content_type": "application/x-www-form-urlencoded",
+      "created_at": "2026-08-26T07:19:28.191187Z",
+      "id": "0bcb17e0-81b3-461c-be30-cc957720bb64",
+      "logical_identity_reference": null,
+      "method": "POST",
+      "parameters": [
+        {
+          "location": "BODY_FIELD",
+          "name": "password"
+        },
+        {
+          "location": "BODY_FIELD",
+          "name": "username"
+        },
+        {
+          "location": "FORM_FIELD",
+          "name": "password"
+        },
+        {
+          "location": "FORM_FIELD",
+          "name": "username"
+        },
+        {
+          "location": "HEADER_METADATA",
+          "name": "Content-Type"
+        },
+        {
+          "location": "HEADER_METADATA",
+          "name": "Host"
+        }
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.191152Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+        "source_type": "http_request_template"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "semantic_key": "19287f312561256cc93bdbf7fdd32be9f6b61baf5df08be1348c6fa236ff76d3",
+      "source_observation_ids": [
+        "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+        "714fb193-68ab-4a5b-b983-1e9c94643c5e"
+      ],
+      "updated_at": "2026-08-26T07:19:28.508714Z",
+      "web_resource_id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef"
+    },
+    {
+      "content_type": null,
+      "created_at": "2026-08-26T07:19:28.170014Z",
+      "id": "e7f6978d-ed30-42af-9408-4658ccd5aa01",
+      "logical_identity_reference": null,
+      "method": "GET",
+      "parameters": [
+        {
+          "location": "HEADER_METADATA",
+          "name": "Host"
+        },
+        {
+          "location": "QUERY",
+          "name": "q"
+        }
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.169973Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "c344e243-3753-402d-9698-336694faca93",
+        "source_type": "http_request_template"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "semantic_key": "216cb41f6c3addae630653fd56afdc7fc44a4c06f625b1536a5e3354384bdab3",
+      "source_observation_ids": [
+        "c344e243-3753-402d-9698-336694faca93",
+        "06c4d980-15fc-4ee9-a447-0c77a79c8acf"
+      ],
+      "updated_at": "2026-08-26T07:19:28.477384Z",
+      "web_resource_id": "ee302c6b-d9db-410c-9cc8-1d65e008a0e1"
+    },
+    {
+      "content_type": null,
+      "created_at": "2026-08-26T07:19:28.157530Z",
+      "id": "f9b6bc5f-07d5-46e2-96fe-d723addd2bf5",
+      "logical_identity_reference": null,
+      "method": "GET",
+      "parameters": [
+        {
+          "location": "HEADER_METADATA",
+          "name": "Host"
+        }
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.157447Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "07f3818a-98ab-424d-82b8-d759590c81dc",
+        "source_type": "http_request_template"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "semantic_key": "aedcf836eee9a37cdd25d683a4795fbea39618c77e536a27e489b442bf8bba26",
+      "source_observation_ids": [
+        "07f3818a-98ab-424d-82b8-d759590c81dc",
+        "a9d662ec-02a4-4d25-9e83-1d617790dab4",
+        "3535cd6d-431d-472c-ab8d-f87eb8747a2c",
+        "48a5f085-f783-4693-875d-c1d1b3004385"
+      ],
+      "updated_at": "2026-08-26T07:19:28.512853Z",
+      "web_resource_id": "b503684f-b0f3-49e1-bdc7-457787d1a4a6"
+    }
+  ],
+  "resources": [
+    {
+      "candidate_count": 1,
+      "canonical_key": "GET:http://127.0.0.1:8001/admin",
+      "classification": "OBSERVED",
+      "content_type": "text/html",
+      "created_at": "2026-08-26T07:19:28.149810Z",
+      "effective_port": 8001,
+      "finding_count": 0,
+      "first_seen": "2026-08-26T07:19:27.971068Z",
+      "host": "127.0.0.1",
+      "id": "b503684f-b0f3-49e1-bdc7-457787d1a4a6",
+      "last_seen": "2026-08-26T07:19:28.236554Z",
+      "latest_status_code": 403,
+      "method": "GET",
+      "parameter_count": 1,
+      "path": "/admin",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.149739Z",
+        "collector": "web-surface-builder-v1",
+        "metadata": {},
+        "source_reference": "07f3818a-98ab-424d-82b8-d759590c81dc",
+        "source_type": "web_surface"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "resource_type": "API_ROUTE",
+      "scheme": "http",
+      "source_count": 4,
+      "sources": [
+        "HTML_LINK",
+        "HTTP_EXECUTOR",
+        "TEMPLATE_RESULT",
+        "TRAFFIC"
+      ],
+      "system_endpoint_id": "299c75af-45da-44e6-89ba-46a012579404",
+      "updated_at": "2026-08-26T07:19:28.511215Z"
+    },
+    {
+      "candidate_count": 0,
+      "canonical_key": "GET:http://127.0.0.1:8001/search",
+      "classification": "OBSERVED",
+      "content_type": "text/html",
+      "created_at": "2026-08-26T07:19:28.161613Z",
+      "effective_port": 8001,
+      "finding_count": 0,
+      "first_seen": "2026-08-26T07:19:28.007386Z",
+      "host": "127.0.0.1",
+      "id": "ee302c6b-d9db-410c-9cc8-1d65e008a0e1",
+      "last_seen": "2026-08-26T07:19:28.007436Z",
+      "latest_status_code": 200,
+      "method": "GET",
+      "parameter_count": 2,
+      "path": "/search",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.161572Z",
+        "collector": "web-surface-builder-v1",
+        "metadata": {},
+        "source_reference": "c344e243-3753-402d-9698-336694faca93",
+        "source_type": "web_surface"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "resource_type": "PAGE",
+      "scheme": "http",
+      "source_count": 2,
+      "sources": [
+        "TRAFFIC"
+      ],
+      "system_endpoint_id": "6b45952b-25e4-44c5-8378-7fa48b03f4de",
+      "updated_at": "2026-08-26T07:19:28.472681Z"
+    },
+    {
+      "candidate_count": 0,
+      "canonical_key": "POST:http://127.0.0.1:8001/login",
+      "classification": "OBSERVED",
+      "content_type": "text/html",
+      "created_at": "2026-08-26T07:19:28.184659Z",
+      "effective_port": 8001,
+      "finding_count": 0,
+      "first_seen": "2026-08-26T07:19:28.007471Z",
+      "host": "127.0.0.1",
+      "id": "bdad4d54-0888-4574-87ca-feb5b9ed5eef",
+      "last_seen": "2026-08-26T07:19:28.007617Z",
+      "latest_status_code": 401,
+      "method": "POST",
+      "parameter_count": 6,
+      "path": "/login",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.184624Z",
+        "collector": "web-surface-builder-v1",
+        "metadata": {},
+        "source_reference": "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+        "source_type": "web_surface"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "resource_type": "FORM_TARGET",
+      "scheme": "http",
+      "source_count": 2,
+      "sources": [
+        "HTML_FORM",
+        "TRAFFIC"
+      ],
+      "system_endpoint_id": "ce0c237a-dea1-4c4e-b853-a1a764e3036a",
+      "updated_at": "2026-08-26T07:19:28.504321Z"
+    }
+  ],
+  "summary": {
+    "classifications": {
+      "findings": "VERIFIED",
+      "resources": "OBSERVED",
+      "template_candidates": "TOOL_REPORTED"
+    },
+    "counts": {
+      "forms": 1,
+      "parameters": 9,
+      "request_templates": 3,
+      "resources": 3,
+      "sources": 8,
+      "template_candidates": 1
+    },
+    "methods": {
+      "GET": 2,
+      "POST": 1
+    },
+    "snapshot": {
+      "candidate_count": 1,
+      "created_at": "2026-08-26T07:19:28.519856Z",
+      "id": "d0f13057-4c7e-4091-8f81-55f0c8d179b5",
+      "parameter_count": 9,
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.519816Z",
+        "collector": "web-surface-builder-v1",
+        "metadata": {},
+        "source_reference": "fb2cc336-7cc1-4907-badd-3596d022be85",
+        "source_type": "web_surface_snapshot"
+      },
+      "request_template_count": 3,
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "resource_count": 3,
+      "source_observation_count": 8,
+      "web_surface_sha256": "37039dff4548c1602205b271d76df74f54cf1ee6a7cc8ba9fc5ef8b645e07bf0",
+      "web_surface_version": "web-surface-v1"
+    },
+    "version": "web-surface-v1"
+  },
+  "template_candidates": [
+    {
+      "classification": "TOOL_REPORTED",
+      "created_at": "2026-08-26T07:19:28.319767Z",
+      "finding_created": false,
+      "id": "848471d7-19ce-4b1e-a376-41e8b4085518",
+      "matcher_name": "headers",
+      "observation_id": "48a5f085-f783-4693-875d-c1d1b3004385",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-26T07:19:28.319688Z",
+        "collector": null,
+        "metadata": {},
+        "source_reference": "48a5f085-f783-4693-875d-c1d1b3004385",
+        "source_type": "web_template_candidate"
+      },
+      "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+      "semantic_key": "a32d502c188d2aeab644a05b45c550dfc05850dd647a22866c57a1d28feed625",
+      "template_id": "passive-header-check",
+      "template_name": "<script>alert(1)</script>",
+      "tool_artifact_id": "efccd4d3-5232-4cc6-beeb-059df162b2c3",
+      "tool_metadata": {
+        "type": "http"
+      },
+      "tool_reported_severity": "MEDIUM",
+      "web_resource_id": "b503684f-b0f3-49e1-bdc7-457787d1a4a6"
+    }
+  ]
+}

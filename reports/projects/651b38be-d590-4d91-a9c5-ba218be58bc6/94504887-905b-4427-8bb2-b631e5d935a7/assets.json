@@ -1,0 +1,74 @@
+[
+  {
+    "asset_type": "APPLICATION",
+    "canonical_identifier": "application:http://127.0.0.1:8001",
+    "classification": "OBSERVED",
+    "confidence": 1.0,
+    "created_at": "2026-08-25T07:03:17.332495Z",
+    "evidence_ids": [
+      "05b4ddcb-baf5-4e38-b748-b05110101362",
+      "29140759-165a-485f-8574-0142bdf01241"
+    ],
+    "first_seen": "2026-08-25T07:03:17.186421Z",
+    "id": "1f2ea11f-e3f7-4969-90d6-a9ed909352bb",
+    "last_seen": "2026-08-25T07:03:18.342335Z",
+    "metadata": {
+      "base_url": "http://127.0.0.1:8001"
+    },
+    "name": "phase13-conservative",
+    "observation_ids": [
+      "1351971d-3550-4206-bfab-140a45743fbb",
+      "e3dad195-d8e8-472c-bc74-50bce14bbfcc"
+    ],
+    "parent_asset_id": "44fcbbb5-4baa-4652-b02a-3b184fe95cc3",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T07:03:17.332417Z",
+      "collector": "aegis-system-model-builder",
+      "metadata": {
+        "evidence_id": "29140759-165a-485f-8574-0142bdf01241"
+      },
+      "source_reference": "1351971d-3550-4206-bfab-140a45743fbb",
+      "source_type": "http"
+    },
+    "research_session_id": "94504887-905b-4427-8bb2-b631e5d935a7",
+    "source_type": "http",
+    "updated_at": "2026-08-25T07:03:18.403589Z"
+  },
+  {
+    "asset_type": "HOST",
+    "canonical_identifier": "host:127.0.0.1",
+    "classification": "OBSERVED",
+    "confidence": 1.0,
+    "created_at": "2026-08-25T07:03:17.327853Z",
+    "evidence_ids": [
+      "05b4ddcb-baf5-4e38-b748-b05110101362",
+      "29140759-165a-485f-8574-0142bdf01241"
+    ],
+    "first_seen": "2026-08-25T07:03:17.186421Z",
+    "id": "44fcbbb5-4baa-4652-b02a-3b184fe95cc3",
+    "last_seen": "2026-08-25T07:03:18.342335Z",
+    "metadata": {
+      "host": "127.0.0.1"
+    },
+    "name": "127.0.0.1",
+    "observation_ids": [
+      "1351971d-3550-4206-bfab-140a45743fbb",
+      "e3dad195-d8e8-472c-bc74-50bce14bbfcc"
+    ],
+    "parent_asset_id": null,
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T07:03:17.327660Z",
+      "collector": "aegis-system-model-builder",
+      "metadata": {
+        "evidence_id": "29140759-165a-485f-8574-0142bdf01241"
+      },
+      "source_reference": "1351971d-3550-4206-bfab-140a45743fbb",
+      "source_type": "http"
+    },
+    "research_session_id": "94504887-905b-4427-8bb2-b631e5d935a7",
+    "source_type": "http",
+    "updated_at": "2026-08-25T07:03:18.398787Z"
+  }
+]

@@ -1,0 +1,32 @@
+services:
+  vulnerable-api:
+    build:
+      context: ./vulnerable_api
+      dockerfile: Dockerfile
+    image: aegis-vulnerable-api:phase1
+    ports:
+      - "127.0.0.1:8001:8001"
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=2)
+      interval: 2s
+      timeout: 3s
+      retries: 10
+      start_period: 2s
+    networks:
+      - controlled-lab
+
+networks:
+  controlled-lab:
+    driver: bridge

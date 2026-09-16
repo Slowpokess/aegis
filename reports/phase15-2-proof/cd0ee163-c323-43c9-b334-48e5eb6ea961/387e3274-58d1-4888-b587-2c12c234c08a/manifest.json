@@ -1,0 +1,60 @@
+{
+  "aegis_version": "0.14.0",
+  "files": [
+    {
+      "path": "summary.json",
+      "sha256": "d598b362a63b2117361ddeec93a9e92c2c8578e7074e7097f44f5bcade709fc2",
+      "size_bytes": 65785
+    },
+    {
+      "path": "findings.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "size_bytes": 2
+    },
+    {
+      "path": "observations.json",
+      "sha256": "d8baa57e4b1110315d25e9913ae8736630fa3614b191daedf999e37773b2be15",
+      "size_bytes": 14216
+    },
+    {
+      "path": "evidence-index.json",
+      "sha256": "b85a9b5f96c646a19d64c3e077e01d4d3ffbeeba2cbffd63867da1a24ad30778",
+      "size_bytes": 340
+    },
+    {
+      "path": "assets.json",
+      "sha256": "415312a8917683984d4e7de8277e4dc0c6cfcc6ed18254b7fdcabe43b468200c",
+      "size_bytes": 2971
+    },
+    {
+      "path": "graph.json",
+      "sha256": "ed7913fa4076094ba656d42b3937e40a667ce4cc345c896b25f2cc0272ce463a",
+      "size_bytes": 113
+    },
+    {
+      "path": "timeline.json",
+      "sha256": "aec1c188a4a74a86e57c83e5a122160733f1e094a5c604fd378ea58aeb17ada9",
+      "size_bytes": 14440
+    },
+    {
+      "path": "web-surface.json",
+      "sha256": "9c2350fb53be52e442cf8a81521be4a557a75cc9967468d61d496c8f43c03583",
+      "size_bytes": 16745
+    },
+    {
+      "path": "technical-report.html",
+      "sha256": "c6d945a8461ee386425438880cc6e1c8a33d94dda1502f3d894af167399dcdb7",
+      "size_bytes": 40718
+    }
+  ],
+  "finding_ids": [],
+  "generated_at": "2026-08-26T08:03:15.827663Z",
+  "graph_hash": "4d4737a0ecd1084e418cc3f6918b0fa1b22874e4373a7b67a0fec3686ac7b5a2",
+  "knowledge_hash": "1eb14c2d4189b0f839de0922b160499b809ea8e4f7e236390b647fac916d72ed",
+  "model_hash": "5808aa604a6195dc71d8a4b445b9ca75118910ed334d94c4297cce1723760f0b",
+  "project_id": "cd0ee163-c323-43c9-b334-48e5eb6ea961",
+  "report_version": "aegis-report-v1",
+  "scope_hash": "f71f1c0a53cdd497cf728e0bbfc5ec5f665ab1b6140025a8df9aecf31d0b62de",
+  "session_id": "387e3274-58d1-4888-b587-2c12c234c08a",
+  "web_surface_hash": "bd9156da74465cf910345a333ef8f4a9c4a3e608be84f655582726f27f22d3ec"
+}

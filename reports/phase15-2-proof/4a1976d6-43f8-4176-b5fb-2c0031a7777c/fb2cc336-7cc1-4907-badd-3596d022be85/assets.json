@@ -1,0 +1,84 @@
+[
+  {
+    "asset_type": "APPLICATION",
+    "canonical_identifier": "application:http://127.0.0.1:8001",
+    "classification": "OBSERVED",
+    "confidence": 1.0,
+    "created_at": "2026-08-26T07:19:28.038765Z",
+    "evidence_ids": [
+      "7b83d5e2-0bc1-4e40-a77a-2a1b5706e422",
+      "fab47c0a-ba9f-4278-b839-8cd0f9e434b2"
+    ],
+    "first_seen": "2026-08-26T07:19:27.971068Z",
+    "id": "ed1b8678-02b5-48a3-be38-7001f914ea06",
+    "last_seen": "2026-08-26T07:19:28.007617Z",
+    "metadata": {
+      "base_url": "http://127.0.0.1:8001"
+    },
+    "name": "phase15-2-controlled-proof",
+    "observation_ids": [
+      "06c4d980-15fc-4ee9-a447-0c77a79c8acf",
+      "07f3818a-98ab-424d-82b8-d759590c81dc",
+      "3535cd6d-431d-472c-ab8d-f87eb8747a2c",
+      "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+      "714fb193-68ab-4a5b-b983-1e9c94643c5e",
+      "a9d662ec-02a4-4d25-9e83-1d617790dab4",
+      "c344e243-3753-402d-9698-336694faca93"
+    ],
+    "parent_asset_id": "42516e1e-392e-449d-87d4-5d3ae4ead402",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.038733Z",
+      "collector": "aegis-system-model-builder",
+      "metadata": {
+        "evidence_id": "7b83d5e2-0bc1-4e40-a77a-2a1b5706e422"
+      },
+      "source_reference": "06c4d980-15fc-4ee9-a447-0c77a79c8acf",
+      "source_type": "burp_http_exchange"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "source_type": "burp_http_exchange",
+    "updated_at": "2026-08-26T07:19:28.116456Z"
+  },
+  {
+    "asset_type": "HOST",
+    "canonical_identifier": "host:127.0.0.1",
+    "classification": "OBSERVED",
+    "confidence": 1.0,
+    "created_at": "2026-08-26T07:19:28.036983Z",
+    "evidence_ids": [
+      "7b83d5e2-0bc1-4e40-a77a-2a1b5706e422",
+      "fab47c0a-ba9f-4278-b839-8cd0f9e434b2"
+    ],
+    "first_seen": "2026-08-26T07:19:27.971068Z",
+    "id": "42516e1e-392e-449d-87d4-5d3ae4ead402",
+    "last_seen": "2026-08-26T07:19:28.007617Z",
+    "metadata": {
+      "host": "127.0.0.1"
+    },
+    "name": "127.0.0.1",
+    "observation_ids": [
+      "06c4d980-15fc-4ee9-a447-0c77a79c8acf",
+      "07f3818a-98ab-424d-82b8-d759590c81dc",
+      "3535cd6d-431d-472c-ab8d-f87eb8747a2c",
+      "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+      "714fb193-68ab-4a5b-b983-1e9c94643c5e",
+      "a9d662ec-02a4-4d25-9e83-1d617790dab4",
+      "c344e243-3753-402d-9698-336694faca93"
+    ],
+    "parent_asset_id": null,
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.036921Z",
+      "collector": "aegis-system-model-builder",
+      "metadata": {
+        "evidence_id": "7b83d5e2-0bc1-4e40-a77a-2a1b5706e422"
+      },
+      "source_reference": "06c4d980-15fc-4ee9-a447-0c77a79c8acf",
+      "source_type": "burp_http_exchange"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "source_type": "burp_http_exchange",
+    "updated_at": "2026-08-26T07:19:28.115165Z"
+  }
+]

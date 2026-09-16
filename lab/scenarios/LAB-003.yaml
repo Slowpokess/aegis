@@ -1,0 +1,15 @@
+id: LAB-003
+title: Harmless identity-specific response difference
+vulnerability: false
+class: harmless_response_difference
+actors:
+  - alice
+  - bob
+preconditions:
+  - alice_and_bob_authenticated
+required_evidence:
+  - alice_profile_differs_from_bob_profile
+required_control:
+  - each_profile_contains_only_requesting_identity
+expected_verdict: REJECTED
+

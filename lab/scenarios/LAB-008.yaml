@@ -1,0 +1,17 @@
+id: LAB-008
+title: Redirect and authorization status ambiguity
+vulnerability: false
+class: redirect_status_ambiguity
+actors:
+  - anonymous
+  - alice
+  - admin
+preconditions:
+  - portal_uses_three_access_states
+required_evidence:
+  - anonymous_is_redirected_to_login
+  - authenticated_user_is_denied
+required_control:
+  - authenticated_admin_is_allowed
+expected_verdict: REJECTED
+

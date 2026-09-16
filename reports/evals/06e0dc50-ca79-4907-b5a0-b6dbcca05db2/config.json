@@ -1,0 +1,26 @@
+{
+  "context_limits": {
+    "max_body_characters": 2000,
+    "max_observations": 50,
+    "max_total_characters": 50000
+  },
+  "experiment_prompt_version": "experiment-v2",
+  "hypothesis_prompt_version": "hypothesis-v1",
+  "llm_timeout_seconds": 30.0,
+  "max_hypotheses": 5,
+  "mode": "DETERMINISTIC",
+  "model": "deterministic-fixture-v1",
+  "policy": {
+    "follow_redirects": false,
+    "max_requests_per_minute": 30,
+    "max_response_bytes": 100000,
+    "max_timeout_ms": 10000
+  },
+  "provider": "fake",
+  "target": {
+    "host": "127.0.0.1",
+    "port": 8001,
+    "scheme": "http"
+  },
+  "verification_minimum_runs": 1
+}

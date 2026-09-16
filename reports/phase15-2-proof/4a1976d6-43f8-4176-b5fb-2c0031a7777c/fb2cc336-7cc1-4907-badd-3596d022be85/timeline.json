@@ -1,0 +1,364 @@
+[
+  {
+    "created_at": "2026-08-26T07:19:27.150576Z",
+    "entity_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "entity_type": "ResearchSession",
+    "event_type": "SESSION_STARTED",
+    "event_version": "research-event-v1",
+    "id": "88d0ca56-38bc-4841-a012-89e885d2cd84",
+    "idempotency_key": "SESSION_STARTED:ResearchSession:fb2cc336-7cc1-4907-badd-3596d022be85",
+    "message": "Research session started",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:27.150538Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "SESSION_STARTED:ResearchSession:fb2cc336-7cc1-4907-badd-3596d022be85",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 1,
+    "severity": "INFO",
+    "structured_data": {
+      "scope_revision": 1
+    }
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.617185Z",
+    "entity_id": "06c4d980-15fc-4ee9-a447-0c77a79c8acf",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "92af1550-e480-408e-8340-24db9c0e469c",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:06c4d980-15fc-4ee9-a447-0c77a79c8acf",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.617143Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:06c4d980-15fc-4ee9-a447-0c77a79c8acf",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 2,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.620900Z",
+    "entity_id": "07f3818a-98ab-424d-82b8-d759590c81dc",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "208cd36b-3319-4a24-a24f-6b400df1761b",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:07f3818a-98ab-424d-82b8-d759590c81dc",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.620868Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:07f3818a-98ab-424d-82b8-d759590c81dc",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 3,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.623494Z",
+    "entity_id": "3535cd6d-431d-472c-ab8d-f87eb8747a2c",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "7a56c2aa-1667-4420-b0f3-a7f4194a1508",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:3535cd6d-431d-472c-ab8d-f87eb8747a2c",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.623462Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:3535cd6d-431d-472c-ab8d-f87eb8747a2c",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 4,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.626148Z",
+    "entity_id": "41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "f14a03f8-461d-4260-9cd8-fb91eef7f6ca",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.626120Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:41ce08d1-3af0-4028-b3ba-87283c2bd52b",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 5,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.629238Z",
+    "entity_id": "48a5f085-f783-4693-875d-c1d1b3004385",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "375469d9-c376-45df-b7cc-5674b65f13a7",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:48a5f085-f783-4693-875d-c1d1b3004385",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.629145Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:48a5f085-f783-4693-875d-c1d1b3004385",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 6,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.633254Z",
+    "entity_id": "714fb193-68ab-4a5b-b983-1e9c94643c5e",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "b74a86df-420d-4c60-b2a9-8f35175ba914",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:714fb193-68ab-4a5b-b983-1e9c94643c5e",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.633208Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:714fb193-68ab-4a5b-b983-1e9c94643c5e",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 7,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.636174Z",
+    "entity_id": "a9d662ec-02a4-4d25-9e83-1d617790dab4",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "8e314570-8307-46e3-b877-8453befa61a4",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:a9d662ec-02a4-4d25-9e83-1d617790dab4",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.636142Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:a9d662ec-02a4-4d25-9e83-1d617790dab4",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 8,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.639219Z",
+    "entity_id": "c344e243-3753-402d-9698-336694faca93",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "57404f26-2d1c-446b-b810-567aba8d141e",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:c344e243-3753-402d-9698-336694faca93",
+    "message": "Observation persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.639187Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:c344e243-3753-402d-9698-336694faca93",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 9,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.641795Z",
+    "entity_id": "fab47c0a-ba9f-4278-b839-8cd0f9e434b2",
+    "entity_type": "Evidence",
+    "event_type": "EVIDENCE_CREATED",
+    "event_version": "research-event-v1",
+    "id": "3ef997dd-4a8f-4d3d-ad9f-afe274f20b75",
+    "idempotency_key": "EVIDENCE_CREATED:Evidence:fab47c0a-ba9f-4278-b839-8cd0f9e434b2",
+    "message": "Evidence persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.641763Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "EVIDENCE_CREATED:Evidence:fab47c0a-ba9f-4278-b839-8cd0f9e434b2",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 10,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.644432Z",
+    "entity_id": "154d25a9-680b-4c65-ac15-6af87de9462a",
+    "entity_type": "ToolRun",
+    "event_type": "TOOL_COMPLETED",
+    "event_version": "research-event-v1",
+    "id": "abe20441-6535-49ea-b137-b23f598730da",
+    "idempotency_key": "tool:154d25a9-680b-4c65-ac15-6af87de9462a:COMPLETED",
+    "message": "Tool burp_import: COMPLETED",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.644391Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "tool:154d25a9-680b-4c65-ac15-6af87de9462a:COMPLETED",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 11,
+    "severity": "INFO",
+    "structured_data": {
+      "profile": "offline_import",
+      "status": "COMPLETED",
+      "tool": "burp_import"
+    }
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.648646Z",
+    "entity_id": "c95995a7-a9c4-41a3-ba9e-606aa9a4bc66",
+    "entity_type": "ToolRun",
+    "event_type": "TOOL_COMPLETED",
+    "event_version": "research-event-v1",
+    "id": "94f2c259-be68-4338-b2b2-42eebc5eb91e",
+    "idempotency_key": "tool:c95995a7-a9c4-41a3-ba9e-606aa9a4bc66:COMPLETED",
+    "message": "Tool template_import: COMPLETED",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.648610Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "tool:c95995a7-a9c4-41a3-ba9e-606aa9a4bc66:COMPLETED",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 12,
+    "severity": "INFO",
+    "structured_data": {
+      "profile": "offline_import",
+      "status": "COMPLETED",
+      "tool": "template_import"
+    }
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.651565Z",
+    "entity_id": "6c9b4029-c990-45f5-92af-87f2cddbb51e",
+    "entity_type": "SystemModelBuild",
+    "event_type": "MODEL_REBUILT",
+    "event_version": "research-event-v1",
+    "id": "2b980f70-9dc5-4a11-a4f6-8754722a7f33",
+    "idempotency_key": "model:6c9b4029-c990-45f5-92af-87f2cddbb51e:c6212f3616cd113d27d76dd7bf97fa1be35f9baa3cfc336c6c413bdfac2d1c75",
+    "message": "System Model rebuilt",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.651532Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "model:6c9b4029-c990-45f5-92af-87f2cddbb51e:c6212f3616cd113d27d76dd7bf97fa1be35f9baa3cfc336c6c413bdfac2d1c75",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 13,
+    "severity": "INFO",
+    "structured_data": {
+      "model_hash": "c6212f3616cd113d27d76dd7bf97fa1be35f9baa3cfc336c6c413bdfac2d1c75"
+    }
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.654188Z",
+    "entity_id": "6260d5cc-91ef-4e15-8e4a-7320d3c82321",
+    "entity_type": "SystemModelBuild",
+    "event_type": "MODEL_REBUILT",
+    "event_version": "research-event-v1",
+    "id": "6afd3433-732c-4338-9e2a-74ffcd2b283d",
+    "idempotency_key": "model:6260d5cc-91ef-4e15-8e4a-7320d3c82321:c6212f3616cd113d27d76dd7bf97fa1be35f9baa3cfc336c6c413bdfac2d1c75",
+    "message": "System Model rebuilt",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.654159Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "model:6260d5cc-91ef-4e15-8e4a-7320d3c82321:c6212f3616cd113d27d76dd7bf97fa1be35f9baa3cfc336c6c413bdfac2d1c75",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 14,
+    "severity": "INFO",
+    "structured_data": {
+      "model_hash": "c6212f3616cd113d27d76dd7bf97fa1be35f9baa3cfc336c6c413bdfac2d1c75"
+    }
+  },
+  {
+    "created_at": "2026-08-26T07:19:28.657000Z",
+    "entity_id": "208cb06f-769d-456e-bbe9-5a7d6274ffcd",
+    "entity_type": "AttackGraphSnapshot",
+    "event_type": "GRAPH_REBUILT",
+    "event_version": "research-event-v1",
+    "id": "3cb9b39d-ec0a-487c-a928-2246f156fa2a",
+    "idempotency_key": "graph:208cb06f-769d-456e-bbe9-5a7d6274ffcd:CURRENT",
+    "message": "Attack Graph snapshot persisted",
+    "project_id": "4a1976d6-43f8-4176-b5fb-2c0031a7777c",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-26T07:19:28.656969Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "graph:208cb06f-769d-456e-bbe9-5a7d6274ffcd:CURRENT",
+      "source_type": "operator"
+    },
+    "research_session_id": "fb2cc336-7cc1-4907-badd-3596d022be85",
+    "sequence_number": 15,
+    "severity": "INFO",
+    "structured_data": {
+      "graph_hash": "acf27c693c2203c96840cb05c7870a02766707e24172f2ed43b099074f4457b6",
+      "status": "CURRENT"
+    }
+  }
+]

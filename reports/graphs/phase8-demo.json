@@ -1,0 +1,1308 @@
+{
+  "candidate_signals": [
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-22T05:06:25.412536Z",
+      "details": {
+        "accessor": "identity:bob",
+        "endpoint": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+        "label": "candidate connectivity signal; not a finding",
+        "owner": "identity:alice",
+        "resource": "data:order:101"
+      },
+      "endpoint_entity_id": "f06b2be7-4fe2-4f60-8fc5-c9c4949bd78f",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "graph_id": "7f684195-79f7-4441-b48d-4da37a4f0e0a",
+      "id": "0ed558c5-b29c-4ed9-a246-ca3244787822",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-22T05:06:25.412505Z",
+        "collector": "attack-graph-v1",
+        "metadata": {},
+        "source_reference": "26577ed1487991c7239cf3af66d38cfb6f8c043cf35f277b33d121a0fdbafa18",
+        "source_type": "system_model"
+      },
+      "research_session_id": "6bcf9bc0-da1b-450b-a221-46733d5c41dc",
+      "resource_entity_id": "b00e0ae7-f254-4511-a04b-696609e168b7",
+      "semantic_key": "cross-identity:identity:bob:identity:alice:data:order:101:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "signal_type": "CROSS_IDENTITY_RESOURCE_ACCESS",
+      "subject_entity_id": "ac963ec9-09dd-43e8-b17f-d84ff16d402f",
+      "system_relationship_ids": [
+        "9ff4929f-ba21-4840-b7bf-e3e613deb2f1",
+        "b5491b31-21b1-428f-9f87-bc8ce2820965",
+        "c5ad4eaa-5bfe-4316-93a9-809da28906f4"
+      ],
+      "target_entity_id": "6d6a1273-3891-407b-acec-9c06ac4fe642"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-22T05:06:25.412611Z",
+      "details": {
+        "endpoint": "endpoint:GET:http://127.0.0.1:8001/api/admin/stats",
+        "identity_a": "identity:admin",
+        "identity_b": "identity:alice",
+        "label": "observed role access difference; not privilege escalation",
+        "result_a": "CAN_ACCESS",
+        "result_b": "CANNOT_ACCESS",
+        "role_a": "role:admin",
+        "role_b": "role:user"
+      },
+      "endpoint_entity_id": "ef258a65-5f37-454c-81ed-5e4c7d2ca653",
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "graph_id": "7f684195-79f7-4441-b48d-4da37a4f0e0a",
+      "id": "0196201e-f80d-4c4a-b661-65261a90f4ee",
+      "observation_ids": [
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-22T05:06:25.412590Z",
+        "collector": "attack-graph-v1",
+        "metadata": {},
+        "source_reference": "26577ed1487991c7239cf3af66d38cfb6f8c043cf35f277b33d121a0fdbafa18",
+        "source_type": "system_model"
+      },
+      "research_session_id": "6bcf9bc0-da1b-450b-a221-46733d5c41dc",
+      "resource_entity_id": null,
+      "semantic_key": "role-diff:endpoint:GET:http://127.0.0.1:8001/api/admin/stats:identity:admin:identity:alice",
+      "signal_type": "ROLE_ACCESS_DIFFERENCE",
+      "subject_entity_id": "ac970b47-1da5-416d-9a88-e228f91b34a0",
+      "system_relationship_ids": [
+        "6f0ffac3-ef4e-45a9-a810-c9696a073579",
+        "705d6826-4e1c-4bba-948c-9d5d57c5ddf8"
+      ],
+      "target_entity_id": "6d6a1273-3891-407b-acec-9c06ac4fe642"
+    }
+  ],
+  "edges": [
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "1d5a31358da39119746fb3d956dbfd8beebf14bd8276fc60a01f61be53c3ca66",
+      "edge_type": "EXPOSES",
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993",
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958",
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062",
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08",
+        "af431028-2637-4867-94f4-68da15836df6",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "application:http://127.0.0.1:8001",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "2e170ae8-f737-49e5-b411-faacc3de2aa0"
+      ],
+      "target_node_id": "service:http://127.0.0.1:8001"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "d02d879265d685627916dc63393ac3a9c52cd169a72ffed6206f17ff8b311b23",
+      "edge_type": "APPLIES_TO",
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "source_node_id": "capability:identity:admin:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/admin/stats",
+      "system_entity_ids": [
+        "09f0844e-0bb2-4e62-a9ba-5cfbfd69cf3e"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/admin/stats"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "c229fc07d32e32942d382ffbe9403f7f450e3e3d2363f2e80738c69f636abcc2",
+      "edge_type": "APPLIES_TO",
+      "evidence_ids": [
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "observation_ids": [
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "source_node_id": "capability:identity:alice:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/profile",
+      "system_entity_ids": [
+        "5f29e10a-4cc2-40cc-b286-e490f992cb17"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/profile"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "59f513cc1eee72575f97c8a164fb102b542e13b868f315d5412efa0e081acf37",
+      "edge_type": "APPLIES_TO",
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be"
+      ],
+      "observation_ids": [
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "source_node_id": "capability:identity:anonymous:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/health",
+      "system_entity_ids": [
+        "597fdb2e-31eb-4bdf-a3bc-8e7ccb574d52"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/health"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "fe52bdbd68ddb43f0c0e6922cb45e08aeb45752a04d0f35337fd93981e413f58",
+      "edge_type": "APPLIES_TO",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders",
+      "system_entity_ids": [
+        "78956d5e-0899-4bcb-9b09-c0875ce7e107"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "94b4b2f3a0f172492bd426fe04faada416e5ee51fcc80423c99973abaf369218",
+      "edge_type": "APPLIES_TO",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "source_node_id": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "system_entity_ids": [
+        "6af392f8-c4f7-44b7-8388-125c47006345"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders/101"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "f1d49d30e9300e81790b3964ccf639d4447e847865346006c2b3cbf6a76f0e85",
+      "edge_type": "RETURNS",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "2162fe16-0c5a-4bae-ae37-2deba1cc5ce6"
+      ],
+      "target_node_id": "data:order:201"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "52917e8e3c9741e034c6896b335862ac47ff9bd0e5f8ddc475a0b3fb3f7b7dab",
+      "edge_type": "RETURNS",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "a27fd76a-6a33-410d-a6a6-884dc64e3cce"
+      ],
+      "target_node_id": "data:order:202"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "b8357d30c8b653d122d0de578ff74ede4c265de05ae484ca38f8416c1bdea6d7",
+      "edge_type": "RETURNS",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "source_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "b5491b31-21b1-428f-9f87-bc8ce2820965"
+      ],
+      "target_node_id": "data:order:101"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "eb5135ce8ec60ee88a5d4ed62cd324e0e26a4e802032e1d179fd026378237fd4",
+      "edge_type": "HOSTS",
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993",
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958",
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062",
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08",
+        "af431028-2637-4867-94f4-68da15836df6",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "host:127.0.0.1",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "088492fe-6530-42b8-b030-66d8c568c3bb"
+      ],
+      "target_node_id": "application:http://127.0.0.1:8001"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "b9e886cd9ad66d3130e66bf16f81e3a74a75e3ced79f24bc2458c4f28d247787",
+      "edge_type": "CAN_ACCESS",
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "source_node_id": "identity:admin",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "705d6826-4e1c-4bba-948c-9d5d57c5ddf8"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/admin/stats"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "57ba06894fb3fdcb93dc3009376cc4b96eb29b78c29481691bcab4179890c6c8",
+      "edge_type": "HAS_CAPABILITY",
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "source_node_id": "identity:admin",
+      "system_entity_ids": [
+        "09f0844e-0bb2-4e62-a9ba-5cfbfd69cf3e"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "capability:identity:admin:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/admin/stats"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "8234fa96e41948a15b5142c11a333d8261d5976abc797874b40c6c6ccb659c21",
+      "edge_type": "HAS_ROLE",
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "source_node_id": "identity:admin",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "aa25a2dd-02f7-429f-8f04-7e9a02b23bcb"
+      ],
+      "target_node_id": "role:admin"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "BLOCKING",
+      "edge_id": "46ba921dac6055b735935f69c93e812d423dc4c00456e39010e73c37b5cc857f",
+      "edge_type": "CANNOT_ACCESS",
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670"
+      ],
+      "observation_ids": [
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5"
+      ],
+      "source_node_id": "identity:alice",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "6f0ffac3-ef4e-45a9-a810-c9696a073579"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/admin/stats"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "f67025b76b871ff40d187604c5980aecb82a65cbc09e78b9f001fab75800b800",
+      "edge_type": "CAN_ACCESS",
+      "evidence_ids": [
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "observation_ids": [
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "source_node_id": "identity:alice",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "8e11d87d-c55d-4b12-8d94-7dc12218a11b"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/profile"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "a26c12b31a0b72a3b340e213afa672b435a8887423be7b03193f20872e59a314",
+      "edge_type": "HAS_CAPABILITY",
+      "evidence_ids": [
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "observation_ids": [
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "source_node_id": "identity:alice",
+      "system_entity_ids": [
+        "5f29e10a-4cc2-40cc-b286-e490f992cb17"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "capability:identity:alice:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/profile"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "f4df253872cf427da8ca2e1bf1466890033afc9d917ad781d8a125fc51f03a47",
+      "edge_type": "HAS_ROLE",
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "observation_ids": [
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "source_node_id": "identity:alice",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "348dcece-15bb-4e49-964f-125c656db73f"
+      ],
+      "target_node_id": "role:user"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "b9a6f9d0eb276a889fb82c03a00a53fbdca6579f504568e5ee32d5214cf0512e",
+      "edge_type": "OWNS",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "source_node_id": "identity:alice",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "c5ad4eaa-5bfe-4316-93a9-809da28906f4"
+      ],
+      "target_node_id": "data:order:101"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "3a981df36395f67b1aed23b5efe05df60a40dcf9f0edf7b18bf0b815f0a3f5a9",
+      "edge_type": "CAN_ACCESS",
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be"
+      ],
+      "observation_ids": [
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "source_node_id": "identity:anonymous",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "ca0fdbc2-97a9-49f6-8b64-9f0af81c8a51"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/health"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "c9bdf913907270b3786ec7e5e5669cc7946fc9b71427c6e0dac4bb8825982c10",
+      "edge_type": "HAS_CAPABILITY",
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be"
+      ],
+      "observation_ids": [
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "source_node_id": "identity:anonymous",
+      "system_entity_ids": [
+        "597fdb2e-31eb-4bdf-a3bc-8e7ccb574d52"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "capability:identity:anonymous:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/health"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "f7873acf96160c415de402f8c0980dcd36730fc19f94add1e3a28e63af0d6b3f",
+      "edge_type": "HAS_ROLE",
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958"
+      ],
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "source_node_id": "identity:anonymous",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "0a3438e5-b0b4-4364-95f9-e394cf088551"
+      ],
+      "target_node_id": "role:anonymous"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "0b5804f3c09f2923136af2b7f019b677ba4875391b314acf5e13dd4a863fe314",
+      "edge_type": "CAN_ACCESS",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "2f175a93-5293-4098-85b8-5689c071651c"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "230aa38ab4bfb7945a942e76fc75d46a3dba9f726b8b3972b814dda4679dbbf1",
+      "edge_type": "CAN_ACCESS",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "9ff4929f-ba21-4840-b7bf-e3e613deb2f1"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders/101"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "e270a49f45e50524de5caa6c23c55d8dbf32ee8fca63912bb8e9d768b47846ed",
+      "edge_type": "HAS_CAPABILITY",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [
+        "78956d5e-0899-4bcb-9b09-c0875ce7e107"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "6b8f44428a10b9e7359314460eb3230f016005f9a7ab19ba73325dae6091c3d4",
+      "edge_type": "HAS_CAPABILITY",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [
+        "6af392f8-c4f7-44b7-8388-125c47006345"
+      ],
+      "system_relationship_ids": [],
+      "target_node_id": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders/101"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "d97d81cdd685b886ebca9dfece2a95b49f48cb027ff2fb98b634ea8ec7869c63",
+      "edge_type": "HAS_ROLE",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "ad249b4d-d09e-4a5c-88f4-1929105c74f6"
+      ],
+      "target_node_id": "role:user"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "8a59cc92dde4fe03d01eaf2c9c2c50846cebe0e1af9f2f0e0957db4a14342484",
+      "edge_type": "OWNS",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "93477531-a7ba-4330-8f67-fbc70a2e910b"
+      ],
+      "target_node_id": "data:order:201"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "3708ad4e55d5d8a19e61d408e9f05f9d244700c9e433eeea43c4d8bea4478eb7",
+      "edge_type": "OWNS",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "5c09de6e-ead2-45ea-9a6e-5816b29fc328"
+      ],
+      "target_node_id": "data:order:202"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "be2508b6522d5866fa363c2bc9227eb354d914913e2939dcc0f93546bd1b3af1",
+      "edge_type": "READS",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "e981d182-6e1a-435d-9c18-965cac9ec94f"
+      ],
+      "target_node_id": "data:order:101"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "65e7fa872827c89ce852d43460bbc3f14be476c0434b95d48c306c078f7e2150",
+      "edge_type": "READS",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "9a56db66-811b-4d00-a2d8-3e098a6829c9"
+      ],
+      "target_node_id": "data:order:201"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "INFORMATIONAL",
+      "edge_id": "e37ce6318b666058f02f1c739c03790f582c3c2ed3727ee28ef9f529f077c427",
+      "edge_type": "READS",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "identity:bob",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "a8572b3f-c2cb-40c0-a44a-a7529dacf3fb"
+      ],
+      "target_node_id": "data:order:202"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "be2590d2894ccf372dc3d613e2cec8b0229cfe03b2f59d4d238f37fbef538a22",
+      "edge_type": "EXPOSES",
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "observation_ids": [
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "source_node_id": "service:http://127.0.0.1:8001",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "ecb02e0f-8a96-47f3-88c6-a4ebc04f7914"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/admin/stats"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "f778d40f720f38064aea31750d31f4e4cafb96176ff7f26bda4fdfda37d7b562",
+      "edge_type": "EXPOSES",
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "source_node_id": "service:http://127.0.0.1:8001",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "46f088d0-380e-4514-8dfa-a23a9b1c5d98"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "7e21a1a9e1c8b59787253baad8157ea100f5461b5c85c5bae2702b4b140da82a",
+      "edge_type": "EXPOSES",
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "source_node_id": "service:http://127.0.0.1:8001",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "1b6ac759-b138-4c4f-91f4-ac0e3031aa8f"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders/101"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "8799fc359f941ac4d1d108e31e9e6dba14a761ba57c21b437cc5fdbf055d1cd4",
+      "edge_type": "EXPOSES",
+      "evidence_ids": [
+        "8ad38498-deb4-4293-95a5-4355880a8958"
+      ],
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97"
+      ],
+      "source_node_id": "service:http://127.0.0.1:8001",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "934793ed-1a6f-4973-9b19-cb3aacad9c99"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/portal"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "f1ba5df295ae622a756e2c514f03db998754d5902b09b3b79090a385f6abd162",
+      "edge_type": "EXPOSES",
+      "evidence_ids": [
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "observation_ids": [
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "source_node_id": "service:http://127.0.0.1:8001",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "1dc4539c-f9ee-41e2-9616-2f6e320f228f"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/api/profile"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "disposition": "TRAVERSABLE",
+      "edge_id": "640e67862dc139ecdff966defaae0136945b4b741a8224ead7361ac17c625509",
+      "edge_type": "EXPOSES",
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be"
+      ],
+      "observation_ids": [
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "source_node_id": "service:http://127.0.0.1:8001",
+      "system_entity_ids": [],
+      "system_relationship_ids": [
+        "1079b81d-5f64-4a39-a0f0-609051261c77"
+      ],
+      "target_node_id": "endpoint:GET:http://127.0.0.1:8001/health"
+    }
+  ],
+  "graph_hash": "26577ed1487991c7239cf3af66d38cfb6f8c043cf35f277b33d121a0fdbafa18",
+  "graph_id": "7f684195-79f7-4441-b48d-4da37a4f0e0a",
+  "graph_version": "attack-graph-v1",
+  "nodes": [
+    {
+      "canonical_identifier": "application:http://127.0.0.1:8001",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993",
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958",
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "application:http://127.0.0.1:8001",
+      "node_type": "ASSET",
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062",
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08",
+        "af431028-2637-4867-94f4-68da15836df6",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "92a0ab7c-ea25-4cc8-911a-3dbbb4d6b2ff"
+    },
+    {
+      "canonical_identifier": "capability:identity:admin:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/admin/stats",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "node_id": "capability:identity:admin:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/admin/stats",
+      "node_type": "CAPABILITY",
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "system_entity_id": "09f0844e-0bb2-4e62-a9ba-5cfbfd69cf3e"
+    },
+    {
+      "canonical_identifier": "capability:identity:alice:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/profile",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "node_id": "capability:identity:alice:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/profile",
+      "node_type": "CAPABILITY",
+      "observation_ids": [
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "system_entity_id": "5f29e10a-4cc2-40cc-b286-e490f992cb17"
+    },
+    {
+      "canonical_identifier": "capability:identity:anonymous:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/health",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be"
+      ],
+      "node_id": "capability:identity:anonymous:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/health",
+      "node_type": "CAPABILITY",
+      "observation_ids": [
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "system_entity_id": "597fdb2e-31eb-4bdf-a3bc-8e7ccb574d52"
+    },
+    {
+      "canonical_identifier": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "node_id": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders",
+      "node_type": "CAPABILITY",
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "78956d5e-0899-4bcb-9b09-c0875ce7e107"
+    },
+    {
+      "canonical_identifier": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "capability:identity:bob:READ_ENDPOINT:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "node_type": "CAPABILITY",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "system_entity_id": "6af392f8-c4f7-44b7-8388-125c47006345"
+    },
+    {
+      "canonical_identifier": "data:order:101",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "data:order:101",
+      "node_type": "DATA_OBJECT",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "system_entity_id": "b00e0ae7-f254-4511-a04b-696609e168b7"
+    },
+    {
+      "canonical_identifier": "data:order:201",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "node_id": "data:order:201",
+      "node_type": "DATA_OBJECT",
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "69eaf37b-579c-4e39-9b1d-b8358b1affc4"
+    },
+    {
+      "canonical_identifier": "data:order:202",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "node_id": "data:order:202",
+      "node_type": "DATA_OBJECT",
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "ec4f5b4e-b4cf-4c4a-9ac0-6f6402d89e8b"
+    },
+    {
+      "canonical_identifier": "endpoint:GET:http://127.0.0.1:8001/api/admin/stats",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "node_id": "endpoint:GET:http://127.0.0.1:8001/api/admin/stats",
+      "node_type": "ENDPOINT",
+      "observation_ids": [
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "system_entity_id": "ef258a65-5f37-454c-81ed-5e4c7d2ca653"
+    },
+    {
+      "canonical_identifier": "endpoint:GET:http://127.0.0.1:8001/api/orders",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders",
+      "node_type": "ENDPOINT",
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "023506de-1b2d-4cfe-9b08-82f14d501b1e"
+    },
+    {
+      "canonical_identifier": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "node_type": "ENDPOINT",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "system_entity_id": "f06b2be7-4fe2-4f60-8fc5-c9c4949bd78f"
+    },
+    {
+      "canonical_identifier": "endpoint:GET:http://127.0.0.1:8001/api/portal",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "8ad38498-deb4-4293-95a5-4355880a8958"
+      ],
+      "node_id": "endpoint:GET:http://127.0.0.1:8001/api/portal",
+      "node_type": "ENDPOINT",
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97"
+      ],
+      "system_entity_id": "8adea19c-1f60-4391-9733-d889309d988d"
+    },
+    {
+      "canonical_identifier": "endpoint:GET:http://127.0.0.1:8001/api/profile",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "node_id": "endpoint:GET:http://127.0.0.1:8001/api/profile",
+      "node_type": "ENDPOINT",
+      "observation_ids": [
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "system_entity_id": "2d458db7-79e8-4300-a4d1-8e22ce15b9e7"
+    },
+    {
+      "canonical_identifier": "endpoint:GET:http://127.0.0.1:8001/health",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be"
+      ],
+      "node_id": "endpoint:GET:http://127.0.0.1:8001/health",
+      "node_type": "ENDPOINT",
+      "observation_ids": [
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "system_entity_id": "4661123f-ba78-4f4d-b034-ea607b8b60a5"
+    },
+    {
+      "canonical_identifier": "host:127.0.0.1",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993",
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958",
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "host:127.0.0.1",
+      "node_type": "ASSET",
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062",
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08",
+        "af431028-2637-4867-94f4-68da15836df6",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "9363b26e-707d-453b-84c3-c4a629ea1abc"
+    },
+    {
+      "canonical_identifier": "identity:admin",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "node_id": "identity:admin",
+      "node_type": "IDENTITY",
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "system_entity_id": "ac970b47-1da5-416d-9a88-e228f91b34a0"
+    },
+    {
+      "canonical_identifier": "identity:alice",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "identity:alice",
+      "node_type": "IDENTITY",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "system_entity_id": "6d6a1273-3891-407b-acec-9c06ac4fe642"
+    },
+    {
+      "canonical_identifier": "identity:anonymous",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958"
+      ],
+      "node_id": "identity:anonymous",
+      "node_type": "IDENTITY",
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "system_entity_id": "f4bdf5d6-6719-4972-ac9e-8bcecb26e8b3"
+    },
+    {
+      "canonical_identifier": "identity:bob",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "identity:bob",
+      "node_type": "IDENTITY",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "ac963ec9-09dd-43e8-b17f-d84ff16d402f"
+    },
+    {
+      "canonical_identifier": "permission:identity:admin:GET:endpoint:GET:http://127.0.0.1:8001/api/admin/stats:ALLOW",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "node_id": "permission:identity:admin:GET:endpoint:GET:http://127.0.0.1:8001/api/admin/stats:ALLOW",
+      "node_type": "PERMISSION",
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "system_entity_id": "475f9cb4-7486-4889-9690-c758f8546ccf"
+    },
+    {
+      "canonical_identifier": "permission:identity:alice:GET:endpoint:GET:http://127.0.0.1:8001/api/admin/stats:DENY",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670"
+      ],
+      "node_id": "permission:identity:alice:GET:endpoint:GET:http://127.0.0.1:8001/api/admin/stats:DENY",
+      "node_type": "PERMISSION",
+      "observation_ids": [
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5"
+      ],
+      "system_entity_id": "3585c482-4693-45b4-a4ec-74d1d05b268d"
+    },
+    {
+      "canonical_identifier": "permission:identity:alice:GET:endpoint:GET:http://127.0.0.1:8001/api/profile:ALLOW",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "371ed610-acf7-45bf-863f-2241c1533993"
+      ],
+      "node_id": "permission:identity:alice:GET:endpoint:GET:http://127.0.0.1:8001/api/profile:ALLOW",
+      "node_type": "PERMISSION",
+      "observation_ids": [
+        "af431028-2637-4867-94f4-68da15836df6"
+      ],
+      "system_entity_id": "b8b1a3e4-a9ff-427b-a2c5-46eac9db15a5"
+    },
+    {
+      "canonical_identifier": "permission:identity:anonymous:GET:endpoint:GET:http://127.0.0.1:8001/health:ALLOW",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be"
+      ],
+      "node_id": "permission:identity:anonymous:GET:endpoint:GET:http://127.0.0.1:8001/health:ALLOW",
+      "node_type": "PERMISSION",
+      "observation_ids": [
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "system_entity_id": "1bee4b37-8849-4207-901e-eeb048a712cb"
+    },
+    {
+      "canonical_identifier": "permission:identity:bob:GET:endpoint:GET:http://127.0.0.1:8001/api/orders/101:ALLOW",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "permission:identity:bob:GET:endpoint:GET:http://127.0.0.1:8001/api/orders/101:ALLOW",
+      "node_type": "PERMISSION",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd"
+      ],
+      "system_entity_id": "2b245d4f-3727-4711-a1de-021aa9bfb883"
+    },
+    {
+      "canonical_identifier": "permission:identity:bob:GET:endpoint:GET:http://127.0.0.1:8001/api/orders:ALLOW",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "948da36c-5d08-4b64-a50b-0e822f2e65be"
+      ],
+      "node_id": "permission:identity:bob:GET:endpoint:GET:http://127.0.0.1:8001/api/orders:ALLOW",
+      "node_type": "PERMISSION",
+      "observation_ids": [
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "ac6707e3-1bea-4911-ad34-faf55c46cc27"
+    },
+    {
+      "canonical_identifier": "role:admin",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97"
+      ],
+      "node_id": "role:admin",
+      "node_type": "ROLE",
+      "observation_ids": [
+        "a1f24c16-2342-406d-91ae-e67a4b474f08"
+      ],
+      "system_entity_id": "26ce235d-5d15-4508-a480-366524a417cc"
+    },
+    {
+      "canonical_identifier": "role:anonymous",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958"
+      ],
+      "node_id": "role:anonymous",
+      "node_type": "ROLE",
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062"
+      ],
+      "system_entity_id": "099f7a1e-640b-4d03-bbe0-56b45608359c"
+    },
+    {
+      "canonical_identifier": "role:user",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993",
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "role:user",
+      "node_type": "ROLE",
+      "observation_ids": [
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "af431028-2637-4867-94f4-68da15836df6",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "2c56c15e-c095-486c-9158-9b03290f6db0"
+    },
+    {
+      "canonical_identifier": "service:http://127.0.0.1:8001",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "evidence_ids": [
+        "3458f64b-57b9-4640-9f49-1b42dddae670",
+        "371ed610-acf7-45bf-863f-2241c1533993",
+        "43f82349-344d-4cef-9652-e5581847e9be",
+        "8ad38498-deb4-4293-95a5-4355880a8958",
+        "948da36c-5d08-4b64-a50b-0e822f2e65be",
+        "cbd0f5f9-80cf-4796-a31c-589421a70e97",
+        "d620196f-82fe-4032-9bac-a15f1ad2dfe4"
+      ],
+      "node_id": "service:http://127.0.0.1:8001",
+      "node_type": "SERVICE",
+      "observation_ids": [
+        "0fffb8e4-9044-44e7-9259-c08aaf7e0c97",
+        "3546c8cb-6414-43fc-88f2-c85a57af46cd",
+        "601f6c52-aabc-4e3a-aa30-08180a0af062",
+        "86975dfd-6a3f-4cbf-bde1-e7ecab445ce5",
+        "a1f24c16-2342-406d-91ae-e67a4b474f08",
+        "af431028-2637-4867-94f4-68da15836df6",
+        "eb550d63-1169-46a6-af13-9581d92e28c1"
+      ],
+      "system_entity_id": "ac82aaa8-63c5-4c9a-a1b6-e1b61b52b499"
+    }
+  ],
+  "paths": [],
+  "research_session_id": "6bcf9bc0-da1b-450b-a221-46733d5c41dc",
+  "system_model_hash": "f1741b8d1ea743d7974a404da9f9fecd8b5aedeae06d2e14523f67629e9eca30",
+  "truncated": false
+}

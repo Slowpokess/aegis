@@ -1,0 +1,18 @@
+id: LAB-005
+title: Receipt authorization false-positive trap
+vulnerability: false
+class: false_positive_trap
+actors:
+  - alice
+  - bob
+preconditions:
+  - alice_owns_order_101
+  - bob_owns_order_201
+required_evidence:
+  - alice_is_denied_bob_receipt_201
+  - bob_is_denied_alice_receipt_101
+required_control:
+  - alice_reads_alice_receipt_101
+  - bob_reads_bob_receipt_201
+expected_verdict: REJECTED
+

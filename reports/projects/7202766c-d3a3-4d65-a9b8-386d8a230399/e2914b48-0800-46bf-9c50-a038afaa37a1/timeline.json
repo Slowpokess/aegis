@@ -1,0 +1,346 @@
+[
+  {
+    "created_at": "2026-08-25T06:58:26.691502Z",
+    "entity_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "entity_type": "ResearchSession",
+    "event_type": "SESSION_STARTED",
+    "event_version": "research-event-v1",
+    "id": "596c4add-8823-4fb6-8d19-792f962acf30",
+    "idempotency_key": "SESSION_STARTED:ResearchSession:e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "message": "Research session started",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:26.691446Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "SESSION_STARTED:ResearchSession:e2914b48-0800-46bf-9c50-a038afaa37a1",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 1,
+    "severity": "INFO",
+    "structured_data": {
+      "scope_revision": 1
+    }
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.063655Z",
+    "entity_id": "62e2a07e-dbe7-40fe-add7-0b41bc0dad14",
+    "entity_type": "ResearchBudget",
+    "event_type": "CONTROLLER_PAUSED",
+    "event_version": "research-event-v1",
+    "id": "77561278-d721-4ad5-8903-7cb057699617",
+    "idempotency_key": "controller-paused:62e2a07e-dbe7-40fe-add7-0b41bc0dad14:2026-08-25T06:58:28.049492+00:00",
+    "message": "Controller paused at a safe boundary",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.063574Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "controller-paused:62e2a07e-dbe7-40fe-add7-0b41bc0dad14:2026-08-25T06:58:28.049492+00:00",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 2,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.084301Z",
+    "entity_id": "62e2a07e-dbe7-40fe-add7-0b41bc0dad14",
+    "entity_type": "ResearchBudget",
+    "event_type": "CONTROLLER_RESUMED",
+    "event_version": "research-event-v1",
+    "id": "2752bc78-4cdc-45d0-afe8-bb609464abf7",
+    "idempotency_key": "controller-resumed:62e2a07e-dbe7-40fe-add7-0b41bc0dad14:2026-08-25T06:58:28.071585+00:00",
+    "message": "Controller resumed with persisted budget",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.084240Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "controller-resumed:62e2a07e-dbe7-40fe-add7-0b41bc0dad14:2026-08-25T06:58:28.071585+00:00",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 3,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.253399Z",
+    "entity_id": "5eab3edf-a8b5-4610-a416-365dd1e05b5c",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "58b16a09-6470-4be5-ad39-8fc35bca7032",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:5eab3edf-a8b5-4610-a416-365dd1e05b5c",
+    "message": "Observation persisted",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.253345Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:5eab3edf-a8b5-4610-a416-365dd1e05b5c",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 4,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.257728Z",
+    "entity_id": "ab200641-3cdc-466f-b754-232f0a9dc42c",
+    "entity_type": "Observation",
+    "event_type": "OBSERVATION_CREATED",
+    "event_version": "research-event-v1",
+    "id": "c52ecd20-75cb-4fb9-a2a2-0dcbde836081",
+    "idempotency_key": "OBSERVATION_CREATED:Observation:ab200641-3cdc-466f-b754-232f0a9dc42c",
+    "message": "Observation persisted",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.257682Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "OBSERVATION_CREATED:Observation:ab200641-3cdc-466f-b754-232f0a9dc42c",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 5,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.268421Z",
+    "entity_id": "8362d2fb-cfcb-4683-bb8c-8e47e7949e45",
+    "entity_type": "Evidence",
+    "event_type": "EVIDENCE_CREATED",
+    "event_version": "research-event-v1",
+    "id": "3d3a50d5-4cc1-4e7a-aa4b-202a434af226",
+    "idempotency_key": "EVIDENCE_CREATED:Evidence:8362d2fb-cfcb-4683-bb8c-8e47e7949e45",
+    "message": "Evidence persisted",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.268362Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "EVIDENCE_CREATED:Evidence:8362d2fb-cfcb-4683-bb8c-8e47e7949e45",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 6,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.272273Z",
+    "entity_id": "9a58cfb6-f822-4a7a-8f16-a94410956ea4",
+    "entity_type": "Evidence",
+    "event_type": "EVIDENCE_CREATED",
+    "event_version": "research-event-v1",
+    "id": "651bb424-40d5-4b5a-94ac-05a4bea06919",
+    "idempotency_key": "EVIDENCE_CREATED:Evidence:9a58cfb6-f822-4a7a-8f16-a94410956ea4",
+    "message": "Evidence persisted",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.272228Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "EVIDENCE_CREATED:Evidence:9a58cfb6-f822-4a7a-8f16-a94410956ea4",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 7,
+    "severity": "INFO",
+    "structured_data": {}
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.278026Z",
+    "entity_id": "e6d8a8a9-9e0f-4269-b893-d84138bbbc5e",
+    "entity_type": "EvidenceGap",
+    "event_type": "GAP_RESOLVED",
+    "event_version": "research-event-v1",
+    "id": "02b632e7-7b65-452f-9597-de805ccbf46a",
+    "idempotency_key": "gap:e6d8a8a9-9e0f-4269-b893-d84138bbbc5e:RESOLVED",
+    "message": "Evidence gap resolved",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.276977Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "gap:e6d8a8a9-9e0f-4269-b893-d84138bbbc5e:RESOLVED",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 8,
+    "severity": "INFO",
+    "structured_data": {
+      "gap_type": "MISSING_BASELINE",
+      "status": "RESOLVED"
+    }
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.283337Z",
+    "entity_id": "08dbe2b5-a167-4e86-9ee5-3c222695c7f9",
+    "entity_type": "ResearchAction",
+    "event_type": "ACTION_PROPOSED",
+    "event_version": "research-event-v1",
+    "id": "f877edeb-71c8-4861-9761-07569bfb1758",
+    "idempotency_key": "action:08dbe2b5-a167-4e86-9ee5-3c222695c7f9:SATISFIED",
+    "message": "Action HTTP_OBSERVE: SATISFIED",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.283283Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "action:08dbe2b5-a167-4e86-9ee5-3c222695c7f9:SATISFIED",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 9,
+    "severity": "INFO",
+    "structured_data": {
+      "status": "SATISFIED",
+      "validation": "VALIDATED_EXPERIMENTAL"
+    }
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.287875Z",
+    "entity_id": "f9184faa-0b60-4d8d-9574-8b3056ab194a",
+    "entity_type": "ToolRun",
+    "event_type": "TOOL_COMPLETED",
+    "event_version": "research-event-v1",
+    "id": "c0f9e6eb-c009-48e5-ac8e-6df751e135b8",
+    "idempotency_key": "tool:f9184faa-0b60-4d8d-9574-8b3056ab194a:COMPLETED",
+    "message": "Tool http: COMPLETED",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.287816Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "tool:f9184faa-0b60-4d8d-9574-8b3056ab194a:COMPLETED",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 10,
+    "severity": "INFO",
+    "structured_data": {
+      "profile": "entity_observe",
+      "status": "COMPLETED",
+      "tool": "http"
+    }
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.292795Z",
+    "entity_id": "ca935486-1d1f-4ef4-a338-46f8742efac4",
+    "entity_type": "SystemModelBuild",
+    "event_type": "MODEL_REBUILT",
+    "event_version": "research-event-v1",
+    "id": "48a371e5-d8a2-445b-8e61-c5d05ea6ed20",
+    "idempotency_key": "model:ca935486-1d1f-4ef4-a338-46f8742efac4:b07534a57e1ffeeb88862e47b8f4d36ad9219cfa46a7652f355badab58b2af8d",
+    "message": "System Model rebuilt",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.292711Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "model:ca935486-1d1f-4ef4-a338-46f8742efac4:b07534a57e1ffeeb88862e47b8f4d36ad9219cfa46a7652f355badab58b2af8d",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 11,
+    "severity": "INFO",
+    "structured_data": {
+      "model_hash": "b07534a57e1ffeeb88862e47b8f4d36ad9219cfa46a7652f355badab58b2af8d"
+    }
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.306209Z",
+    "entity_id": "8a1aac51-9de3-4052-8aec-e9d787dd9ec5",
+    "entity_type": "SystemModelBuild",
+    "event_type": "MODEL_REBUILT",
+    "event_version": "research-event-v1",
+    "id": "22265ae6-cdd8-4210-b698-5a6430496284",
+    "idempotency_key": "model:8a1aac51-9de3-4052-8aec-e9d787dd9ec5:ed2ff360b94917fbf43d04b620eb124f867f8d8598d237e710d547f47f0f7364",
+    "message": "System Model rebuilt",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.306152Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "model:8a1aac51-9de3-4052-8aec-e9d787dd9ec5:ed2ff360b94917fbf43d04b620eb124f867f8d8598d237e710d547f47f0f7364",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 12,
+    "severity": "INFO",
+    "structured_data": {
+      "model_hash": "ed2ff360b94917fbf43d04b620eb124f867f8d8598d237e710d547f47f0f7364"
+    }
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.313105Z",
+    "entity_id": "977bd4a3-6a72-468e-99e1-a4b8eee834f1",
+    "entity_type": "AttackGraphSnapshot",
+    "event_type": "GRAPH_REBUILT",
+    "event_version": "research-event-v1",
+    "id": "b8611d8b-5c0c-43ad-a4f9-cf4f070fa874",
+    "idempotency_key": "graph:977bd4a3-6a72-468e-99e1-a4b8eee834f1:STALE",
+    "message": "Attack Graph snapshot persisted",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.313037Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "graph:977bd4a3-6a72-468e-99e1-a4b8eee834f1:STALE",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 13,
+    "severity": "INFO",
+    "structured_data": {
+      "graph_hash": "73b040e68e98058c3c20c4ea7d1c4f4b33bafbda8cdd28c793820b0deaf27039",
+      "status": "STALE"
+    }
+  },
+  {
+    "created_at": "2026-08-25T06:58:28.319485Z",
+    "entity_id": "2151b3a0-d580-4119-9cb8-dcb4fa8ff145",
+    "entity_type": "AttackGraphSnapshot",
+    "event_type": "GRAPH_REBUILT",
+    "event_version": "research-event-v1",
+    "id": "f98598c9-9075-4a9b-81df-289cae25c521",
+    "idempotency_key": "graph:2151b3a0-d580-4119-9cb8-dcb4fa8ff145:CURRENT",
+    "message": "Attack Graph snapshot persisted",
+    "project_id": "7202766c-d3a3-4d65-a9b8-386d8a230399",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:28.319297Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "graph:2151b3a0-d580-4119-9cb8-dcb4fa8ff145:CURRENT",
+      "source_type": "operator"
+    },
+    "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+    "sequence_number": 14,
+    "severity": "INFO",
+    "structured_data": {
+      "graph_hash": "217c14898727c74478dcde3d147553d49f1d9b4afae00e699398a423e5e61521",
+      "status": "CURRENT"
+    }
+  }
+]

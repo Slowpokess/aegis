@@ -1,0 +1,145 @@
+version: harness-v1
+scenarios:
+  - scenario_id: LAB-001
+    seed_requests:
+      - {identity: bob, path: /api/orders}
+      - {identity: alice, path: /api/orders}
+    hypothesis_title: Possible cross-identity order-list exposure
+    hypothesis_description: Compare whether different identities receive the same order data.
+    changed_variable: identity
+    candidate: {method: GET, path: /api/orders, identity: bob}
+    control: {method: GET, path: /api/orders, identity: alice}
+    expected_if_true: Both identities receive identical order data.
+    expected_if_false: Identity-specific order data differs.
+    verification_spec:
+      rule_id: http-json-resource-access
+      rule_version: v1
+      comparisons:
+        - {type: STATUS_CODE, operator: EQUAL, required: true, impact: false}
+        - {type: NORMALIZED_JSON, operator: EQUAL, required: true, impact: true}
+
+  - scenario_id: LAB-002
+    seed_requests:
+      - {identity: bob, path: /api/orders/101}
+      - {identity: alice, path: /api/orders/101}
+    hypothesis_title: Possible cross-owner object access
+    hypothesis_description: Compare owner and non-owner access to the same observed order.
+    changed_variable: identity
+    candidate: {method: GET, path: /api/orders/101, identity: bob}
+    control: {method: GET, path: /api/orders/101, identity: alice}
+    expected_if_true: Both identities receive the same protected object.
+    expected_if_false: The non-owner is denied or receives different data.
+    verification_spec:
+      rule_id: http-json-resource-access
+      rule_version: v1
+      comparisons:
+        - {type: STATUS_CODE, operator: EQUAL, required: true, impact: false}
+        - {type: JSON_FIELD_VALUE, field: id, operator: EQUAL, required: true, impact: true}
+        - {type: JSON_FIELD_VALUE, field: owner, operator: EQUAL, required: true, impact: true}
+
+  - scenario_id: LAB-003
+    seed_requests:
+      - {identity: bob, path: /api/profile}
+      - {identity: alice, path: /api/profile}
+    hypothesis_title: Possible cross-identity profile exposure
+    hypothesis_description: Compare whether identities receive identical profile content.
+    changed_variable: identity
+    candidate: {method: GET, path: /api/profile, identity: bob}
+    control: {method: GET, path: /api/profile, identity: alice}
+    expected_if_true: Both identities receive identical profile data.
+    expected_if_false: Profiles remain identity-specific.
+    verification_spec:
+      rule_id: http-json-resource-access
+      rule_version: v1
+      comparisons:
+        - {type: STATUS_CODE, operator: EQUAL, required: true, impact: false}
+        - {type: NORMALIZED_JSON, operator: EQUAL, required: true, impact: true}
+
+  - scenario_id: LAB-004
+    seed_requests:
+      - {identity: alice, path: /api/account/settings}
+      - {identity: alice, path: /api/profile}
+    hypothesis_title: Possible internal account metadata disclosure
+    hypothesis_description: Compare settings with the public profile for internal metadata presence.
+    changed_variable: path
+    candidate: {method: GET, path: /api/account/settings, identity: alice}
+    control: {method: GET, path: /api/profile, identity: alice}
+    expected_if_true: Internal account metadata appears only in settings.
+    expected_if_false: Internal account metadata presence is the same.
+    verification_spec:
+      rule_id: http-json-disclosure
+      rule_version: v1
+      comparisons:
+        - {type: STATUS_CODE, operator: EQUAL, required: true, impact: false}
+        - {type: JSON_FIELD_PRESENCE, field: internal_account_id, operator: NOT_EQUAL, required: true, impact: true}
+
+  - scenario_id: LAB-005
+    seed_requests:
+      - {identity: bob, path: /api/orders/101/receipt}
+      - {identity: alice, path: /api/orders/101/receipt}
+    hypothesis_title: Possible receipt authorization bypass
+    hypothesis_description: Compare owner and non-owner receipt responses for the same order.
+    changed_variable: identity
+    candidate: {method: GET, path: /api/orders/101/receipt, identity: bob}
+    control: {method: GET, path: /api/orders/101/receipt, identity: alice}
+    expected_if_true: The non-owner receives the same receipt response.
+    expected_if_false: The non-owner response differs from the owner baseline.
+    verification_spec:
+      rule_id: http-json-resource-access
+      rule_version: v1
+      comparisons:
+        - {type: STATUS_CODE, operator: EQUAL, required: true, impact: false}
+        - {type: NORMALIZED_JSON, operator: EQUAL, required: true, impact: true}
+
+  - scenario_id: LAB-006
+    seed_requests:
+      - {identity: alice, path: /api/account/settings/restricted}
+    hypothesis_title: Possible restricted-settings authorization behavior
+    hypothesis_description: A comparative baseline is required before reaching a conclusion.
+    changed_variable: identity
+    candidate: {method: GET, path: /api/account/settings/restricted, identity: alice}
+    control: {method: GET, path: /api/account/settings/restricted, identity: admin}
+    expected_if_true: Both identities receive the same restricted data.
+    expected_if_false: Access differs by identity.
+    verification_spec:
+      rule_id: http-json-resource-access
+      rule_version: v1
+      comparisons:
+        - {type: NORMALIZED_JSON, operator: EQUAL, required: true, impact: true}
+    execution_mode: INCOMPLETE
+
+  - scenario_id: LAB-007
+    seed_requests:
+      - {identity: alice, path: /api/admin/stats}
+      - {identity: admin, path: /api/admin/stats}
+    hypothesis_title: Possible administrative role bypass
+    hypothesis_description: Compare ordinary-user and administrator responses.
+    changed_variable: identity
+    candidate: {method: GET, path: /api/admin/stats, identity: alice}
+    control: {method: GET, path: /api/admin/stats, identity: admin}
+    expected_if_true: The ordinary user receives the same administrative data.
+    expected_if_false: Administrative data remains role-restricted.
+    verification_spec:
+      rule_id: http-json-resource-access
+      rule_version: v1
+      comparisons:
+        - {type: STATUS_CODE, operator: EQUAL, required: true, impact: false}
+        - {type: NORMALIZED_JSON, operator: EQUAL, required: true, impact: true}
+
+  - scenario_id: LAB-008
+    seed_requests:
+      - {identity: anonymous, path: /api/portal}
+      - {identity: admin, path: /api/portal}
+    hypothesis_title: Possible portal authorization bypass
+    hypothesis_description: Compare anonymous and administrator portal responses without following redirects.
+    changed_variable: identity
+    candidate: {method: GET, path: /api/portal, identity: anonymous}
+    control: {method: GET, path: /api/portal, identity: admin}
+    expected_if_true: Anonymous and administrator responses contain identical data.
+    expected_if_false: Redirect and authorized response content differ.
+    verification_spec:
+      rule_id: http-body-resource-access
+      rule_version: v1
+      comparisons:
+        - {type: STATUS_CODE, operator: EQUAL, required: true, impact: false}
+        - {type: BODY_HASH, operator: EQUAL, required: true, impact: true}

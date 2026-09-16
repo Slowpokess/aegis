@@ -1,0 +1,87 @@
+{
+  "candidate_signals": [
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:27.068710Z",
+      "details": {
+        "accessor": "identity:bob",
+        "endpoint": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+        "label": "candidate connectivity signal; not a finding",
+        "owner": "identity:alice",
+        "resource": "data:order:101"
+      },
+      "endpoint_entity_id": "2cd699fc-b371-45ba-aa3d-afb477ab4069",
+      "evidence_ids": [
+        "9a58cfb6-f822-4a7a-8f16-a94410956ea4"
+      ],
+      "graph_id": "977bd4a3-6a72-468e-99e1-a4b8eee834f1",
+      "id": "ec8721fb-55d9-44d6-ae10-d7775a8446c1",
+      "observation_ids": [
+        "ab200641-3cdc-466f-b754-232f0a9dc42c"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:27.068648Z",
+        "collector": "attack-graph-v1",
+        "metadata": {},
+        "source_reference": "73b040e68e98058c3c20c4ea7d1c4f4b33bafbda8cdd28c793820b0deaf27039",
+        "source_type": "system_model"
+      },
+      "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+      "resource_entity_id": "3dad38f0-007c-407b-a524-17c7d8ca9b30",
+      "semantic_key": "cross-identity:identity:bob:identity:alice:data:order:101:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "signal_type": "CROSS_IDENTITY_RESOURCE_ACCESS",
+      "subject_entity_id": "b288b051-0c68-4030-8db4-391cc04b95a1",
+      "system_relationship_ids": [
+        "17e1af5b-4ee9-46c9-bf94-40c9e42d9c87",
+        "3a4a438a-640f-4e15-a016-4bc4fb625a67",
+        "d5b8541c-15b7-4d68-a8d1-8c0b389d0241"
+      ],
+      "target_entity_id": "b560691d-bfff-4d4b-a9f2-e8374fbd2168"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:27.713204Z",
+      "details": {
+        "accessor": "identity:bob",
+        "endpoint": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+        "label": "candidate connectivity signal; not a finding",
+        "owner": "identity:alice",
+        "resource": "data:order:101"
+      },
+      "endpoint_entity_id": "2cd699fc-b371-45ba-aa3d-afb477ab4069",
+      "evidence_ids": [
+        "8362d2fb-cfcb-4683-bb8c-8e47e7949e45",
+        "9a58cfb6-f822-4a7a-8f16-a94410956ea4"
+      ],
+      "graph_id": "2151b3a0-d580-4119-9cb8-dcb4fa8ff145",
+      "id": "d0812f04-5305-4d51-a27e-bbcf47e5234d",
+      "observation_ids": [
+        "5eab3edf-a8b5-4610-a416-365dd1e05b5c",
+        "ab200641-3cdc-466f-b754-232f0a9dc42c"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:27.713128Z",
+        "collector": "attack-graph-v1",
+        "metadata": {},
+        "source_reference": "217c14898727c74478dcde3d147553d49f1d9b4afae00e699398a423e5e61521",
+        "source_type": "system_model"
+      },
+      "research_session_id": "e2914b48-0800-46bf-9c50-a038afaa37a1",
+      "resource_entity_id": "3dad38f0-007c-407b-a524-17c7d8ca9b30",
+      "semantic_key": "cross-identity:identity:bob:identity:alice:data:order:101:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "signal_type": "CROSS_IDENTITY_RESOURCE_ACCESS",
+      "subject_entity_id": "b288b051-0c68-4030-8db4-391cc04b95a1",
+      "system_relationship_ids": [
+        "17e1af5b-4ee9-46c9-bf94-40c9e42d9c87",
+        "3a4a438a-640f-4e15-a016-4bc4fb625a67",
+        "d5b8541c-15b7-4d68-a8d1-8c0b389d0241"
+      ],
+      "target_entity_id": "b560691d-bfff-4d4b-a9f2-e8374fbd2168"
+    }
+  ],
+  "graph_hash": "217c14898727c74478dcde3d147553d49f1d9b4afae00e699398a423e5e61521"
+}

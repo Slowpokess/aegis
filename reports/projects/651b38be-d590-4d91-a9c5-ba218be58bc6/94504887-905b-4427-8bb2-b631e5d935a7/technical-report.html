@@ -1,0 +1,643 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Aegis Technical Report</title><style>body{font-family:system-ui;margin:2rem;max-width:1100px}pre{white-space:pre-wrap;background:#f4f4f4;padding:1rem}section{margin-bottom:2rem}</style></head><body><h1>Aegis Evidence-Backed Technical Report</h1><section><h2>Executive Summary</h2><pre>{
+  &quot;assets_discovered&quot;: 2,
+  &quot;inconclusive_items&quot;: 0,
+  &quot;open_evidence_gaps&quot;: 0,
+  &quot;requests&quot;: 1,
+  &quot;research_status&quot;: &quot;COMPLETED&quot;,
+  &quot;tool_runs&quot;: 1,
+  &quot;verified_findings&quot;: 0
+}</pre></section><section><h2>Scope</h2><pre>{
+  &quot;hosts&quot;: [
+    &quot;127.0.0.1&quot;
+  ],
+  &quot;id&quot;: &quot;61ef5166-5f4c-4b6d-ac75-8844d8325cb0&quot;,
+  &quot;ports&quot;: [
+    8001
+  ],
+  &quot;provenance&quot;: {
+    &quot;classification&quot;: &quot;OBSERVED&quot;,
+    &quot;collected_at&quot;: &quot;2026-08-25T07:03:15.069135Z&quot;,
+    &quot;collector&quot;: &quot;operator-api-v1&quot;,
+    &quot;metadata&quot;: {},
+    &quot;source_reference&quot;: &quot;phase13-demo:CONSERVATIVE&quot;,
+    &quot;source_type&quot;: &quot;operator&quot;
+  },
+  &quot;schemes&quot;: [
+    &quot;http&quot;
+  ]
+}</pre></section><section><h2>Research Policy</h2><pre>{
+  &quot;approval_mode&quot;: &quot;APPROVE_EVERY_ACTION&quot;,
+  &quot;experimental_mode&quot;: false,
+  &quot;profile&quot;: &quot;CONSERVATIVE&quot;,
+  &quot;settings&quot;: {
+    &quot;allow_action_repetition&quot;: false,
+    &quot;allow_closed_gap_revisit&quot;: false,
+    &quot;allow_off_gap_exploration&quot;: false,
+    &quot;max_exploratory_actions&quot;: 0,
+    &quot;max_repeated_semantic_action_count&quot;: 1,
+    &quot;min_information_gain&quot;: 40,
+    &quot;prefer_reproduction&quot;: false,
+    &quot;stop_on_no_open_gaps&quot;: true
+  }
+}</pre></section><section><h2>Assets</h2><pre>[
+  {
+    &quot;asset_type&quot;: &quot;APPLICATION&quot;,
+    &quot;canonical_identifier&quot;: &quot;application:http://127.0.0.1:8001&quot;,
+    &quot;classification&quot;: &quot;OBSERVED&quot;,
+    &quot;confidence&quot;: 1.0,
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:17.332495Z&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+      &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+    ],
+    &quot;first_seen&quot;: &quot;2026-08-25T07:03:17.186421Z&quot;,
+    &quot;id&quot;: &quot;1f2ea11f-e3f7-4969-90d6-a9ed909352bb&quot;,
+    &quot;last_seen&quot;: &quot;2026-08-25T07:03:18.342335Z&quot;,
+    &quot;metadata&quot;: {
+      &quot;base_url&quot;: &quot;http://127.0.0.1:8001&quot;
+    },
+    &quot;name&quot;: &quot;phase13-conservative&quot;,
+    &quot;observation_ids&quot;: [
+      &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;
+    ],
+    &quot;parent_asset_id&quot;: &quot;44fcbbb5-4baa-4652-b02a-3b184fe95cc3&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:17.332417Z&quot;,
+      &quot;collector&quot;: &quot;aegis-system-model-builder&quot;,
+      &quot;metadata&quot;: {
+        &quot;evidence_id&quot;: &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+      },
+      &quot;source_reference&quot;: &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;source_type&quot;: &quot;http&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;source_type&quot;: &quot;http&quot;,
+    &quot;updated_at&quot;: &quot;2026-08-25T07:03:18.403589Z&quot;
+  },
+  {
+    &quot;asset_type&quot;: &quot;HOST&quot;,
+    &quot;canonical_identifier&quot;: &quot;host:127.0.0.1&quot;,
+    &quot;classification&quot;: &quot;OBSERVED&quot;,
+    &quot;confidence&quot;: 1.0,
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:17.327853Z&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+      &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+    ],
+    &quot;first_seen&quot;: &quot;2026-08-25T07:03:17.186421Z&quot;,
+    &quot;id&quot;: &quot;44fcbbb5-4baa-4652-b02a-3b184fe95cc3&quot;,
+    &quot;last_seen&quot;: &quot;2026-08-25T07:03:18.342335Z&quot;,
+    &quot;metadata&quot;: {
+      &quot;host&quot;: &quot;127.0.0.1&quot;
+    },
+    &quot;name&quot;: &quot;127.0.0.1&quot;,
+    &quot;observation_ids&quot;: [
+      &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;
+    ],
+    &quot;parent_asset_id&quot;: null,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:17.327660Z&quot;,
+      &quot;collector&quot;: &quot;aegis-system-model-builder&quot;,
+      &quot;metadata&quot;: {
+        &quot;evidence_id&quot;: &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+      },
+      &quot;source_reference&quot;: &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;source_type&quot;: &quot;http&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;source_type&quot;: &quot;http&quot;,
+    &quot;updated_at&quot;: &quot;2026-08-25T07:03:18.398787Z&quot;
+  }
+]</pre></section><section><h2>Services</h2><pre>[
+  {
+    &quot;asset_id&quot;: &quot;1f2ea11f-e3f7-4969-90d6-a9ed909352bb&quot;,
+    &quot;canonical_identifier&quot;: &quot;service:http://127.0.0.1:8001&quot;,
+    &quot;classification&quot;: &quot;OBSERVED&quot;,
+    &quot;confidence&quot;: 1.0,
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:17.339456Z&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+      &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+    ],
+    &quot;first_seen&quot;: &quot;2026-08-25T07:03:17.186421Z&quot;,
+    &quot;id&quot;: &quot;434bc2e0-d62d-4be4-ace8-e44fc5a0206d&quot;,
+    &quot;last_seen&quot;: &quot;2026-08-25T07:03:18.342335Z&quot;,
+    &quot;observation_ids&quot;: [
+      &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;
+    ],
+    &quot;observed_state&quot;: &quot;RESPONDED&quot;,
+    &quot;port&quot;: 8001,
+    &quot;protocol&quot;: &quot;HTTP&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:17.339357Z&quot;,
+      &quot;collector&quot;: &quot;aegis-system-model-builder&quot;,
+      &quot;metadata&quot;: {
+        &quot;evidence_id&quot;: &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+      },
+      &quot;source_reference&quot;: &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;source_type&quot;: &quot;http&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;service_type&quot;: &quot;HTTP&quot;,
+    &quot;source_type&quot;: &quot;http&quot;,
+    &quot;updated_at&quot;: &quot;2026-08-25T07:03:18.406119Z&quot;
+  }
+]</pre></section><section><h2>Endpoints</h2><pre>[
+  {
+    &quot;authentication_observed&quot;: true,
+    &quot;canonical_identifier&quot;: &quot;endpoint:GET:http://127.0.0.1:8001/api/orders/101&quot;,
+    &quot;classification&quot;: &quot;OBSERVED&quot;,
+    &quot;confidence&quot;: 1.0,
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:17.347621Z&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+      &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+    ],
+    &quot;first_seen&quot;: &quot;2026-08-25T07:03:17.186421Z&quot;,
+    &quot;host&quot;: &quot;127.0.0.1&quot;,
+    &quot;id&quot;: &quot;f32be723-2388-4e9b-9a31-6b6c9fef68d2&quot;,
+    &quot;last_seen&quot;: &quot;2026-08-25T07:03:18.342335Z&quot;,
+    &quot;method&quot;: &quot;GET&quot;,
+    &quot;observation_ids&quot;: [
+      &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;
+    ],
+    &quot;path&quot;: &quot;/api/orders/101&quot;,
+    &quot;port&quot;: 8001,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:17.347498Z&quot;,
+      &quot;collector&quot;: &quot;aegis-system-model-builder&quot;,
+      &quot;metadata&quot;: {
+        &quot;evidence_id&quot;: &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+      },
+      &quot;source_reference&quot;: &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;source_type&quot;: &quot;http&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;scheme&quot;: &quot;http&quot;,
+    &quot;service_id&quot;: &quot;434bc2e0-d62d-4be4-ace8-e44fc5a0206d&quot;,
+    &quot;source_type&quot;: &quot;http&quot;,
+    &quot;updated_at&quot;: &quot;2026-08-25T07:03:18.409374Z&quot;
+  }
+]</pre></section><section><h2>Candidate Signals</h2><pre>[
+  {
+    &quot;classification&quot;: &quot;OBSERVED&quot;,
+    &quot;confidence&quot;: 1.0,
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:17.544558Z&quot;,
+    &quot;details&quot;: {
+      &quot;accessor&quot;: &quot;identity:bob&quot;,
+      &quot;endpoint&quot;: &quot;endpoint:GET:http://127.0.0.1:8001/api/orders/101&quot;,
+      &quot;label&quot;: &quot;candidate connectivity signal; not a finding&quot;,
+      &quot;owner&quot;: &quot;identity:alice&quot;,
+      &quot;resource&quot;: &quot;data:order:101&quot;
+    },
+    &quot;endpoint_entity_id&quot;: &quot;f32be723-2388-4e9b-9a31-6b6c9fef68d2&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+    ],
+    &quot;graph_id&quot;: &quot;072129bf-91d1-48fa-af5c-6774fe9198f0&quot;,
+    &quot;id&quot;: &quot;9afbe150-fefc-43d1-a291-4bbe6c15ea35&quot;,
+    &quot;observation_ids&quot;: [
+      &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;
+    ],
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:17.544514Z&quot;,
+      &quot;collector&quot;: &quot;attack-graph-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;a9b4a0d5d81d1e152ae07886e4ab1941b67d579dfbbcd7a09b83be2b250a4545&quot;,
+      &quot;source_type&quot;: &quot;system_model&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;resource_entity_id&quot;: &quot;a2236fc2-f80a-4f0c-965d-a04d0706cdde&quot;,
+    &quot;semantic_key&quot;: &quot;cross-identity:identity:bob:identity:alice:data:order:101:endpoint:GET:http://127.0.0.1:8001/api/orders/101&quot;,
+    &quot;signal_type&quot;: &quot;CROSS_IDENTITY_RESOURCE_ACCESS&quot;,
+    &quot;subject_entity_id&quot;: &quot;496b599b-6449-4d34-931e-2ccdd9fd65c4&quot;,
+    &quot;system_relationship_ids&quot;: [
+      &quot;87996e0d-056d-410f-ab2f-796041d0a738&quot;,
+      &quot;a77515b8-3f7a-4368-8d53-f441d6a3a775&quot;,
+      &quot;c0a131b3-97e1-4eb3-b5b9-e795f005ff80&quot;
+    ],
+    &quot;target_entity_id&quot;: &quot;67e4760e-20ad-4911-af8d-c96bfea840e5&quot;
+  },
+  {
+    &quot;classification&quot;: &quot;OBSERVED&quot;,
+    &quot;confidence&quot;: 1.0,
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:18.565481Z&quot;,
+    &quot;details&quot;: {
+      &quot;accessor&quot;: &quot;identity:bob&quot;,
+      &quot;endpoint&quot;: &quot;endpoint:GET:http://127.0.0.1:8001/api/orders/101&quot;,
+      &quot;label&quot;: &quot;candidate connectivity signal; not a finding&quot;,
+      &quot;owner&quot;: &quot;identity:alice&quot;,
+      &quot;resource&quot;: &quot;data:order:101&quot;
+    },
+    &quot;endpoint_entity_id&quot;: &quot;f32be723-2388-4e9b-9a31-6b6c9fef68d2&quot;,
+    &quot;evidence_ids&quot;: [
+      &quot;05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+      &quot;29140759-165a-485f-8574-0142bdf01241&quot;
+    ],
+    &quot;graph_id&quot;: &quot;eb0c366c-e454-415e-9fb6-b5d76d38a2f7&quot;,
+    &quot;id&quot;: &quot;b5fe3d2a-127f-4d97-bf0d-22fc10033b17&quot;,
+    &quot;observation_ids&quot;: [
+      &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;
+    ],
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:18.565394Z&quot;,
+      &quot;collector&quot;: &quot;attack-graph-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;3bac3645842cbac2578470ffd03ff0b4202f45fc3110989bb5ff993034b27542&quot;,
+      &quot;source_type&quot;: &quot;system_model&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;resource_entity_id&quot;: &quot;a2236fc2-f80a-4f0c-965d-a04d0706cdde&quot;,
+    &quot;semantic_key&quot;: &quot;cross-identity:identity:bob:identity:alice:data:order:101:endpoint:GET:http://127.0.0.1:8001/api/orders/101&quot;,
+    &quot;signal_type&quot;: &quot;CROSS_IDENTITY_RESOURCE_ACCESS&quot;,
+    &quot;subject_entity_id&quot;: &quot;496b599b-6449-4d34-931e-2ccdd9fd65c4&quot;,
+    &quot;system_relationship_ids&quot;: [
+      &quot;87996e0d-056d-410f-ab2f-796041d0a738&quot;,
+      &quot;a77515b8-3f7a-4368-8d53-f441d6a3a775&quot;,
+      &quot;c0a131b3-97e1-4eb3-b5b9-e795f005ff80&quot;
+    ],
+    &quot;target_entity_id&quot;: &quot;67e4760e-20ad-4911-af8d-c96bfea840e5&quot;
+  }
+]</pre></section><section><h2>Hypotheses</h2><pre>[]</pre></section><section><h2>Verification Results</h2><pre>[]</pre></section><section><h2>Findings</h2><pre>[]</pre></section><section><h2>Open Evidence Gaps</h2><pre>[]</pre></section><section><h2>Timeline</h2><pre>[
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:15.128479Z&quot;,
+    &quot;entity_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;entity_type&quot;: &quot;ResearchSession&quot;,
+    &quot;event_type&quot;: &quot;SESSION_STARTED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;0e2a534a-c1de-45bf-8550-d10274b0e571&quot;,
+    &quot;idempotency_key&quot;: &quot;SESSION_STARTED:ResearchSession:94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;message&quot;: &quot;Research session started&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:15.128408Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;SESSION_STARTED:ResearchSession:94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 1,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;scope_revision&quot;: 1
+    }
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:18.383447Z&quot;,
+    &quot;entity_id&quot;: &quot;038669f5-c1b3-4d02-aa3a-cfb014c62bad&quot;,
+    &quot;entity_type&quot;: &quot;ResearchAction&quot;,
+    &quot;event_type&quot;: &quot;ACTION_APPROVED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;d4f68a6f-625d-4864-9d70-aa78f267f8a3&quot;,
+    &quot;idempotency_key&quot;: &quot;ACTION_APPROVED:ResearchAction:038669f5-c1b3-4d02-aa3a-cfb014c62bad&quot;,
+    &quot;message&quot;: &quot;Operator approved policy-previewed action&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:18.383328Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;ACTION_APPROVED:ResearchAction:038669f5-c1b3-4d02-aa3a-cfb014c62bad&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 2,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {}
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:18.880664Z&quot;,
+    &quot;entity_id&quot;: &quot;a79bde85-6ca2-46f8-9b8e-ceaa2cf8047e&quot;,
+    &quot;entity_type&quot;: &quot;ResearchBudget&quot;,
+    &quot;event_type&quot;: &quot;CONTROLLER_PAUSED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;ade40bc7-c27a-4023-9e78-1a859af72aa0&quot;,
+    &quot;idempotency_key&quot;: &quot;controller-paused:a79bde85-6ca2-46f8-9b8e-ceaa2cf8047e:2026-08-25T07:03:18.864453+00:00&quot;,
+    &quot;message&quot;: &quot;Controller paused at a safe boundary&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:18.880605Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;controller-paused:a79bde85-6ca2-46f8-9b8e-ceaa2cf8047e:2026-08-25T07:03:18.864453+00:00&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 3,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {}
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:18.899620Z&quot;,
+    &quot;entity_id&quot;: &quot;a79bde85-6ca2-46f8-9b8e-ceaa2cf8047e&quot;,
+    &quot;entity_type&quot;: &quot;ResearchBudget&quot;,
+    &quot;event_type&quot;: &quot;CONTROLLER_RESUMED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;c00a64f2-c276-4124-9d75-553104ef5437&quot;,
+    &quot;idempotency_key&quot;: &quot;controller-resumed:a79bde85-6ca2-46f8-9b8e-ceaa2cf8047e:2026-08-25T07:03:18.890540+00:00&quot;,
+    &quot;message&quot;: &quot;Controller resumed with persisted budget&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:18.899563Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;controller-resumed:a79bde85-6ca2-46f8-9b8e-ceaa2cf8047e:2026-08-25T07:03:18.890540+00:00&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 4,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {}
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.358694Z&quot;,
+    &quot;entity_id&quot;: &quot;1351971d-3550-4206-bfab-140a45743fbb&quot;,
+    &quot;entity_type&quot;: &quot;Observation&quot;,
+    &quot;event_type&quot;: &quot;OBSERVATION_CREATED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;379db2e5-3bf4-4294-a2e6-3f26226b8f62&quot;,
+    &quot;idempotency_key&quot;: &quot;OBSERVATION_CREATED:Observation:1351971d-3550-4206-bfab-140a45743fbb&quot;,
+    &quot;message&quot;: &quot;Observation persisted&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.358458Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;OBSERVATION_CREATED:Observation:1351971d-3550-4206-bfab-140a45743fbb&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 5,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {}
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.365474Z&quot;,
+    &quot;entity_id&quot;: &quot;e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;,
+    &quot;entity_type&quot;: &quot;Observation&quot;,
+    &quot;event_type&quot;: &quot;OBSERVATION_CREATED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;50543f17-3bda-4c5f-bbea-919f71ee1cb3&quot;,
+    &quot;idempotency_key&quot;: &quot;OBSERVATION_CREATED:Observation:e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;,
+    &quot;message&quot;: &quot;Observation persisted&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.365403Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;OBSERVATION_CREATED:Observation:e3dad195-d8e8-472c-bc74-50bce14bbfcc&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 6,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {}
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.385856Z&quot;,
+    &quot;entity_id&quot;: &quot;05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+    &quot;entity_type&quot;: &quot;Evidence&quot;,
+    &quot;event_type&quot;: &quot;EVIDENCE_CREATED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;084ec076-c10b-42b3-87d4-4a0045c05a65&quot;,
+    &quot;idempotency_key&quot;: &quot;EVIDENCE_CREATED:Evidence:05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+    &quot;message&quot;: &quot;Evidence persisted&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.385798Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;EVIDENCE_CREATED:Evidence:05b4ddcb-baf5-4e38-b748-b05110101362&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 7,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {}
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.390424Z&quot;,
+    &quot;entity_id&quot;: &quot;29140759-165a-485f-8574-0142bdf01241&quot;,
+    &quot;entity_type&quot;: &quot;Evidence&quot;,
+    &quot;event_type&quot;: &quot;EVIDENCE_CREATED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;6e3e1903-fc45-4ab4-ac6b-051512ea9732&quot;,
+    &quot;idempotency_key&quot;: &quot;EVIDENCE_CREATED:Evidence:29140759-165a-485f-8574-0142bdf01241&quot;,
+    &quot;message&quot;: &quot;Evidence persisted&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.390371Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;EVIDENCE_CREATED:Evidence:29140759-165a-485f-8574-0142bdf01241&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 8,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {}
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.395963Z&quot;,
+    &quot;entity_id&quot;: &quot;e4de1d35-d5e9-4cc0-bd43-a1952bb31e25&quot;,
+    &quot;entity_type&quot;: &quot;EvidenceGap&quot;,
+    &quot;event_type&quot;: &quot;GAP_RESOLVED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;06e25a1e-8321-470b-bc1b-649426d3132c&quot;,
+    &quot;idempotency_key&quot;: &quot;gap:e4de1d35-d5e9-4cc0-bd43-a1952bb31e25:RESOLVED&quot;,
+    &quot;message&quot;: &quot;Evidence gap resolved&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.395905Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;gap:e4de1d35-d5e9-4cc0-bd43-a1952bb31e25:RESOLVED&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 9,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;gap_type&quot;: &quot;MISSING_BASELINE&quot;,
+      &quot;status&quot;: &quot;RESOLVED&quot;
+    }
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.400710Z&quot;,
+    &quot;entity_id&quot;: &quot;038669f5-c1b3-4d02-aa3a-cfb014c62bad&quot;,
+    &quot;entity_type&quot;: &quot;ResearchAction&quot;,
+    &quot;event_type&quot;: &quot;ACTION_PROPOSED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;e6935143-49fa-4ae0-8ad8-71916ff0bb48&quot;,
+    &quot;idempotency_key&quot;: &quot;action:038669f5-c1b3-4d02-aa3a-cfb014c62bad:SATISFIED&quot;,
+    &quot;message&quot;: &quot;Action HTTP_OBSERVE: SATISFIED&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.400644Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;action:038669f5-c1b3-4d02-aa3a-cfb014c62bad:SATISFIED&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 10,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;status&quot;: &quot;SATISFIED&quot;,
+      &quot;validation&quot;: &quot;VALIDATED&quot;
+    }
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.424615Z&quot;,
+    &quot;entity_id&quot;: &quot;06f1492f-6c13-4396-9bc6-80303d520aac&quot;,
+    &quot;entity_type&quot;: &quot;ToolRun&quot;,
+    &quot;event_type&quot;: &quot;TOOL_COMPLETED&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;96325971-45fb-4ba4-9a2d-724b0806f548&quot;,
+    &quot;idempotency_key&quot;: &quot;tool:06f1492f-6c13-4396-9bc6-80303d520aac:COMPLETED&quot;,
+    &quot;message&quot;: &quot;Tool http: COMPLETED&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.424506Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;tool:06f1492f-6c13-4396-9bc6-80303d520aac:COMPLETED&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 11,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;profile&quot;: &quot;entity_observe&quot;,
+      &quot;status&quot;: &quot;COMPLETED&quot;,
+      &quot;tool&quot;: &quot;http&quot;
+    }
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.431005Z&quot;,
+    &quot;entity_id&quot;: &quot;44e8d52a-5e26-462d-822e-40d6aa9098f6&quot;,
+    &quot;entity_type&quot;: &quot;SystemModelBuild&quot;,
+    &quot;event_type&quot;: &quot;MODEL_REBUILT&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;67d51907-91fa-48fe-8567-f5340ffc385c&quot;,
+    &quot;idempotency_key&quot;: &quot;model:44e8d52a-5e26-462d-822e-40d6aa9098f6:4b4fc716453dddc1a1aac7fb3df0a86eabed4d2356a562bca0e81e75165714aa&quot;,
+    &quot;message&quot;: &quot;System Model rebuilt&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.430924Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;model:44e8d52a-5e26-462d-822e-40d6aa9098f6:4b4fc716453dddc1a1aac7fb3df0a86eabed4d2356a562bca0e81e75165714aa&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 12,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;model_hash&quot;: &quot;4b4fc716453dddc1a1aac7fb3df0a86eabed4d2356a562bca0e81e75165714aa&quot;
+    }
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.451540Z&quot;,
+    &quot;entity_id&quot;: &quot;36ecfe9a-20cf-4b1c-a12a-bdb18dd79c02&quot;,
+    &quot;entity_type&quot;: &quot;SystemModelBuild&quot;,
+    &quot;event_type&quot;: &quot;MODEL_REBUILT&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;e110dea2-f6bf-4887-9507-2369eaf4889f&quot;,
+    &quot;idempotency_key&quot;: &quot;model:36ecfe9a-20cf-4b1c-a12a-bdb18dd79c02:e8e3fdd12ae3d6787dcb2dc513c0bbfa61a1d5e793c6e4cdeee6667725a02ce4&quot;,
+    &quot;message&quot;: &quot;System Model rebuilt&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.451483Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;model:36ecfe9a-20cf-4b1c-a12a-bdb18dd79c02:e8e3fdd12ae3d6787dcb2dc513c0bbfa61a1d5e793c6e4cdeee6667725a02ce4&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 13,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;model_hash&quot;: &quot;e8e3fdd12ae3d6787dcb2dc513c0bbfa61a1d5e793c6e4cdeee6667725a02ce4&quot;
+    }
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.456641Z&quot;,
+    &quot;entity_id&quot;: &quot;072129bf-91d1-48fa-af5c-6774fe9198f0&quot;,
+    &quot;entity_type&quot;: &quot;AttackGraphSnapshot&quot;,
+    &quot;event_type&quot;: &quot;GRAPH_REBUILT&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;4a9c7201-429d-4978-a0f6-f741debb4581&quot;,
+    &quot;idempotency_key&quot;: &quot;graph:072129bf-91d1-48fa-af5c-6774fe9198f0:STALE&quot;,
+    &quot;message&quot;: &quot;Attack Graph snapshot persisted&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.456586Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;graph:072129bf-91d1-48fa-af5c-6774fe9198f0:STALE&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 14,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;graph_hash&quot;: &quot;a9b4a0d5d81d1e152ae07886e4ab1941b67d579dfbbcd7a09b83be2b250a4545&quot;,
+      &quot;status&quot;: &quot;STALE&quot;
+    }
+  },
+  {
+    &quot;created_at&quot;: &quot;2026-08-25T07:03:19.463300Z&quot;,
+    &quot;entity_id&quot;: &quot;eb0c366c-e454-415e-9fb6-b5d76d38a2f7&quot;,
+    &quot;entity_type&quot;: &quot;AttackGraphSnapshot&quot;,
+    &quot;event_type&quot;: &quot;GRAPH_REBUILT&quot;,
+    &quot;event_version&quot;: &quot;research-event-v1&quot;,
+    &quot;id&quot;: &quot;1f64dbc9-a164-4854-b676-2f7ea1ff0727&quot;,
+    &quot;idempotency_key&quot;: &quot;graph:eb0c366c-e454-415e-9fb6-b5d76d38a2f7:CURRENT&quot;,
+    &quot;message&quot;: &quot;Attack Graph snapshot persisted&quot;,
+    &quot;project_id&quot;: &quot;651b38be-d590-4d91-a9c5-ba218be58bc6&quot;,
+    &quot;provenance&quot;: {
+      &quot;classification&quot;: &quot;OBSERVED&quot;,
+      &quot;collected_at&quot;: &quot;2026-08-25T07:03:19.463244Z&quot;,
+      &quot;collector&quot;: &quot;operator-api-v1&quot;,
+      &quot;metadata&quot;: {},
+      &quot;source_reference&quot;: &quot;graph:eb0c366c-e454-415e-9fb6-b5d76d38a2f7:CURRENT&quot;,
+      &quot;source_type&quot;: &quot;operator&quot;
+    },
+    &quot;research_session_id&quot;: &quot;94504887-905b-4427-8bb2-b631e5d935a7&quot;,
+    &quot;sequence_number&quot;: 15,
+    &quot;severity&quot;: &quot;INFO&quot;,
+    &quot;structured_data&quot;: {
+      &quot;graph_hash&quot;: &quot;3bac3645842cbac2578470ffd03ff0b4202f45fc3110989bb5ff993034b27542&quot;,
+      &quot;status&quot;: &quot;CURRENT&quot;
+    }
+  }
+]</pre></section><section><h2>Limitations</h2><pre>[
+  &quot;Local/development operator control plane; no production multi-user authentication.&quot;,
+  &quot;Raw evidence bodies are excluded from reports by default.&quot;
+]</pre></section></body></html>

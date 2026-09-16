@@ -1,0 +1,3 @@
+import {expect,test} from '@playwright/test'
+test('operator console loads the project workflow',async({page})=>{await page.route('**/api/projects',route=>route.fulfill({json:[]}));await page.route('**/api/tools',route=>route.fulfill({json:[]}));await page.route('**/api/runtime',route=>route.fulfill({json:{version:'0.14.0'}}));await page.goto('/');await expect(page.getByText('AEGIS')).toBeVisible();await expect(page.getByRole('heading',{name:'New project'})).toBeVisible();await expect(page.getByLabel('Research policy')).toHaveValue('CONSERVATIVE');await expect(page.getByLabel('Approval mode')).toHaveValue('AUTO')})
+

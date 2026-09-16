@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nmaprun scanner="nmap" version="7.95">
+  <host>
+    <status state="up"/>
+    <address addr="127.0.0.1" addrtype="ipv4"/>
+    <hostnames><hostname name="localhost" type="PTR"/></hostnames>
+    <ports>
+      <port protocol="tcp" portid="8001">
+        <state state="open"/>
+        <service name="http" product="uvicorn" version="fixture" extrainfo="untrusted banner"/>
+      </port>
+      <port protocol="tcp" portid="9000">
+        <state state="closed"/>
+      </port>
+    </ports>
+  </host>
+</nmaprun>

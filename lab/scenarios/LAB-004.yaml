@@ -1,0 +1,15 @@
+id: LAB-004
+title: Controlled synthetic account information disclosure
+vulnerability: true
+class: information_disclosure
+actors:
+  - alice
+preconditions:
+  - alice_authenticated
+required_evidence:
+  - alice_settings_expose_internal_account_identifier
+  - alice_settings_expose_synthetic_email
+required_control:
+  - alice_profile_omits_internal_account_identifier
+expected_verdict: SUPPORTED
+

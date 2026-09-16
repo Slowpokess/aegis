@@ -1,0 +1,16 @@
+id: aegis-safe-lab-candidate
+
+info:
+  name: Aegis controlled lab candidate
+  author: aegis
+  severity: info
+  tags: aegis,safe-active
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/health"
+    matchers:
+      - type: status
+        status:
+          - 200

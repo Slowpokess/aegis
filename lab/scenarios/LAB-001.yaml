@@ -1,0 +1,17 @@
+id: LAB-001
+title: Normal resource authorization
+vulnerability: false
+class: normal_authorization
+actors:
+  - alice
+  - bob
+preconditions:
+  - alice_owns_orders_101_and_102
+  - bob_owns_orders_201_and_202
+required_evidence:
+  - alice_lists_only_alice_orders
+  - bob_lists_only_bob_orders
+required_control:
+  - both_users_are_authenticated
+expected_verdict: REJECTED
+

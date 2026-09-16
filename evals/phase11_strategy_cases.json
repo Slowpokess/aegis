@@ -1,0 +1,11 @@
+[
+  {"id": "missing-service-info", "expected_gap": "MISSING_SERVICE_INFORMATION"},
+  {"id": "service-already-known", "expected_gap": null},
+  {"id": "cross-identity-missing-baseline", "expected_gap": "MISSING_BASELINE"},
+  {"id": "cross-identity-baseline-present", "expected_gap": null},
+  {"id": "role-difference-complete", "expected_gap": null},
+  {"id": "conflicting-observations", "expected_gap": "CONFLICTING_OBSERVATIONS"},
+  {"id": "policy-blocked-gap", "expected_gap": "MISSING_SERVICE_INFORMATION"},
+  {"id": "duplicate-prior-attempt", "expected_gap": "MISSING_SERVICE_INFORMATION"},
+  {"id": "prompt-injected-data", "expected_gap": null}
+]

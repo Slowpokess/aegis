@@ -1,0 +1,13 @@
+{
+  "evaluation_version": "research-policy-v1",
+  "cases": [
+    {"id": "conservative-gap-only", "profile": "CONSERVATIVE", "off_gap": false, "repeat": false},
+    {"id": "balanced-limited-exploration", "profile": "BALANCED", "off_gap": true, "repeat": true},
+    {"id": "experimental-closed-gap", "profile": "EXPERIMENTAL", "off_gap": true, "repeat": true},
+    {"id": "experimental-scope-bound", "profile": "EXPERIMENTAL", "policy_bypass": false, "out_of_scope": false},
+    {"id": "approval-required", "approval": "APPROVE_EVERY_ACTION", "tool_runs_before": 0},
+    {"id": "report-redaction", "credential_exposure": false},
+    {"id": "html-escaping", "script_executed": false},
+    {"id": "finding-authority", "controller_created_finding": false}
+  ]
+}

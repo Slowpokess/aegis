@@ -1,0 +1,454 @@
+[
+  {
+    "actual_experiment_ids": [
+      "f4a82203-cdc2-4e7b-bcef-55c1b9f7b719"
+    ],
+    "actual_finding_ids": [],
+    "actual_hypothesis_ids": [
+      "1061572f-1500-4685-b601-1dc95c91013a"
+    ],
+    "actual_verification_ids": [
+      "066f3ed2-b888-4188-8a33-10f1874f8afd"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "TN",
+    "created_at": "2026-08-22T02:35:34.548619Z",
+    "duration_ms": 528,
+    "expected_class": "normal_authorization",
+    "expected_verdict": "REJECTED",
+    "expected_vulnerability": false,
+    "failure_stage": "NONE",
+    "id": "963eddad-0a01-4eb5-b355-25d47b30914e",
+    "matched_finding_id": null,
+    "metrics": {
+      "evidence_records": 4,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 0,
+      "http_requests": 4,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 4,
+      "policy_approvals": 2,
+      "policy_rejections": 0,
+      "runtime_ms": 528,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.548560Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-001",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "b276128b-430e-42a2-8778-e9765a2931aa",
+    "scenario_id": "LAB-001",
+    "scenario_run_id": "bd52f069-4127-4891-a1fa-65a0f6ce5b91",
+    "selected_actual_verdict": "REJECTED"
+  },
+  {
+    "actual_experiment_ids": [
+      "8caaaf77-e04d-4d46-ab5a-65324b98e234"
+    ],
+    "actual_finding_ids": [
+      "d715e932-eb2e-4b7f-9490-fb7485ea60d3"
+    ],
+    "actual_hypothesis_ids": [
+      "a2c77343-70fb-463c-afb0-188f96e63336"
+    ],
+    "actual_verification_ids": [
+      "fe06ae40-08e5-40cd-81e0-9e8e2cfa2055"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "TP",
+    "created_at": "2026-08-22T02:35:34.555550Z",
+    "duration_ms": 279,
+    "expected_class": "broken_object_authorization",
+    "expected_verdict": "SUPPORTED",
+    "expected_vulnerability": true,
+    "failure_stage": "NONE",
+    "id": "23988078-9ab4-4c0f-b2e7-0c7ae3602143",
+    "matched_finding_id": "d715e932-eb2e-4b7f-9490-fb7485ea60d3",
+    "metrics": {
+      "evidence_records": 4,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 1,
+      "http_requests": 4,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 4,
+      "policy_approvals": 2,
+      "policy_rejections": 0,
+      "runtime_ms": 279,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.555504Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-002",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "5a729c27-0f52-4f5a-ae8f-5bbedd3e9d63",
+    "scenario_id": "LAB-002",
+    "scenario_run_id": "e867a72a-9b3a-4756-abeb-2a88fd44e6e1",
+    "selected_actual_verdict": "SUPPORTED"
+  },
+  {
+    "actual_experiment_ids": [
+      "624e82a6-5aa1-4f45-9f67-a56c71ecd729"
+    ],
+    "actual_finding_ids": [],
+    "actual_hypothesis_ids": [
+      "c1f40a6a-7664-4310-bf46-f911c5bf8c54"
+    ],
+    "actual_verification_ids": [
+      "86fee0df-ca46-4972-87b7-616c0edabd8f"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "TN",
+    "created_at": "2026-08-22T02:35:34.559415Z",
+    "duration_ms": 284,
+    "expected_class": "harmless_response_difference",
+    "expected_verdict": "REJECTED",
+    "expected_vulnerability": false,
+    "failure_stage": "NONE",
+    "id": "fd4ad6c7-6438-40bc-8742-5cd455d78814",
+    "matched_finding_id": null,
+    "metrics": {
+      "evidence_records": 4,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 0,
+      "http_requests": 4,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 4,
+      "policy_approvals": 2,
+      "policy_rejections": 0,
+      "runtime_ms": 284,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.559363Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-003",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "ce96d42e-0046-4e6b-a82b-590b3acf2de5",
+    "scenario_id": "LAB-003",
+    "scenario_run_id": "57e864bc-3e0b-4f61-b6d8-63df36b6603e",
+    "selected_actual_verdict": "REJECTED"
+  },
+  {
+    "actual_experiment_ids": [
+      "c981e76d-7c18-4582-a196-4f2ce058e0cd"
+    ],
+    "actual_finding_ids": [
+      "9e652a93-d81e-475b-a500-197bb5085128"
+    ],
+    "actual_hypothesis_ids": [
+      "67eec8ab-a4e3-495f-9619-05954865ecfd"
+    ],
+    "actual_verification_ids": [
+      "50c9f9e8-6358-4267-afae-324004055ce8"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "TP",
+    "created_at": "2026-08-22T02:35:34.562597Z",
+    "duration_ms": 274,
+    "expected_class": "information_disclosure",
+    "expected_verdict": "SUPPORTED",
+    "expected_vulnerability": true,
+    "failure_stage": "NONE",
+    "id": "bf0a9963-a97c-4770-b5ed-828359ff3db4",
+    "matched_finding_id": "9e652a93-d81e-475b-a500-197bb5085128",
+    "metrics": {
+      "evidence_records": 4,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 1,
+      "http_requests": 4,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 4,
+      "policy_approvals": 2,
+      "policy_rejections": 0,
+      "runtime_ms": 274,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.562551Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-004",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "ef37a8eb-107b-4d5e-869f-90a1103f2e42",
+    "scenario_id": "LAB-004",
+    "scenario_run_id": "cdd3aab6-ac85-439c-8e31-1591597afdfe",
+    "selected_actual_verdict": "SUPPORTED"
+  },
+  {
+    "actual_experiment_ids": [
+      "a040c97a-3ed6-49cf-91e2-b3ebb13fb014"
+    ],
+    "actual_finding_ids": [],
+    "actual_hypothesis_ids": [
+      "fe0f1661-3470-41e1-91d5-ff4f12017dd9"
+    ],
+    "actual_verification_ids": [
+      "0bfd6a7f-083f-44ad-b4c4-dfa5b2612c58"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "TN",
+    "created_at": "2026-08-22T02:35:34.565382Z",
+    "duration_ms": 247,
+    "expected_class": "false_positive_trap",
+    "expected_verdict": "REJECTED",
+    "expected_vulnerability": false,
+    "failure_stage": "NONE",
+    "id": "f08a71da-0635-4444-bd55-ea93601496a1",
+    "matched_finding_id": null,
+    "metrics": {
+      "evidence_records": 4,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 0,
+      "http_requests": 4,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 4,
+      "policy_approvals": 2,
+      "policy_rejections": 0,
+      "runtime_ms": 247,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.565340Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-005",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "0ac646ce-07e9-4a6b-9f54-20b5799e8f4e",
+    "scenario_id": "LAB-005",
+    "scenario_run_id": "5b7d360c-4a9e-4378-8472-3fec70fb3e2f",
+    "selected_actual_verdict": "REJECTED"
+  },
+  {
+    "actual_experiment_ids": [
+      "6a88c824-67ac-487c-a081-4fa3d64e08eb"
+    ],
+    "actual_finding_ids": [],
+    "actual_hypothesis_ids": [
+      "b4e338c8-5a26-4109-985b-443bcc68908f"
+    ],
+    "actual_verification_ids": [
+      "afc1b055-ae98-4144-abad-b675277b5470"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "CORRECT_INCONCLUSIVE",
+    "created_at": "2026-08-22T02:35:34.567746Z",
+    "duration_ms": 83,
+    "expected_class": "insufficient_evidence",
+    "expected_verdict": "INCONCLUSIVE",
+    "expected_vulnerability": null,
+    "failure_stage": "NONE",
+    "id": "05bb8ffc-7e04-4f24-9b11-648f6687378d",
+    "matched_finding_id": null,
+    "metrics": {
+      "evidence_records": 1,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 0,
+      "http_requests": 1,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 1,
+      "policy_approvals": 0,
+      "policy_rejections": 0,
+      "runtime_ms": 83,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.567703Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-006",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "80dc8347-52c1-4495-99c4-cf259c52b137",
+    "scenario_id": "LAB-006",
+    "scenario_run_id": "959430f8-08de-4d90-9007-4e3dbe87e429",
+    "selected_actual_verdict": "INCONCLUSIVE"
+  },
+  {
+    "actual_experiment_ids": [
+      "294aa14a-b4b8-4b2c-823a-ce438eff19ba"
+    ],
+    "actual_finding_ids": [],
+    "actual_hypothesis_ids": [
+      "93ac2961-c47d-4abe-8a22-a0e0ede19275"
+    ],
+    "actual_verification_ids": [
+      "7671bf3f-778a-42a1-982d-9d62d7a33e5a"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "TN",
+    "created_at": "2026-08-22T02:35:34.569932Z",
+    "duration_ms": 237,
+    "expected_class": "role_boundary",
+    "expected_verdict": "REJECTED",
+    "expected_vulnerability": false,
+    "failure_stage": "NONE",
+    "id": "faf0e5dc-39cd-4df9-83d5-9540e7fbd5ae",
+    "matched_finding_id": null,
+    "metrics": {
+      "evidence_records": 4,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 0,
+      "http_requests": 4,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 4,
+      "policy_approvals": 2,
+      "policy_rejections": 0,
+      "runtime_ms": 237,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.569892Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-007",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "cf4c1310-7f32-4478-9e53-042cfcdf1d38",
+    "scenario_id": "LAB-007",
+    "scenario_run_id": "982708aa-6055-4bd7-82be-609431636432",
+    "selected_actual_verdict": "REJECTED"
+  },
+  {
+    "actual_experiment_ids": [
+      "f5a19755-134d-47f6-a4ac-045c3c174b1e"
+    ],
+    "actual_finding_ids": [],
+    "actual_hypothesis_ids": [
+      "996ca2fc-ffc7-4215-a70e-345d3d2948ba"
+    ],
+    "actual_verification_ids": [
+      "4260c816-57ad-4427-819a-e18e1412416d"
+    ],
+    "benchmark_run_id": "06e0dc50-ca79-4907-b5a0-b6dbcca05db2",
+    "classification": "TN",
+    "created_at": "2026-08-22T02:35:34.572663Z",
+    "duration_ms": 249,
+    "expected_class": "redirect_status_ambiguity",
+    "expected_verdict": "REJECTED",
+    "expected_vulnerability": false,
+    "failure_stage": "NONE",
+    "id": "6b657abd-fc19-469c-95b9-7e7d40a0fa11",
+    "matched_finding_id": null,
+    "metrics": {
+      "evidence_records": 4,
+      "experiment_executions": 1,
+      "experiments_generated": 1,
+      "experiments_rejected": 0,
+      "experiments_validated": 1,
+      "findings": 0,
+      "http_requests": 4,
+      "hypotheses_accepted": 1,
+      "hypotheses_generated": 1,
+      "hypotheses_rejected": 0,
+      "llm_input_tokens": null,
+      "llm_latency_ms": 2,
+      "llm_output_tokens": null,
+      "llm_runs": 2,
+      "llm_total_tokens": null,
+      "observations": 4,
+      "policy_approvals": 2,
+      "policy_rejections": 0,
+      "runtime_ms": 249,
+      "verification_runs": 1
+    },
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-22T02:35:34.572622Z",
+      "collector": "aegis-evaluator",
+      "metadata": {},
+      "source_reference": "LAB-008",
+      "source_type": "evaluation"
+    },
+    "research_session_id": "9b4d8d87-4328-4a66-9ad8-79d2042f4455",
+    "scenario_id": "LAB-008",
+    "scenario_run_id": "d0d41ec3-2751-427c-af71-86c1ab4b186e",
+    "selected_actual_verdict": "REJECTED"
+  }
+]

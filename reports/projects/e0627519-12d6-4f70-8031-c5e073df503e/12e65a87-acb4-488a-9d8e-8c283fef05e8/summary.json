@@ -1,0 +1,1042 @@
+{
+  "actions": [
+    {
+      "action_type": "HTTP_OBSERVE",
+      "contract": {
+        "action_type": "HTTP_OBSERVE",
+        "action_version": "research-action-v1",
+        "capability": "HTTP_REQUEST",
+        "endpoint_entity_id": "0cb87253-ecef-4eb2-aa8a-8ab31e4122ba",
+        "expected_information": [
+          {
+            "field_selector": null,
+            "information": "STATUS_CODE"
+          },
+          {
+            "field_selector": null,
+            "information": "RESOURCE_ID"
+          },
+          {
+            "field_selector": null,
+            "information": "RESOURCE_OWNER"
+          }
+        ],
+        "follow_redirects": false,
+        "identity_entity_id": "483f3af3-511d-4202-9163-ea230046d0c5",
+        "max_response_bytes": 100000,
+        "method": "GET",
+        "path": "/api/orders/101",
+        "policy_decision": {
+          "allowed": true,
+          "decision_id": "DEC-3b652ea6-bc16-46f9-890f-c40164406b77",
+          "message": "action is within deterministic policy",
+          "policy_engine": "aegis-policy",
+          "policy_engine_version": "0.2.0",
+          "policy_sha256": "5efeeb4118b967a86143bedf2e40e1221d79297fdce6015ea2c91e9be05642c2",
+          "reason_code": "WITHIN_SCOPE"
+        },
+        "purpose": "OWNER_BASELINE",
+        "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+        "resource_entity_id": "699bdd63-3ab8-4ef6-9396-974ef4f79c87",
+        "timeout_ms": 5000
+      },
+      "controller_step_id": "f334dc16-2190-4beb-acb8-a499c17e8d0c",
+      "created_at": "2026-08-25T06:58:25.391230Z",
+      "discovery_plan_id": "99c28d89-6140-4f9d-92ba-e6153da2345a",
+      "evidence_ids": [
+        "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35"
+      ],
+      "experiment_execution_id": null,
+      "failure_reason": null,
+      "finished_at": "2026-08-25T06:58:25.705541Z",
+      "id": "1241d655-e90c-421a-88cb-b736979849af",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d"
+      ],
+      "proposal": {
+        "action_type": "HTTP_OBSERVE",
+        "action_version": "research-action-v1",
+        "depends_on": [],
+        "endpoint_entity_id": "0cb87253-ecef-4eb2-aa8a-8ab31e4122ba",
+        "expected_information": [
+          {
+            "field_selector": null,
+            "information": "STATUS_CODE"
+          },
+          {
+            "field_selector": null,
+            "information": "RESOURCE_ID"
+          },
+          {
+            "field_selector": null,
+            "information": "RESOURCE_OWNER"
+          }
+        ],
+        "identity_entity_id": "483f3af3-511d-4202-9163-ea230046d0c5",
+        "method": "GET",
+        "priority": "HIGH",
+        "purpose": "OWNER_BASELINE",
+        "rationale": "Acquire the missing owner baseline at the exact candidate endpoint.",
+        "repeat_reason": null,
+        "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+        "resource_entity_id": "699bdd63-3ab8-4ef6-9396-974ef4f79c87",
+        "subject_entity_id": "483f3af3-511d-4202-9163-ea230046d0c5",
+        "supporting_gap_ids": [
+          "7050ce34-1161-4daf-a2c1-fffaaa73c385"
+        ],
+        "supporting_hypothesis_ids": [],
+        "supporting_observation_ids": [],
+        "supporting_question_ids": [
+          "93e947b6-bef1-4e0c-b6a0-9badd405d1a8"
+        ],
+        "supporting_signal_ids": [
+          "1e51f011-92f1-4112-86d6-ba09e06f134a"
+        ],
+        "target_entity_id": "0cb87253-ecef-4eb2-aa8a-8ab31e4122ba"
+      },
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:25.391020Z",
+        "collector": "closed-loop-controller-v1",
+        "metadata": {},
+        "source_reference": "3df12b0c4e0434ebe6ba7328c658aa95fc6c23600551c601ccd9153dcc7a1138",
+        "source_type": "research_action"
+      },
+      "purpose": "OWNER_BASELINE",
+      "research_intent_id": "f033217e-d56f-4273-b2e9-e58a4c711301",
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "satisfaction": "SATISFIED",
+      "semantic_hash": "4e2f99de05fb3c19fad296e069be27d5b49f8afc89cec49f71b21240aabf4eaa",
+      "status": "SATISFIED",
+      "tool_run_ids": [
+        "7f5815f0-c444-4099-9178-e6d7a4e95062"
+      ],
+      "validation_reason": "VALIDATED",
+      "verification_result_ids": []
+    }
+  ],
+  "assets": [
+    {
+      "asset_type": "APPLICATION",
+      "canonical_identifier": "application:http://127.0.0.1:8001",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:24.854495Z",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35"
+      ],
+      "first_seen": "2026-08-25T06:58:24.815293Z",
+      "id": "558c2d22-2075-4cbf-94ef-61a00c3396f5",
+      "last_seen": "2026-08-25T06:58:25.690742Z",
+      "metadata": {
+        "base_url": "http://127.0.0.1:8001"
+      },
+      "name": "phase13-conservative",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d",
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "parent_asset_id": "45032463-03ab-49b1-abae-20cf47a8f57c",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.854424Z",
+        "collector": "aegis-system-model-builder",
+        "metadata": {
+          "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf"
+        },
+        "source_reference": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+        "source_type": "http"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "source_type": "http",
+      "updated_at": "2026-08-25T06:58:25.744285Z"
+    },
+    {
+      "asset_type": "HOST",
+      "canonical_identifier": "host:127.0.0.1",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:24.851838Z",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35"
+      ],
+      "first_seen": "2026-08-25T06:58:24.815293Z",
+      "id": "45032463-03ab-49b1-abae-20cf47a8f57c",
+      "last_seen": "2026-08-25T06:58:25.690742Z",
+      "metadata": {
+        "host": "127.0.0.1"
+      },
+      "name": "127.0.0.1",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d",
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "parent_asset_id": null,
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.851761Z",
+        "collector": "aegis-system-model-builder",
+        "metadata": {
+          "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf"
+        },
+        "source_reference": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+        "source_type": "http"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "source_type": "http",
+      "updated_at": "2026-08-25T06:58:25.740691Z"
+    }
+  ],
+  "budget": {
+    "allowed_capabilities": [],
+    "consumed_actions": 1,
+    "consumed_duration_seconds": 0.0,
+    "consumed_llm_calls": 0,
+    "consumed_requests": 1,
+    "consumed_steps": 3,
+    "consumed_tool_runs": 1,
+    "controller_status": "COMPLETED",
+    "created_at": "2026-08-25T06:58:24.715372Z",
+    "id": "1a2a2268-77f4-4e26-b87b-755db2d082d6",
+    "max_actions": 5,
+    "max_duration_seconds": 120.0,
+    "max_llm_calls": 0,
+    "max_requests": 5,
+    "max_steps": 5,
+    "max_tool_runs": 5,
+    "pause_requested": false,
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:24.715309Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "project-budget:e0627519-12d6-4f70-8031-c5e073df503e:12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "source_type": "operator"
+    },
+    "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+    "stop_reason": "no important open evidence gap remains",
+    "updated_at": "2026-08-25T06:58:26.387423Z"
+  },
+  "candidate_signals": [
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:25.088802Z",
+      "details": {
+        "accessor": "identity:bob",
+        "endpoint": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+        "label": "candidate connectivity signal; not a finding",
+        "owner": "identity:alice",
+        "resource": "data:order:101"
+      },
+      "endpoint_entity_id": "0cb87253-ecef-4eb2-aa8a-8ab31e4122ba",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf"
+      ],
+      "graph_id": "03fe5151-e06f-47b2-aa57-a86e52760808",
+      "id": "1e51f011-92f1-4112-86d6-ba09e06f134a",
+      "observation_ids": [
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:25.088760Z",
+        "collector": "attack-graph-v1",
+        "metadata": {},
+        "source_reference": "d38ce3c3a3413fc1e6a749f48f54be13914c175944de0f7dd12f81c5556a1db5",
+        "source_type": "system_model"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "resource_entity_id": "699bdd63-3ab8-4ef6-9396-974ef4f79c87",
+      "semantic_key": "cross-identity:identity:bob:identity:alice:data:order:101:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "signal_type": "CROSS_IDENTITY_RESOURCE_ACCESS",
+      "subject_entity_id": "6e2084d8-b6b0-4c6c-a4cb-950f380fcef8",
+      "system_relationship_ids": [
+        "154f2f7a-ce0d-4989-a571-238240e339d8",
+        "64d3a9b8-2b19-485c-8467-f605b9362834",
+        "a6367178-c2f5-4390-9c47-3dbd9446e68d"
+      ],
+      "target_entity_id": "483f3af3-511d-4202-9163-ea230046d0c5"
+    },
+    {
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:25.921555Z",
+      "details": {
+        "accessor": "identity:bob",
+        "endpoint": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+        "label": "candidate connectivity signal; not a finding",
+        "owner": "identity:alice",
+        "resource": "data:order:101"
+      },
+      "endpoint_entity_id": "0cb87253-ecef-4eb2-aa8a-8ab31e4122ba",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35"
+      ],
+      "graph_id": "3b604409-cb01-4fd4-a47a-92c8970b92e7",
+      "id": "3b4f0a05-c928-407f-a9d9-90b71212ba4e",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d",
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:25.921514Z",
+        "collector": "attack-graph-v1",
+        "metadata": {},
+        "source_reference": "407fd610be5e91d3e871f4562bbe04b72193ec5a2d7a0a62a73109414d64910e",
+        "source_type": "system_model"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "resource_entity_id": "699bdd63-3ab8-4ef6-9396-974ef4f79c87",
+      "semantic_key": "cross-identity:identity:bob:identity:alice:data:order:101:endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "signal_type": "CROSS_IDENTITY_RESOURCE_ACCESS",
+      "subject_entity_id": "6e2084d8-b6b0-4c6c-a4cb-950f380fcef8",
+      "system_relationship_ids": [
+        "154f2f7a-ce0d-4989-a571-238240e339d8",
+        "64d3a9b8-2b19-485c-8467-f605b9362834",
+        "a6367178-c2f5-4390-9c47-3dbd9446e68d"
+      ],
+      "target_entity_id": "483f3af3-511d-4202-9163-ea230046d0c5"
+    }
+  ],
+  "deterministic_core_hash": "968575782ccb03f67695024a6756825d221c096c4859609aaf8cedeef61a2810",
+  "endpoints": [
+    {
+      "authentication_observed": true,
+      "canonical_identifier": "endpoint:GET:http://127.0.0.1:8001/api/orders/101",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:24.872639Z",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35"
+      ],
+      "first_seen": "2026-08-25T06:58:24.815293Z",
+      "host": "127.0.0.1",
+      "id": "0cb87253-ecef-4eb2-aa8a-8ab31e4122ba",
+      "last_seen": "2026-08-25T06:58:25.690742Z",
+      "method": "GET",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d",
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "path": "/api/orders/101",
+      "port": 8001,
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.872543Z",
+        "collector": "aegis-system-model-builder",
+        "metadata": {
+          "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf"
+        },
+        "source_reference": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+        "source_type": "http"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "scheme": "http",
+      "service_id": "47a1a122-f15c-4dad-a6b5-4dd7c398a11d",
+      "source_type": "http",
+      "updated_at": "2026-08-25T06:58:25.752774Z"
+    }
+  ],
+  "evidence_index": [
+    {
+      "body_bytes": 78,
+      "id": "0455bce2-c7c1-4bab-8edb-776758751daf",
+      "integrity_hash": "2b609b182387d0238f3547b7526aff54e84589db8ca01eab02333aec7c157ca1",
+      "method": "GET",
+      "observation_ids": [
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "path": "/api/orders/101",
+      "status_code": 200,
+      "truncated": false
+    },
+    {
+      "body_bytes": 78,
+      "id": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+      "integrity_hash": "3d367df6eb3a57005e148652337543f81c66d8dc0e902dcb7ff78bbe018f1c13",
+      "method": "GET",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d"
+      ],
+      "path": "/api/orders/101",
+      "status_code": 200,
+      "truncated": false
+    }
+  ],
+  "executive_summary": {
+    "assets_discovered": 2,
+    "inconclusive_items": 0,
+    "open_evidence_gaps": 0,
+    "requests": 1,
+    "research_status": "COMPLETED",
+    "tool_runs": 1,
+    "verified_findings": 0
+  },
+  "experiments": [],
+  "findings": [],
+  "hashes": {
+    "graph": "407fd610be5e91d3e871f4562bbe04b72193ec5a2d7a0a62a73109414d64910e",
+    "knowledge": "3c19579b098513c3d8c762afc44119358a5ecfd8c2c5bf842bfe438e28d96df0",
+    "model": "74f7f2e9f41d711662d6c4daabd10c5cca060d2b79d252d6159f8588cde8c1c6",
+    "scope": "0d95cf714163697c3d68919d29ab64336a0f8b296b97ff2dd858ef2406d694d6"
+  },
+  "hypotheses": [],
+  "identities": [
+    {
+      "canonical_identifier": "identity:alice",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:24.955544Z",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35"
+      ],
+      "first_seen": "2026-08-25T06:58:24.815293Z",
+      "id": "483f3af3-511d-4202-9163-ea230046d0c5",
+      "identity_type": "USER",
+      "last_seen": "2026-08-25T06:58:25.690742Z",
+      "name": "alice",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d",
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.955488Z",
+        "collector": "aegis-system-model-builder",
+        "metadata": {
+          "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf"
+        },
+        "source_reference": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+        "source_type": "http"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "role_id": "96d237c4-3e6d-4f38-8632-e6d8fb8b223e",
+      "source_type": "http",
+      "updated_at": "2026-08-25T06:58:25.825837Z"
+    },
+    {
+      "canonical_identifier": "identity:bob",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:24.904879Z",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf"
+      ],
+      "first_seen": "2026-08-25T06:58:24.815293Z",
+      "id": "6e2084d8-b6b0-4c6c-a4cb-950f380fcef8",
+      "identity_type": "USER",
+      "last_seen": "2026-08-25T06:58:24.815293Z",
+      "name": "bob",
+      "observation_ids": [
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.904799Z",
+        "collector": "aegis-system-model-builder",
+        "metadata": {
+          "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf"
+        },
+        "source_reference": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+        "source_type": "http"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "role_id": "96d237c4-3e6d-4f38-8632-e6d8fb8b223e",
+      "source_type": "http",
+      "updated_at": "2026-08-25T06:58:24.904882Z"
+    }
+  ],
+  "identity_access_observations": [
+    {
+      "asset_id": "c49a0018-c136-464f-ba46-604101a753d0",
+      "evidence_id": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+      "id": "091842ab-8c8e-44d8-8526-24542225287d",
+      "normalized_data": {
+        "body_length": 78,
+        "content_type": "application/json",
+        "is_json": true,
+        "json_top_level_type": "object",
+        "redirect_location": null,
+        "response_hash": "3d367df6eb3a57005e148652337543f81c66d8dc0e902dcb7ff78bbe018f1c13",
+        "server": "uvicorn",
+        "status_code": 200,
+        "truncated": false
+      },
+      "normalized_data_trust": "TRUSTED",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:25.690678Z",
+        "collector": "aegis-python-normalizer",
+        "metadata": {
+          "evidence_id": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+          "evidence_sha256": "3d367df6eb3a57005e148652337543f81c66d8dc0e902dcb7ff78bbe018f1c13",
+          "executor": "aegis-executor",
+          "executor_version": "0.2.0",
+          "identity": {
+            "name": "alice",
+            "roles": [
+              "user"
+            ]
+          },
+          "protocol_version": 1,
+          "request_id": "REQ-5e52b568-1add-48e1-9472-494d4bd3f9c6",
+          "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8"
+        },
+        "source_reference": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+        "source_type": "http"
+      },
+      "raw_data": {
+        "body_base64": "eyJpZCI6MTAxLCJvd25lciI6ImFsaWNlIiwiaXRlbSI6InN5bnRoZXRpYy1ib29rIiwiYW1vdW50IjoyNSwic3RhdHVzIjoicGFpZCJ9",
+        "body_bytes": 78,
+        "headers": {
+          "content-length": "78",
+          "content-type": "application/json",
+          "date": "Tue, 25 Aug 2026 06:58:25 GMT",
+          "server": "uvicorn"
+        },
+        "status_code": 200,
+        "truncated": false
+      },
+      "request_id": "REQ-5e52b568-1add-48e1-9472-494d4bd3f9c6",
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "source": "HTTP",
+      "timestamp": "2026-08-25T06:58:25.690742Z",
+      "tool_artifact_id": null,
+      "trust": "UNTRUSTED"
+    },
+    {
+      "asset_id": "c49a0018-c136-464f-ba46-604101a753d0",
+      "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf",
+      "id": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+      "normalized_data": {
+        "body_length": 78,
+        "content_type": "application/json",
+        "is_json": true,
+        "json_top_level_type": "object",
+        "redirect_location": null,
+        "response_hash": "2b609b182387d0238f3547b7526aff54e84589db8ca01eab02333aec7c157ca1",
+        "server": "uvicorn",
+        "status_code": 200,
+        "truncated": false
+      },
+      "normalized_data_trust": "TRUSTED",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.815232Z",
+        "collector": "aegis-python-normalizer",
+        "metadata": {
+          "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf",
+          "evidence_sha256": "2b609b182387d0238f3547b7526aff54e84589db8ca01eab02333aec7c157ca1",
+          "executor": "aegis-executor",
+          "executor_version": "0.2.0",
+          "identity": {
+            "name": "bob",
+            "roles": [
+              "user"
+            ]
+          },
+          "protocol_version": 1,
+          "request_id": "REQ-3f09b175-62ad-4a88-beef-177d73f2c419",
+          "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8"
+        },
+        "source_reference": "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "source_type": "http"
+      },
+      "raw_data": {
+        "body_base64": "eyJpZCI6MTAxLCJvd25lciI6ImFsaWNlIiwiaXRlbSI6InN5bnRoZXRpYy1ib29rIiwiYW1vdW50IjoyNSwic3RhdHVzIjoicGFpZCJ9",
+        "body_bytes": 78,
+        "headers": {
+          "content-length": "78",
+          "content-type": "application/json",
+          "date": "Tue, 25 Aug 2026 06:58:24 GMT",
+          "server": "uvicorn"
+        },
+        "status_code": 200,
+        "truncated": false
+      },
+      "request_id": "REQ-3f09b175-62ad-4a88-beef-177d73f2c419",
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "source": "HTTP",
+      "timestamp": "2026-08-25T06:58:24.815293Z",
+      "tool_artifact_id": null,
+      "trust": "UNTRUSTED"
+    }
+  ],
+  "inconclusive_items": [],
+  "limitations": [
+    "Local/development operator control plane; no production multi-user authentication.",
+    "Raw evidence bodies are excluded from reports by default."
+  ],
+  "methodology": {
+    "fact_authority": "Evidence and deterministic verification",
+    "llm_authority": "Research proposals only",
+    "summary": "Typed actions, deterministic policy, evidence acquisition, model/graph projection, and verification."
+  },
+  "open_evidence_gaps": [],
+  "project": {
+    "description": null,
+    "id": "e0627519-12d6-4f70-8031-c5e073df503e",
+    "model_configuration": {
+      "max_completion_tokens": 4096,
+      "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "provider": "fake"
+    },
+    "name": "phase13-conservative",
+    "status": "COMPLETED"
+  },
+  "report_version": "aegis-report-v1",
+  "research_policy": {
+    "approval_mode": "APPROVE_EVERY_ACTION",
+    "experimental_mode": false,
+    "profile": "CONSERVATIVE",
+    "settings": {
+      "allow_action_repetition": false,
+      "allow_closed_gap_revisit": false,
+      "allow_off_gap_exploration": false,
+      "max_exploratory_actions": 0,
+      "max_repeated_semantic_action_count": 1,
+      "min_information_gain": 40,
+      "prefer_reproduction": false,
+      "stop_on_no_open_gaps": true
+    }
+  },
+  "scope": {
+    "hosts": [
+      "127.0.0.1"
+    ],
+    "id": "7ea1c4b0-777c-44ea-b17c-9d443f470eea",
+    "ports": [
+      8001
+    ],
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:24.686910Z",
+      "collector": "operator-api-v1",
+      "metadata": {},
+      "source_reference": "phase13-demo:CONSERVATIVE",
+      "source_type": "operator"
+    },
+    "schemes": [
+      "http"
+    ]
+  },
+  "services": [
+    {
+      "asset_id": "558c2d22-2075-4cbf-94ef-61a00c3396f5",
+      "canonical_identifier": "service:http://127.0.0.1:8001",
+      "classification": "OBSERVED",
+      "confidence": 1.0,
+      "created_at": "2026-08-25T06:58:24.859010Z",
+      "evidence_ids": [
+        "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35"
+      ],
+      "first_seen": "2026-08-25T06:58:24.815293Z",
+      "id": "47a1a122-f15c-4dad-a6b5-4dd7c398a11d",
+      "last_seen": "2026-08-25T06:58:25.690742Z",
+      "observation_ids": [
+        "091842ab-8c8e-44d8-8526-24542225287d",
+        "d15ea97b-b4c4-4654-b242-7c740e1606fe"
+      ],
+      "observed_state": "RESPONDED",
+      "port": 8001,
+      "protocol": "HTTP",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.858890Z",
+        "collector": "aegis-system-model-builder",
+        "metadata": {
+          "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf"
+        },
+        "source_reference": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+        "source_type": "http"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "service_type": "HTTP",
+      "source_type": "http",
+      "updated_at": "2026-08-25T06:58:25.749589Z"
+    }
+  ],
+  "session": {
+    "id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+    "scope_revision": 1,
+    "status": "RUNNING"
+  },
+  "timeline": [
+    {
+      "created_at": "2026-08-25T06:58:24.722856Z",
+      "entity_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "entity_type": "ResearchSession",
+      "event_type": "SESSION_STARTED",
+      "event_version": "research-event-v1",
+      "id": "d6d94dd2-8d2e-4199-9ebc-06446b6082a3",
+      "idempotency_key": "SESSION_STARTED:ResearchSession:12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "message": "Research session started",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:24.722800Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "SESSION_STARTED:ResearchSession:12e65a87-acb4-488a-9d8e-8c283fef05e8",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 1,
+      "severity": "INFO",
+      "structured_data": {
+        "scope_revision": 1
+      }
+    },
+    {
+      "created_at": "2026-08-25T06:58:25.726208Z",
+      "entity_id": "1241d655-e90c-421a-88cb-b736979849af",
+      "entity_type": "ResearchAction",
+      "event_type": "ACTION_APPROVED",
+      "event_version": "research-event-v1",
+      "id": "e1dd7a76-f00e-4992-91db-31c83800ed7d",
+      "idempotency_key": "ACTION_APPROVED:ResearchAction:1241d655-e90c-421a-88cb-b736979849af",
+      "message": "Operator approved policy-previewed action",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:25.726090Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "ACTION_APPROVED:ResearchAction:1241d655-e90c-421a-88cb-b736979849af",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 2,
+      "severity": "INFO",
+      "structured_data": {}
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.183567Z",
+      "entity_id": "1a2a2268-77f4-4e26-b87b-755db2d082d6",
+      "entity_type": "ResearchBudget",
+      "event_type": "CONTROLLER_PAUSED",
+      "event_version": "research-event-v1",
+      "id": "7f81711f-9928-494e-a929-a00028f06776",
+      "idempotency_key": "controller-paused:1a2a2268-77f4-4e26-b87b-755db2d082d6:2026-08-25T06:58:26.162767+00:00",
+      "message": "Controller paused at a safe boundary",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.183486Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "controller-paused:1a2a2268-77f4-4e26-b87b-755db2d082d6:2026-08-25T06:58:26.162767+00:00",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 3,
+      "severity": "INFO",
+      "structured_data": {}
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.207936Z",
+      "entity_id": "1a2a2268-77f4-4e26-b87b-755db2d082d6",
+      "entity_type": "ResearchBudget",
+      "event_type": "CONTROLLER_RESUMED",
+      "event_version": "research-event-v1",
+      "id": "66a4170c-d20b-4eaa-b388-0ef0681bbf39",
+      "idempotency_key": "controller-resumed:1a2a2268-77f4-4e26-b87b-755db2d082d6:2026-08-25T06:58:26.195235+00:00",
+      "message": "Controller resumed with persisted budget",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.207886Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "controller-resumed:1a2a2268-77f4-4e26-b87b-755db2d082d6:2026-08-25T06:58:26.195235+00:00",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 4,
+      "severity": "INFO",
+      "structured_data": {}
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.416474Z",
+      "entity_id": "091842ab-8c8e-44d8-8526-24542225287d",
+      "entity_type": "Observation",
+      "event_type": "OBSERVATION_CREATED",
+      "event_version": "research-event-v1",
+      "id": "1557259e-4ffa-49ab-b1f7-7f6c0d55132c",
+      "idempotency_key": "OBSERVATION_CREATED:Observation:091842ab-8c8e-44d8-8526-24542225287d",
+      "message": "Observation persisted",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.416409Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "OBSERVATION_CREATED:Observation:091842ab-8c8e-44d8-8526-24542225287d",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 5,
+      "severity": "INFO",
+      "structured_data": {}
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.421128Z",
+      "entity_id": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+      "entity_type": "Observation",
+      "event_type": "OBSERVATION_CREATED",
+      "event_version": "research-event-v1",
+      "id": "b4cf785c-ef79-444c-af58-ec20246e373d",
+      "idempotency_key": "OBSERVATION_CREATED:Observation:d15ea97b-b4c4-4654-b242-7c740e1606fe",
+      "message": "Observation persisted",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.421071Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "OBSERVATION_CREATED:Observation:d15ea97b-b4c4-4654-b242-7c740e1606fe",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 6,
+      "severity": "INFO",
+      "structured_data": {}
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.425667Z",
+      "entity_id": "0455bce2-c7c1-4bab-8edb-776758751daf",
+      "entity_type": "Evidence",
+      "event_type": "EVIDENCE_CREATED",
+      "event_version": "research-event-v1",
+      "id": "bbfbded1-7cfb-4155-82b1-c6f570f8e996",
+      "idempotency_key": "EVIDENCE_CREATED:Evidence:0455bce2-c7c1-4bab-8edb-776758751daf",
+      "message": "Evidence persisted",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.425596Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "EVIDENCE_CREATED:Evidence:0455bce2-c7c1-4bab-8edb-776758751daf",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 7,
+      "severity": "INFO",
+      "structured_data": {}
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.441336Z",
+      "entity_id": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+      "entity_type": "Evidence",
+      "event_type": "EVIDENCE_CREATED",
+      "event_version": "research-event-v1",
+      "id": "6b5a48af-6457-4d1e-b52b-3cf08b8f8de7",
+      "idempotency_key": "EVIDENCE_CREATED:Evidence:14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+      "message": "Evidence persisted",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.441270Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "EVIDENCE_CREATED:Evidence:14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 8,
+      "severity": "INFO",
+      "structured_data": {}
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.449165Z",
+      "entity_id": "7050ce34-1161-4daf-a2c1-fffaaa73c385",
+      "entity_type": "EvidenceGap",
+      "event_type": "GAP_RESOLVED",
+      "event_version": "research-event-v1",
+      "id": "597602c1-ee7c-4ce4-a3fa-b093eaef476f",
+      "idempotency_key": "gap:7050ce34-1161-4daf-a2c1-fffaaa73c385:RESOLVED",
+      "message": "Evidence gap resolved",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.449113Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "gap:7050ce34-1161-4daf-a2c1-fffaaa73c385:RESOLVED",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 9,
+      "severity": "INFO",
+      "structured_data": {
+        "gap_type": "MISSING_BASELINE",
+        "status": "RESOLVED"
+      }
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.454771Z",
+      "entity_id": "1241d655-e90c-421a-88cb-b736979849af",
+      "entity_type": "ResearchAction",
+      "event_type": "ACTION_PROPOSED",
+      "event_version": "research-event-v1",
+      "id": "73d8139b-1c09-479b-a84e-13f39ebd2fc5",
+      "idempotency_key": "action:1241d655-e90c-421a-88cb-b736979849af:SATISFIED",
+      "message": "Action HTTP_OBSERVE: SATISFIED",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.454618Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "action:1241d655-e90c-421a-88cb-b736979849af:SATISFIED",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 10,
+      "severity": "INFO",
+      "structured_data": {
+        "status": "SATISFIED",
+        "validation": "VALIDATED"
+      }
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.467973Z",
+      "entity_id": "7f5815f0-c444-4099-9178-e6d7a4e95062",
+      "entity_type": "ToolRun",
+      "event_type": "TOOL_COMPLETED",
+      "event_version": "research-event-v1",
+      "id": "5a607368-f196-4260-9160-68a67ff44ba1",
+      "idempotency_key": "tool:7f5815f0-c444-4099-9178-e6d7a4e95062:COMPLETED",
+      "message": "Tool http: COMPLETED",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.467801Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "tool:7f5815f0-c444-4099-9178-e6d7a4e95062:COMPLETED",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 11,
+      "severity": "INFO",
+      "structured_data": {
+        "profile": "entity_observe",
+        "status": "COMPLETED",
+        "tool": "http"
+      }
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.475455Z",
+      "entity_id": "02f15556-d3c5-4333-aa94-5d2d06f2c2c1",
+      "entity_type": "SystemModelBuild",
+      "event_type": "MODEL_REBUILT",
+      "event_version": "research-event-v1",
+      "id": "4cc5be91-ba1e-4e6b-996e-0d480ecb76b0",
+      "idempotency_key": "model:02f15556-d3c5-4333-aa94-5d2d06f2c2c1:c892688443870c498d1db9e045383bf86e1620de73ac5ec177a6cea4b1489958",
+      "message": "System Model rebuilt",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.475406Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "model:02f15556-d3c5-4333-aa94-5d2d06f2c2c1:c892688443870c498d1db9e045383bf86e1620de73ac5ec177a6cea4b1489958",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 12,
+      "severity": "INFO",
+      "structured_data": {
+        "model_hash": "c892688443870c498d1db9e045383bf86e1620de73ac5ec177a6cea4b1489958"
+      }
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.481409Z",
+      "entity_id": "5e0ccdd2-9a63-4df6-afd0-dddca1577100",
+      "entity_type": "SystemModelBuild",
+      "event_type": "MODEL_REBUILT",
+      "event_version": "research-event-v1",
+      "id": "a26a4b21-6fa2-4243-a546-f9eeb91acddc",
+      "idempotency_key": "model:5e0ccdd2-9a63-4df6-afd0-dddca1577100:74f7f2e9f41d711662d6c4daabd10c5cca060d2b79d252d6159f8588cde8c1c6",
+      "message": "System Model rebuilt",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.481343Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "model:5e0ccdd2-9a63-4df6-afd0-dddca1577100:74f7f2e9f41d711662d6c4daabd10c5cca060d2b79d252d6159f8588cde8c1c6",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 13,
+      "severity": "INFO",
+      "structured_data": {
+        "model_hash": "74f7f2e9f41d711662d6c4daabd10c5cca060d2b79d252d6159f8588cde8c1c6"
+      }
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.485355Z",
+      "entity_id": "03fe5151-e06f-47b2-aa57-a86e52760808",
+      "entity_type": "AttackGraphSnapshot",
+      "event_type": "GRAPH_REBUILT",
+      "event_version": "research-event-v1",
+      "id": "ac4ac1c4-cecf-4ce2-bdae-22939357b949",
+      "idempotency_key": "graph:03fe5151-e06f-47b2-aa57-a86e52760808:STALE",
+      "message": "Attack Graph snapshot persisted",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.485308Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "graph:03fe5151-e06f-47b2-aa57-a86e52760808:STALE",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 14,
+      "severity": "INFO",
+      "structured_data": {
+        "graph_hash": "d38ce3c3a3413fc1e6a749f48f54be13914c175944de0f7dd12f81c5556a1db5",
+        "status": "STALE"
+      }
+    },
+    {
+      "created_at": "2026-08-25T06:58:26.489594Z",
+      "entity_id": "3b604409-cb01-4fd4-a47a-92c8970b92e7",
+      "entity_type": "AttackGraphSnapshot",
+      "event_type": "GRAPH_REBUILT",
+      "event_version": "research-event-v1",
+      "id": "30f1e8fc-c0d7-43c8-9a22-d69fef9a4b11",
+      "idempotency_key": "graph:3b604409-cb01-4fd4-a47a-92c8970b92e7:CURRENT",
+      "message": "Attack Graph snapshot persisted",
+      "project_id": "e0627519-12d6-4f70-8031-c5e073df503e",
+      "provenance": {
+        "classification": "OBSERVED",
+        "collected_at": "2026-08-25T06:58:26.489537Z",
+        "collector": "operator-api-v1",
+        "metadata": {},
+        "source_reference": "graph:3b604409-cb01-4fd4-a47a-92c8970b92e7:CURRENT",
+        "source_type": "operator"
+      },
+      "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+      "sequence_number": 15,
+      "severity": "INFO",
+      "structured_data": {
+        "graph_hash": "407fd610be5e91d3e871f4562bbe04b72193ec5a2d7a0a62a73109414d64910e",
+        "status": "CURRENT"
+      }
+    }
+  ],
+  "verification_results": []
+}

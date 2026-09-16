@@ -1,0 +1,14 @@
+[
+  {
+    "body_bytes": 22,
+    "id": "79ee6581-42df-4b7f-a1eb-0df7077512dd",
+    "integrity_hash": "95aecbd9d83f3e94a12a465a1101c992758f32cdd08676929c11ec77b618f0e3",
+    "method": "GET",
+    "observation_ids": [
+      "f507ad31-c182-4e68-89dc-c6ac2aa3d0bf"
+    ],
+    "path": "/admin",
+    "status_code": 404,
+    "truncated": false
+  }
+]

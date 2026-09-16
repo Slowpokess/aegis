@@ -1,0 +1,116 @@
+[
+  {
+    "asset_id": "c49a0018-c136-464f-ba46-604101a753d0",
+    "evidence_id": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+    "id": "091842ab-8c8e-44d8-8526-24542225287d",
+    "normalized_data": {
+      "body_length": 78,
+      "content_type": "application/json",
+      "is_json": true,
+      "json_top_level_type": "object",
+      "redirect_location": null,
+      "response_hash": "3d367df6eb3a57005e148652337543f81c66d8dc0e902dcb7ff78bbe018f1c13",
+      "server": "uvicorn",
+      "status_code": 200,
+      "truncated": false
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:25.690678Z",
+      "collector": "aegis-python-normalizer",
+      "metadata": {
+        "evidence_id": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+        "evidence_sha256": "3d367df6eb3a57005e148652337543f81c66d8dc0e902dcb7ff78bbe018f1c13",
+        "executor": "aegis-executor",
+        "executor_version": "0.2.0",
+        "identity": {
+          "name": "alice",
+          "roles": [
+            "user"
+          ]
+        },
+        "protocol_version": 1,
+        "request_id": "REQ-5e52b568-1add-48e1-9472-494d4bd3f9c6",
+        "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8"
+      },
+      "source_reference": "14c4dc9b-7219-47ee-9c8d-dedfdfb61b35",
+      "source_type": "http"
+    },
+    "raw_data": {
+      "body_base64": "eyJpZCI6MTAxLCJvd25lciI6ImFsaWNlIiwiaXRlbSI6InN5bnRoZXRpYy1ib29rIiwiYW1vdW50IjoyNSwic3RhdHVzIjoicGFpZCJ9",
+      "body_bytes": 78,
+      "headers": {
+        "content-length": "78",
+        "content-type": "application/json",
+        "date": "Tue, 25 Aug 2026 06:58:25 GMT",
+        "server": "uvicorn"
+      },
+      "status_code": 200,
+      "truncated": false
+    },
+    "request_id": "REQ-5e52b568-1add-48e1-9472-494d4bd3f9c6",
+    "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+    "source": "HTTP",
+    "timestamp": "2026-08-25T06:58:25.690742Z",
+    "tool_artifact_id": null,
+    "trust": "UNTRUSTED"
+  },
+  {
+    "asset_id": "c49a0018-c136-464f-ba46-604101a753d0",
+    "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf",
+    "id": "d15ea97b-b4c4-4654-b242-7c740e1606fe",
+    "normalized_data": {
+      "body_length": 78,
+      "content_type": "application/json",
+      "is_json": true,
+      "json_top_level_type": "object",
+      "redirect_location": null,
+      "response_hash": "2b609b182387d0238f3547b7526aff54e84589db8ca01eab02333aec7c157ca1",
+      "server": "uvicorn",
+      "status_code": 200,
+      "truncated": false
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-25T06:58:24.815232Z",
+      "collector": "aegis-python-normalizer",
+      "metadata": {
+        "evidence_id": "0455bce2-c7c1-4bab-8edb-776758751daf",
+        "evidence_sha256": "2b609b182387d0238f3547b7526aff54e84589db8ca01eab02333aec7c157ca1",
+        "executor": "aegis-executor",
+        "executor_version": "0.2.0",
+        "identity": {
+          "name": "bob",
+          "roles": [
+            "user"
+          ]
+        },
+        "protocol_version": 1,
+        "request_id": "REQ-3f09b175-62ad-4a88-beef-177d73f2c419",
+        "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8"
+      },
+      "source_reference": "0455bce2-c7c1-4bab-8edb-776758751daf",
+      "source_type": "http"
+    },
+    "raw_data": {
+      "body_base64": "eyJpZCI6MTAxLCJvd25lciI6ImFsaWNlIiwiaXRlbSI6InN5bnRoZXRpYy1ib29rIiwiYW1vdW50IjoyNSwic3RhdHVzIjoicGFpZCJ9",
+      "body_bytes": 78,
+      "headers": {
+        "content-length": "78",
+        "content-type": "application/json",
+        "date": "Tue, 25 Aug 2026 06:58:24 GMT",
+        "server": "uvicorn"
+      },
+      "status_code": 200,
+      "truncated": false
+    },
+    "request_id": "REQ-3f09b175-62ad-4a88-beef-177d73f2c419",
+    "research_session_id": "12e65a87-acb4-488a-9d8e-8c283fef05e8",
+    "source": "HTTP",
+    "timestamp": "2026-08-25T06:58:24.815293Z",
+    "tool_artifact_id": null,
+    "trust": "UNTRUSTED"
+  }
+]

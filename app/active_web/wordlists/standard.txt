@@ -1,0 +1,8 @@
+admin
+hidden
+login
+api
+health
+robots.txt
+static
+uploads

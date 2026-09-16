@@ -1,0 +1,343 @@
+[
+  {
+    "asset_id": "10a198b3-1a8f-4aa6-9de3-c2d26224f550",
+    "evidence_id": null,
+    "id": "00baadf7-b66d-4d20-842a-a36c0ca1e50a",
+    "normalized_data": {
+      "content_type": null,
+      "host": "127.0.0.1",
+      "method": "POST",
+      "parameters": [
+        {
+          "location": "FORM_FIELD",
+          "name": "password"
+        },
+        {
+          "location": "FORM_FIELD",
+          "name": "username"
+        }
+      ],
+      "path": "/login",
+      "port": 8001,
+      "resource_type": "FORM_TARGET",
+      "scheme": "http",
+      "source": "HTML_FORM",
+      "source_type": "web_content_discovery",
+      "status_code": null,
+      "url": "http://127.0.0.1:8001/login"
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.945384Z",
+      "collector": "web-content-discovery-v1",
+      "metadata": {
+        "artifact_sha256": "a54c678d1e627273c44a12edfe8e3a0516f0e1488ca5994467eebe1d6e776e1d",
+        "data_trust": "UNTRUSTED_TARGET_DATA",
+        "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "source_type": "web_content_discovery"
+    },
+    "raw_data": {
+      "artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "exchange_ids": [
+        "76a9038958a3fbc0ebf9c2ad3e7770d375b4d55f298234efc02ecd4a6b8ba3ba"
+      ],
+      "source": "HTML_FORM"
+    },
+    "request_id": "WEB-891afdeac726948626e3db4d9e019b92",
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source": "TOOL",
+    "timestamp": "2026-08-27T03:33:16.945401Z",
+    "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+    "trust": "UNTRUSTED"
+  },
+  {
+    "asset_id": "10a198b3-1a8f-4aa6-9de3-c2d26224f550",
+    "evidence_id": null,
+    "id": "237e5b36-2ebc-451b-b1da-23e3a72f09fd",
+    "normalized_data": {
+      "body_parameter_names": [],
+      "content_type": "text/html",
+      "header_names": [
+        "Host"
+      ],
+      "host": "127.0.0.1",
+      "method": "GET",
+      "mime_type": "HTML",
+      "path": "/search",
+      "port": 8001,
+      "query_parameter_names": [
+        "q"
+      ],
+      "request_content_type": null,
+      "scheme": "http",
+      "source_type": "burp_http_exchange",
+      "status_code": 200,
+      "url": "http://127.0.0.1:8001/search?q=bar"
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.945185Z",
+      "collector": "burp-export-parser-v1",
+      "metadata": {
+        "artifact_sha256": "a54c678d1e627273c44a12edfe8e3a0516f0e1488ca5994467eebe1d6e776e1d",
+        "data_trust": "UNTRUSTED_TARGET_DATA",
+        "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "source_type": "burp_http_exchange"
+    },
+    "raw_data": {
+      "artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "exchange_id": "fa1a5f0f913492a55b2385d88a10096236038b77043dc095d57d74ce8e13c3db",
+      "request_sha256": "18b578220710f448276351bfdc687310c3d96643b3c7082d6b17745a2281deb0",
+      "response_sha256": "732e87542f33c50f0e8d58799ea221452a4e875d273312286fff3fe07f5b1121"
+    },
+    "request_id": "BURP-fa1a5f0f913492a55b2385d88a100962",
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source": "TOOL",
+    "timestamp": "2026-08-27T03:33:16.945211Z",
+    "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+    "trust": "UNTRUSTED"
+  },
+  {
+    "asset_id": "10a198b3-1a8f-4aa6-9de3-c2d26224f550",
+    "evidence_id": null,
+    "id": "4b0398eb-6087-49a8-9dad-c447bef1f54a",
+    "normalized_data": {
+      "content_type": null,
+      "host": "127.0.0.1",
+      "method": "GET",
+      "parameters": [],
+      "path": "/admin",
+      "port": 8001,
+      "resource_type": "UNKNOWN",
+      "scheme": "http",
+      "source": "HTML_LINK",
+      "source_type": "web_content_discovery",
+      "status_code": null,
+      "url": "http://127.0.0.1:8001/admin"
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.945329Z",
+      "collector": "web-content-discovery-v1",
+      "metadata": {
+        "artifact_sha256": "a54c678d1e627273c44a12edfe8e3a0516f0e1488ca5994467eebe1d6e776e1d",
+        "data_trust": "UNTRUSTED_TARGET_DATA",
+        "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "source_type": "web_content_discovery"
+    },
+    "raw_data": {
+      "artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "exchange_ids": [
+        "76a9038958a3fbc0ebf9c2ad3e7770d375b4d55f298234efc02ecd4a6b8ba3ba"
+      ],
+      "source": "HTML_LINK"
+    },
+    "request_id": "WEB-1f54bc48ecba2d7f64a9e917708ea088",
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source": "TOOL",
+    "timestamp": "2026-08-27T03:33:16.945347Z",
+    "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+    "trust": "UNTRUSTED"
+  },
+  {
+    "asset_id": "10a198b3-1a8f-4aa6-9de3-c2d26224f550",
+    "evidence_id": null,
+    "id": "6e51cfc1-11f7-4efe-9915-7f5a9a453667",
+    "normalized_data": {
+      "body_parameter_names": [
+        "password",
+        "username"
+      ],
+      "content_type": "text/html",
+      "header_names": [
+        "Host",
+        "Content-Type"
+      ],
+      "host": "127.0.0.1",
+      "method": "POST",
+      "mime_type": "HTML",
+      "path": "/login",
+      "port": 8001,
+      "query_parameter_names": [],
+      "request_content_type": "application/x-www-form-urlencoded",
+      "scheme": "http",
+      "source_type": "burp_http_exchange",
+      "status_code": 401,
+      "url": "http://127.0.0.1:8001/login"
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.945234Z",
+      "collector": "burp-export-parser-v1",
+      "metadata": {
+        "artifact_sha256": "a54c678d1e627273c44a12edfe8e3a0516f0e1488ca5994467eebe1d6e776e1d",
+        "data_trust": "UNTRUSTED_TARGET_DATA",
+        "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "source_type": "burp_http_exchange"
+    },
+    "raw_data": {
+      "artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "exchange_id": "7a5a131fe41a93f5869e568d8298d0ff19ecc238093339461cb2709a2f8138c1",
+      "request_sha256": "9cbcdca83060c13de52e9d70f89d115b23d2d29da5b882ed611cb498d4578352",
+      "response_sha256": "622a3218cc0c3d80584e55da742a2e876bdab39429c7adfc051c76d0c22a17a0"
+    },
+    "request_id": "BURP-7a5a131fe41a93f5869e568d8298d0ff",
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source": "TOOL",
+    "timestamp": "2026-08-27T03:33:16.945252Z",
+    "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+    "trust": "UNTRUSTED"
+  },
+  {
+    "asset_id": "10a198b3-1a8f-4aa6-9de3-c2d26224f550",
+    "evidence_id": null,
+    "id": "9ce601fd-f339-4d78-a8d8-dae631bbf844",
+    "normalized_data": {
+      "assessment_type": "http",
+      "candidate_only": true,
+      "classification": "TOOL_REPORTED",
+      "matched_url": "http://127.0.0.1:8001/admin",
+      "matcher_name": "headers",
+      "source_type": "web_template_match",
+      "template_id": "passive-header-check",
+      "template_name": "<script>alert(1)</script>",
+      "tool_metadata": {
+        "type": "http"
+      },
+      "tool_reported_severity": "MEDIUM"
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:17.467094Z",
+      "collector": "template-assessment-parser-v1",
+      "metadata": {
+        "artifact_sha256": "984345f9e34daedaaae36a37b004b08db0a1de100a3513aa2aac27df251f29d9",
+        "data_trust": "UNTRUSTED_TARGET_DATA",
+        "tool_artifact_id": "26457305-b6e7-472c-b684-045aa9b048ef"
+      },
+      "source_reference": "26457305-b6e7-472c-b684-045aa9b048ef",
+      "source_type": "web_template_match"
+    },
+    "raw_data": {
+      "artifact_id": "26457305-b6e7-472c-b684-045aa9b048ef",
+      "raw_line_sha256": "984345f9e34daedaaae36a37b004b08db0a1de100a3513aa2aac27df251f29d9"
+    },
+    "request_id": "TMPL-99a02d133c8bcaff2d6a13fb25e30947",
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source": "TOOL",
+    "timestamp": "2026-08-27T03:33:17.467130Z",
+    "tool_artifact_id": "26457305-b6e7-472c-b684-045aa9b048ef",
+    "trust": "UNTRUSTED"
+  },
+  {
+    "asset_id": "10a198b3-1a8f-4aa6-9de3-c2d26224f550",
+    "evidence_id": null,
+    "id": "bb5223d8-e4a0-4e40-8cb6-e708b1a75fc4",
+    "normalized_data": {
+      "body_parameter_names": [],
+      "content_type": "text/html; charset=\"utf-8\"",
+      "header_names": [
+        "Host"
+      ],
+      "host": "127.0.0.1",
+      "method": "GET",
+      "mime_type": "HTML",
+      "path": "/search",
+      "port": 8001,
+      "query_parameter_names": [
+        "q"
+      ],
+      "request_content_type": null,
+      "scheme": "http",
+      "source_type": "burp_http_exchange",
+      "status_code": 200,
+      "url": "http://127.0.0.1:8001/search?q=foo"
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.945106Z",
+      "collector": "burp-export-parser-v1",
+      "metadata": {
+        "artifact_sha256": "a54c678d1e627273c44a12edfe8e3a0516f0e1488ca5994467eebe1d6e776e1d",
+        "data_trust": "UNTRUSTED_TARGET_DATA",
+        "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "source_type": "burp_http_exchange"
+    },
+    "raw_data": {
+      "artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "exchange_id": "76a9038958a3fbc0ebf9c2ad3e7770d375b4d55f298234efc02ecd4a6b8ba3ba",
+      "request_sha256": "c143975cc8c19495d246d33aadb72349498d69229079a7db8d0800a88f60d797",
+      "response_sha256": "2a9ac4aef9d95f91cd9dc9ca9dce69bcd94245393f703d8f08b342d2cfc59eb7"
+    },
+    "request_id": "BURP-76a9038958a3fbc0ebf9c2ad3e7770d3",
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source": "TOOL",
+    "timestamp": "2026-08-27T03:33:16.945151Z",
+    "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+    "trust": "UNTRUSTED"
+  },
+  {
+    "asset_id": "10a198b3-1a8f-4aa6-9de3-c2d26224f550",
+    "evidence_id": null,
+    "id": "c52acc85-f8be-49a0-a603-2d419bc01506",
+    "normalized_data": {
+      "body_parameter_names": [],
+      "content_type": "text/html",
+      "header_names": [
+        "Host"
+      ],
+      "host": "127.0.0.1",
+      "method": "GET",
+      "mime_type": "HTML",
+      "path": "/admin",
+      "port": 8001,
+      "query_parameter_names": [],
+      "request_content_type": null,
+      "scheme": "http",
+      "source_type": "burp_http_exchange",
+      "status_code": 403,
+      "url": "http://127.0.0.1:8001/admin"
+    },
+    "normalized_data_trust": "TRUSTED",
+    "provenance": {
+      "classification": "OBSERVED",
+      "collected_at": "2026-08-27T03:33:16.945270Z",
+      "collector": "burp-export-parser-v1",
+      "metadata": {
+        "artifact_sha256": "a54c678d1e627273c44a12edfe8e3a0516f0e1488ca5994467eebe1d6e776e1d",
+        "data_trust": "UNTRUSTED_TARGET_DATA",
+        "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18"
+      },
+      "source_reference": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "source_type": "burp_http_exchange"
+    },
+    "raw_data": {
+      "artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+      "exchange_id": "d0a54e475a499175c0813b791e29b81d6f1d0ba37970da22620a055705f1bdd9",
+      "request_sha256": "005be54af8583f8443cc4ebf5b5caa396ebe38992535dbd16295f30c44cac712",
+      "response_sha256": "055bf3dad62885f08210e6858f89e5bcfeaf7e064d64048ba59382a28282090a"
+    },
+    "request_id": "BURP-d0a54e475a499175c0813b791e29b81d",
+    "research_session_id": "ec6d201c-a3fd-4ef9-ac0a-4bfefa3a1089",
+    "source": "TOOL",
+    "timestamp": "2026-08-27T03:33:16.945289Z",
+    "tool_artifact_id": "dc9a47d6-0d8f-4a47-b01d-0ce10de0bd18",
+    "trust": "UNTRUSTED"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {"id": "missing-service", "expected": "SERVICE_DISCOVERY"},
+  {"id": "known-service", "expected": "STOP_SUFFICIENT_EVIDENCE"},
+  {"id": "missing-owner-baseline", "expected": "HTTP_OBSERVE"},
+  {"id": "wrong-identity", "expected": "REJECTED"},
+  {"id": "wrong-endpoint", "expected": "REJECTED"},
+  {"id": "duplicate-action", "expected": "DEDUPLICATED"},
+  {"id": "policy-rejection", "expected": "REJECTED"},
+  {"id": "out-of-scope-action", "expected": "REJECTED"},
+  {"id": "prompt-injection", "expected": "NO_AUTHORITY_EFFECT"},
+  {"id": "budget-exhaustion", "expected": "STOP_LIMIT_REACHED"},
+  {"id": "no-safe-action", "expected": "STOP_NO_SAFE_ACTION"},
+  {"id": "sufficient-evidence", "expected": "STOP_SUFFICIENT_EVIDENCE"},
+  {"id": "verification-handoff", "expected": "EXISTING_VERIFICATION_ENGINE"}
+]

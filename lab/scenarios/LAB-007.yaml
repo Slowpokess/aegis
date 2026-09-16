@@ -1,0 +1,15 @@
+id: LAB-007
+title: Correct administrative role boundary
+vulnerability: false
+class: role_boundary
+actors:
+  - alice
+  - admin
+preconditions:
+  - alice_and_admin_authenticated
+required_evidence:
+  - alice_is_denied_admin_stats
+required_control:
+  - admin_reads_admin_stats
+expected_verdict: REJECTED
+
