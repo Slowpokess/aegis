@@ -32,10 +32,11 @@ supported-browser runner proves an isolated candidate/control execution.
 
 ### 16.2: Persisted control-plane integration
 
-Status: planned; depends on 16.1.
+Status: in progress; depends on 16.1.
 
-- Add revisioned storage and migrations for browser verification action, run,
-  and redacted evidence metadata.
+- Revisioned `ClientVerificationRun` storage and migration `0016` are complete.
+- Add browser verification action creation, approval/rejection/cancellation,
+  redacted evidence metadata, and strict localhost API/CLI/UI lifecycle views.
 - Bind every run to a WebResource, Hypothesis, Evidence, ResearchAction,
   ActionApproval, budget entry, and report manifest.
 - Add strict localhost API/CLI/UI lifecycle views. Approval and revalidation
@@ -57,6 +58,39 @@ Status: planned; depends on 16.2.
 
 Exit criteria: reproducible controlled-lab proof, no external browser egress,
 no secret in exports, and a report manifest that verifies.
+
+### 16.4: Evidence-driven recommendations
+
+Status: in progress; depends on completed 16.2 and a persisted browser result.
+
+- Classify candidate/control evidence deterministically before any heuristic or
+  LLM explanation: `CONFIRMED`, `REJECTED`, `INCONCLUSIVE`,
+  `PARTIALLY_CONFIRMED`, or `NEEDS_ADDITIONAL_VERIFICATION`.
+- Persist a secret-free `VerificationRecommendation` with evidence references,
+  confidence, vulnerability class/context only when grounded, remediation, and
+  a minimum next step.
+- Expose recommendations through strict read APIs and permit acceptance only by
+  creating a new `ResearchAction`; recommendations never execute a probe.
+- Render evidence, interpretation, verdict, recommended next step, and
+  remediation separately in reports and manifests.
+
+Exit criteria: deterministic classification, no recommendation from missing or
+cross-session lineage, no automatic execution, approval/budget/scope regression
+tests, report redaction checks, and migration/API coverage.
+
+### 16.5: Controlled proof payload generation
+
+Status: in progress; depends on 16.4 and a confirmed, context-grounded result.
+
+- Generate a structured, versioned inert-canary proof only from confirmed
+  vulnerability class, context, evidence, scope, and policy.
+- Return `UNKNOWN`/no payload when source, sink, context, encoding, or browser
+  evidence is insufficient; never use generic blind variations.
+- Treat an accepted generated proof as a new action requiring fresh validation,
+  budget, policy, and operator approval.
+
+Exit criteria: context mismatch, unsafe class, missing evidence, and external
+egress tests all fail closed; no generated proof is executed implicitly.
 
 ## Phase 17 — Passive and network intelligence connectors
 
