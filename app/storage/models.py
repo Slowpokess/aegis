@@ -519,6 +519,18 @@ class ActionApprovalRecord(PayloadMixin, Base):
     created_at: Mapped[str] = mapped_column(String(64), index=True)
 
 
+class ClientVerificationRunRecord(PayloadMixin, Base):
+    __tablename__ = "client_verification_runs"
+
+    research_session_id: Mapped[str] = mapped_column(ForeignKey("research_sessions.id"), index=True)
+    research_action_id: Mapped[str] = mapped_column(ForeignKey("research_actions.id"), index=True)
+    action_approval_id: Mapped[str] = mapped_column(ForeignKey("action_approvals.id"), index=True)
+    web_resource_id: Mapped[str] = mapped_column(ForeignKey("web_resources.id"), index=True)
+    hypothesis_id: Mapped[str] = mapped_column(ForeignKey("hypotheses.id"), index=True)
+    status: Mapped[str] = mapped_column(String(30), index=True)
+    created_at: Mapped[str] = mapped_column(String(64), index=True)
+
+
 class ResearchEventRecord(PayloadMixin, Base):
     __tablename__ = "research_events"
     __table_args__ = (UniqueConstraint("idempotency_key"),)

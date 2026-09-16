@@ -5,7 +5,8 @@ from urllib.parse import urlsplit
 
 from pydantic import Field, model_validator
 
-from app.domain.common import DomainModel, Identifier
+from app.domain.common import DomainModel, EntityModel, Identifier, utc_now
+from datetime import datetime
 
 
 class ClientSideContext(StrEnum):
@@ -94,6 +95,36 @@ class ClientVerificationProposal(DomainModel):
 class ClientVerificationValidation(DomainModel):
     valid: bool
     errors: tuple[str, ...] = ()
+
+
+class ClientVerificationRunStatus(StrEnum):
+    CREATED = "CREATED"
+    WAITING_FOR_APPROVAL = "WAITING_FOR_APPROVAL"
+    AUTHORIZED = "AUTHORIZED"
+    EXECUTING = "EXECUTING"
+    COMPLETED = "COMPLETED"
+    REJECTED = "REJECTED"
+    FAILED = "FAILED"
+    CANCELLED = "CANCELLED"
+
+
+class ClientVerificationRun(EntityModel):
+    """Persistent, secret-free browser verification lifecycle record."""
+
+    research_session_id: Identifier
+    research_action_id: Identifier
+    action_approval_id: Identifier
+    web_resource_id: Identifier
+    hypothesis_id: Identifier
+    proposal: ClientVerificationProposal
+    status: ClientVerificationRunStatus = ClientVerificationRunStatus.CREATED
+    candidate_dom_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
+    control_dom_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
+    external_requests_blocked: int = Field(default=0, ge=0)
+    error_code: str | None = Field(default=None, max_length=100)
+    created_at: datetime = Field(default_factory=utc_now)
+    started_at: datetime | None = None
+    finished_at: datetime | None = None
 
 
 class ClientVerificationValidator:

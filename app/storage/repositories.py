@@ -8,6 +8,7 @@ from sqlalchemy.orm import Session
 
 from app.domain.assets import Asset
 from app.domain.active_web import WebCandidateProvenance
+from app.domain.client_verification import ClientVerificationRun
 from app.domain.attack_graph import AttackGraphSnapshot, CandidateSignal, GraphSnapshotStatus
 from app.domain.capabilities import Capability
 from app.domain.evidence import Evidence
@@ -128,6 +129,7 @@ from app.storage.models import (
     WebSurfaceSnapshotRecord,
     WebTemplateCandidateRecord,
     WebCandidateProvenanceRecord,
+    ClientVerificationRunRecord,
 )
 
 DomainT = TypeVar("DomainT", bound=BaseModel)
@@ -239,6 +241,26 @@ class EvidenceRepository(Repository[Evidence, EvidenceRecord]):
         return [
             Evidence.model_validate(record.payload) for record in self.session.scalars(statement)
         ]
+
+
+class ClientVerificationRunRepository(Repository[ClientVerificationRun, ClientVerificationRunRecord]):
+    def add(self, item: ClientVerificationRun) -> ClientVerificationRun:
+        action = self.session.get(ResearchActionRecord, str(item.research_action_id))
+        approval = self.session.get(ActionApprovalRecord, str(item.action_approval_id))
+        resource = self.session.get(WebResourceRecord, str(item.web_resource_id))
+        hypothesis = self.session.get(HypothesisRecord, str(item.hypothesis_id))
+        if any(value is None for value in (action, approval, resource, hypothesis)):
+            raise ValueError("client verification lineage reference does not exist")
+        session_id = str(item.research_session_id)
+        if (
+            action.research_session_id != session_id
+            or approval.research_session_id != session_id
+            or approval.action_id != str(item.research_action_id)
+            or resource.research_session_id != session_id
+            or hypothesis.research_session_id != session_id
+        ):
+            raise ValueError("client verification lineage cannot cross research sessions")
+        return super().add(item)
 
 
 class HypothesisRepository(Repository[Hypothesis, HypothesisRecord]):
@@ -1321,6 +1343,20 @@ class RepositorySet:
                 "project_id": str(item.project_id),
                 "research_session_id": str(item.research_session_id),
                 "action_id": str(item.action_id),
+                "status": item.status.value,
+                "created_at": item.created_at.isoformat(),
+            },
+        )
+        self.client_verification_runs = ClientVerificationRunRepository(
+            session,
+            ClientVerificationRun,
+            ClientVerificationRunRecord,
+            lambda item: {
+                "research_session_id": str(item.research_session_id),
+                "research_action_id": str(item.research_action_id),
+                "action_approval_id": str(item.action_approval_id),
+                "web_resource_id": str(item.web_resource_id),
+                "hypothesis_id": str(item.hypothesis_id),
                 "status": item.status.value,
                 "created_at": item.created_at.isoformat(),
             },

@@ -67,6 +67,7 @@ def test_initial_migration_upgrade_and_downgrade(tmp_path, monkeypatch) -> None:
         "research_projects",
         "research_policies",
         "action_approvals",
+        "client_verification_runs",
         "research_events",
         "report_metadata",
         "web_resources",
@@ -165,6 +166,7 @@ def test_phase12_rows_survive_phase13_upgrade(tmp_path, monkeypatch) -> None:
             "research_projects",
             "research_policies",
             "action_approvals",
+            "client_verification_runs",
             "research_events",
             "report_metadata",
         } <= set(inspect(engine).get_table_names())
