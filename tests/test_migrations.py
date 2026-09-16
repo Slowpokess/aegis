@@ -68,6 +68,8 @@ def test_initial_migration_upgrade_and_downgrade(tmp_path, monkeypatch) -> None:
         "research_policies",
         "action_approvals",
         "client_verification_runs",
+        "verification_recommendations",
+        "generated_payloads",
         "research_events",
         "report_metadata",
         "web_resources",

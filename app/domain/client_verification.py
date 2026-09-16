@@ -108,6 +108,26 @@ class ClientVerificationRunStatus(StrEnum):
     CANCELLED = "CANCELLED"
 
 
+class ClientVerificationObservation(DomainModel):
+    """Report-safe facts captured from one isolated browser context.
+
+    This deliberately contains no DOM, URL query, console text, cookies, or
+    storage values.  Those can be target-controlled or secret-bearing.
+    """
+
+    reflected: bool = False
+    executed: bool = False
+    canary_observed: bool = False
+    context: ClientSideContext = ClientSideContext.UNKNOWN
+    final_url_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
+    dom_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
+    console_signal_count: int = Field(default=0, ge=0, le=1000)
+    runtime_error_count: int = Field(default=0, ge=0, le=1000)
+    policy_blocked: bool = False
+    source_ref: str | None = Field(default=None, max_length=200)
+    sink_ref: str | None = Field(default=None, max_length=200)
+
+
 class ClientVerificationRun(EntityModel):
     """Persistent, secret-free browser verification lifecycle record."""
 
@@ -120,6 +140,8 @@ class ClientVerificationRun(EntityModel):
     status: ClientVerificationRunStatus = ClientVerificationRunStatus.CREATED
     candidate_dom_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
     control_dom_sha256: str | None = Field(default=None, pattern=r"^[a-f0-9]{64}$")
+    candidate_observation: ClientVerificationObservation | None = None
+    control_observation: ClientVerificationObservation | None = None
     external_requests_blocked: int = Field(default=0, ge=0)
     error_code: str | None = Field(default=None, max_length=100)
     created_at: datetime = Field(default_factory=utc_now)

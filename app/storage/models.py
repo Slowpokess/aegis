@@ -531,6 +531,27 @@ class ClientVerificationRunRecord(PayloadMixin, Base):
     created_at: Mapped[str] = mapped_column(String(64), index=True)
 
 
+class VerificationRecommendationRecord(PayloadMixin, Base):
+    __tablename__ = "verification_recommendations"
+    __table_args__ = (UniqueConstraint("run_id"),)
+
+    run_id: Mapped[str] = mapped_column(ForeignKey("client_verification_runs.id"), index=True)
+    research_session_id: Mapped[str] = mapped_column(ForeignKey("research_sessions.id"), index=True)
+    verdict: Mapped[str] = mapped_column(String(40), index=True)
+    recommended_action: Mapped[str] = mapped_column(String(40), index=True)
+    created_at: Mapped[str] = mapped_column(String(64), index=True)
+
+
+class GeneratedPayloadRecord(PayloadMixin, Base):
+    __tablename__ = "generated_payloads"
+    __table_args__ = (UniqueConstraint("verification_run_id"),)
+    verification_run_id: Mapped[str] = mapped_column(ForeignKey("client_verification_runs.id"), index=True)
+    research_session_id: Mapped[str] = mapped_column(ForeignKey("research_sessions.id"), index=True)
+    vulnerability_class: Mapped[str] = mapped_column(String(40), index=True)
+    injection_context: Mapped[str] = mapped_column(String(40), index=True)
+    created_at: Mapped[str] = mapped_column(String(64), index=True)
+
+
 class ResearchEventRecord(PayloadMixin, Base):
     __tablename__ = "research_events"
     __table_args__ = (UniqueConstraint("idempotency_key"),)

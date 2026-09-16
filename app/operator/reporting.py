@@ -80,6 +80,7 @@ class ReportService:
             findings = r.findings.list_by_session(session_id)
             gaps = r.evidence_gaps.list_by_session(session_id)
             actions = r.research_actions.list_by_session(session_id)
+            recommendations = r.verification_recommendations.list_by_session(session_id, limit=10_000)
             runs = r.tool_runs.list_by_session(session_id)
             events = r.research_events.list_by_session(session_id, limit=10_000)
             model = export_model(r, session_id)
@@ -255,6 +256,9 @@ class ReportService:
             "hypotheses": [item.model_dump(mode="json") for item in hypotheses],
             "experiments": [item.model_dump(mode="json") for item in experiments],
             "verification_results": [item.model_dump(mode="json") for item in verifications],
+            # Recommendations intentionally retain the distinction between observed
+            # evidence, deterministic interpretation, and a non-executed next step.
+            "verification_recommendations": [item.model_dump(mode="json") for item in recommendations],
             "findings": finding_reports,
             "inconclusive_items": [
                 item.model_dump(mode="json")
@@ -312,6 +316,7 @@ class ReportService:
                 "candidate_signals": report["candidate_signals"],
             },
             "timeline.json": report["timeline"],
+            "verification-recommendations.json": report["verification_recommendations"],
             "web-surface.json": report["web_surface"],
         }
         entries = []
@@ -387,6 +392,7 @@ class ReportService:
             ("Candidate Signals", "candidate_signals"),
             ("Hypotheses", "hypotheses"),
             ("Verification Results", "verification_results"),
+            ("Verification Recommendations", "verification_recommendations"),
             ("Findings", "findings"),
             ("Open Evidence Gaps", "open_evidence_gaps"),
             ("Timeline", "timeline"),

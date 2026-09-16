@@ -1,6 +1,7 @@
 from pathlib import Path
 from typing import Annotated
 from uuid import UUID
+from uuid import uuid4
 
 from fastapi import APIRouter, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict, Field
@@ -13,6 +14,11 @@ from app.attack_graph.queries import GraphQueryService
 from app.controller.factory import build_controller
 from app.discovery.registry import ToolRegistry
 from app.domain.controller import ResearchAction, ResearchActionStatus, ResearchActionType
+from app.domain.recommendations import VerificationRecommendationEngine
+from app.domain.recommendations import RecommendedAction
+from app.domain.generated_payloads import PayloadGenerationEngine
+from app.domain.operator import ActionApproval
+from app.domain.common import utc_now
 from app.domain.operator import (
     ApprovalMode,
     ResearchEventType,
@@ -346,6 +352,87 @@ async def session_findings(session_id: UUID, request: Request) -> list[dict[str,
     with request.app.state.database.session_factory() as session:
         values = RepositorySet(session).findings.list_by_session(session_id)
     return [item.model_dump(mode="json") for item in values]
+
+
+@router.get("/client-verifications/{run_id}/recommendation", tags=["client-verification"])
+async def client_verification_recommendation(run_id: UUID, request: Request) -> dict[str, object]:
+    """Return a persisted deterministic recommendation; this route never executes a probe."""
+    with request.app.state.database.session_factory.begin() as session:
+        repositories = RepositorySet(session)
+        run = repositories.client_verification_runs.get(run_id)
+        if run is None:
+            raise HTTPException(status_code=404, detail="client verification run does not exist")
+        value = repositories.verification_recommendations.get_by_run(run_id)
+        if value is None:
+            value = VerificationRecommendationEngine().generate(run)
+            try:
+                repositories.verification_recommendations.add(value)
+            except ValueError as error:
+                raise HTTPException(status_code=409, detail=str(error)) from error
+        generated = repositories.generated_payloads.get_by_run(run_id)
+        if generated is None:
+            generated = PayloadGenerationEngine().generate(run, value)
+            if generated is not None:
+                repositories.generated_payloads.add(generated)
+    payload = value.model_dump(mode="json")
+    payload["generated_payload"] = generated.model_dump(mode="json") if generated else None
+    return payload
+
+
+@router.get("/sessions/{session_id}/recommendations", tags=["client-verification"])
+async def session_recommendations(
+    session_id: UUID, request: Request,
+    offset: Annotated[int, Query(ge=0)] = 0,
+    limit: Annotated[int, Query(ge=1, le=200)] = 100,
+) -> list[dict[str, object]]:
+    with request.app.state.database.session_factory() as session:
+        values = RepositorySet(session).verification_recommendations.list_by_session(
+            session_id, offset=offset, limit=limit)
+    return [item.model_dump(mode="json") for item in values]
+
+
+@router.post("/recommendations/{recommendation_id}/request-action", tags=["client-verification"], status_code=201)
+async def request_recommendation_action(recommendation_id: UUID, request: Request) -> dict[str, object]:
+    """Accept a recommendation by creating a *pending* action only.
+
+    No executor is imported or called here. Approval re-runs the regular action
+    validation path (scope, policy, repetition and budget checks) before any
+    future browser integration may run.
+    """
+    with request.app.state.database.session_factory.begin() as session:
+        repositories = RepositorySet(session)
+        recommendation = repositories.verification_recommendations.get(recommendation_id)
+        if recommendation is None:
+            raise HTTPException(status_code=404, detail="verification recommendation does not exist")
+        if (recommendation.recommended_action is not RecommendedAction.RUN_ADDITIONAL_VERIFICATION
+                or recommendation.suggested_probe is None or not recommendation.requires_approval):
+            raise HTTPException(status_code=409, detail="recommendation does not authorize a verification action")
+        run = repositories.client_verification_runs.get(recommendation.run_id)
+        original = repositories.research_actions.get(run.research_action_id) if run else None
+        research = repositories.research_sessions.get(recommendation.research_session_id)
+        project = repositories.research_projects.get(research.project_id) if research and research.project_id else None
+        if original is None or project is None:
+            raise HTTPException(status_code=409, detail="recommendation action lineage is incomplete")
+        # Preserve the sealed original action proposal; the recommendation never
+        # supplies a browser command or free-form payload.
+        proposal = original.proposal.model_copy(update={
+            "rationale": f"Approved recommendation {recommendation.id}: {recommendation.reasoning[:600]}",
+            "repeat_reason": "REPRODUCTION",
+        })
+        action = original.model_copy(update={
+            "id": uuid4(), "proposal": proposal, "semantic_hash": original.semantic_hash,
+            "status": ResearchActionStatus.WAITING_FOR_APPROVAL, "operator_initiated": True,
+            "validation_reason": "RECOMMENDATION_PENDING_FRESH_VALIDATION",
+            "failure_reason": None, "created_at": utc_now(), "finished_at": None,
+            "tool_run_ids": (), "evidence_ids": (), "observation_ids": (), "verification_result_ids": (),
+        })
+        repositories.research_actions.add(action)
+        approval = ActionApproval(project_id=project.id, research_session_id=action.research_session_id,
+            action_id=action.id, policy_preview_allowed=True,
+            policy_preview_reason="Recommendation acceptance requires fresh approval and validation.",
+            provenance=operator_provenance(f"recommendation-action:{recommendation.id}:{action.id}"))
+        repositories.action_approvals.add(approval)
+    return {"action": action.model_dump(mode="json"), "approval": approval.model_dump(mode="json")}
 
 
 @router.get("/sessions/{session_id}/gaps", tags=["operator"])

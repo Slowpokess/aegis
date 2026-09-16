@@ -9,6 +9,8 @@ from sqlalchemy.orm import Session
 from app.domain.assets import Asset
 from app.domain.active_web import WebCandidateProvenance
 from app.domain.client_verification import ClientVerificationRun
+from app.domain.recommendations import VerificationRecommendation
+from app.domain.generated_payloads import GeneratedPayload
 from app.domain.attack_graph import AttackGraphSnapshot, CandidateSignal, GraphSnapshotStatus
 from app.domain.capabilities import Capability
 from app.domain.evidence import Evidence
@@ -130,6 +132,8 @@ from app.storage.models import (
     WebTemplateCandidateRecord,
     WebCandidateProvenanceRecord,
     ClientVerificationRunRecord,
+    VerificationRecommendationRecord,
+    GeneratedPayloadRecord,
 )
 
 DomainT = TypeVar("DomainT", bound=BaseModel)
@@ -261,6 +265,47 @@ class ClientVerificationRunRepository(Repository[ClientVerificationRun, ClientVe
         ):
             raise ValueError("client verification lineage cannot cross research sessions")
         return super().add(item)
+
+    def list_by_session(self, research_session_id: UUID) -> list[ClientVerificationRun]:
+        statement = (select(ClientVerificationRunRecord)
+            .where(ClientVerificationRunRecord.research_session_id == str(research_session_id))
+            .order_by(ClientVerificationRunRecord.created_at, ClientVerificationRunRecord.id))
+        return [ClientVerificationRun.model_validate(item.payload) for item in self.session.scalars(statement)]
+
+
+class VerificationRecommendationRepository(Repository[VerificationRecommendation, VerificationRecommendationRecord]):
+    def add(self, item: VerificationRecommendation) -> VerificationRecommendation:
+        run = self.session.get(ClientVerificationRunRecord, str(item.run_id))
+        if run is None or run.research_session_id != str(item.research_session_id):
+            raise ValueError("recommendation run lineage cannot cross research sessions")
+        evidence_ids = {str(value.id) for value in EvidenceRepository(self.session, Evidence, EvidenceRecord).list_by_session(item.research_session_id)}
+        if not set(map(str, item.evidence_refs)).issubset(evidence_ids):
+            raise ValueError("recommendation evidence lineage does not exist in research session")
+        return super().add(item)
+
+    def get_by_run(self, run_id: UUID) -> VerificationRecommendation | None:
+        statement = select(VerificationRecommendationRecord).where(VerificationRecommendationRecord.run_id == str(run_id))
+        record = self.session.scalar(statement)
+        return VerificationRecommendation.model_validate(record.payload) if record else None
+
+    def list_by_session(self, research_session_id: UUID, *, offset: int = 0, limit: int = 100) -> list[VerificationRecommendation]:
+        statement = (select(VerificationRecommendationRecord)
+            .where(VerificationRecommendationRecord.research_session_id == str(research_session_id))
+            .order_by(VerificationRecommendationRecord.created_at, VerificationRecommendationRecord.id)
+            .offset(offset).limit(limit))
+        return [VerificationRecommendation.model_validate(item.payload) for item in self.session.scalars(statement)]
+
+
+class GeneratedPayloadRepository(Repository[GeneratedPayload, GeneratedPayloadRecord]):
+    def add(self, item: GeneratedPayload) -> GeneratedPayload:
+        run = self.session.get(ClientVerificationRunRecord, str(item.verification_run_id))
+        if run is None or run.research_session_id != str(item.research_session_id):
+            raise ValueError("generated payload run lineage cannot cross research sessions")
+        return super().add(item)
+
+    def get_by_run(self, run_id: UUID) -> GeneratedPayload | None:
+        record = self.session.scalar(select(GeneratedPayloadRecord).where(GeneratedPayloadRecord.verification_run_id == str(run_id)))
+        return GeneratedPayload.model_validate(record.payload) if record else None
 
 
 class HypothesisRepository(Repository[Hypothesis, HypothesisRecord]):
@@ -1360,6 +1405,18 @@ class RepositorySet:
                 "status": item.status.value,
                 "created_at": item.created_at.isoformat(),
             },
+        )
+        self.verification_recommendations = VerificationRecommendationRepository(
+            session, VerificationRecommendation, VerificationRecommendationRecord,
+            lambda item: {"run_id": str(item.run_id), "research_session_id": str(item.research_session_id),
+                          "verdict": item.verdict.value, "recommended_action": item.recommended_action.value,
+                          "created_at": item.created_at.isoformat()},
+        )
+        self.generated_payloads = GeneratedPayloadRepository(
+            session, GeneratedPayload, GeneratedPayloadRecord,
+            lambda item: {"verification_run_id": str(item.verification_run_id), "research_session_id": str(item.research_session_id),
+                          "vulnerability_class": item.vulnerability_class.value, "injection_context": item.injection_context.value,
+                          "created_at": item.created_at.isoformat()},
         )
         self.research_events = ResearchEventRepository(
             session,
