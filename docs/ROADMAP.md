@@ -7,10 +7,10 @@ operator-approved immutable scope.
 
 ## Current baseline
 
-Phases 0–15.3 are complete. Phase 16 has a committed security foundation and an
-uncommitted Playwright executor vertical slice. The executor is disabled by
-default and has not run against a real browser on this macOS 12 host because no
-supported Chromium runtime is installed.
+Phases 0–15.3 are complete. Phase 16 has a committed security foundation and a
+committed Playwright executor vertical slice. The executor is disabled by default
+and has not run against a real browser on this macOS 12 host because no supported
+Chromium runtime is installed.
 
 ## Phase 16 — Controlled client-side verification
 
