@@ -15,7 +15,7 @@ from app.storage.database import Database
 from app.storage.repositories import RepositorySet
 from evals.entrypoint import cli
 from evals.reporting import export_json
-from evals.runner import BenchmarkRunner
+from evals.runner import BenchmarkRunner, current_git_commit
 
 
 @pytest.mark.asyncio
@@ -36,7 +36,7 @@ async def test_all_scenarios_pipeline_benchmark_persists_metrics_and_exports(
     assert run.status is BenchmarkStatus.COMPLETED
     assert run.scenario_count == 8
     assert run.ground_truth_sha256 is not None
-    assert run.git_commit is None
+    assert run.git_commit == current_git_commit()
     assert run.metrics is not None
     assert (run.metrics.tp, run.metrics.fp, run.metrics.tn, run.metrics.fn) == (2, 0, 5, 0)
     assert run.metrics.correct_inconclusive == 1

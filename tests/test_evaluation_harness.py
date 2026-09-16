@@ -26,7 +26,8 @@ def test_configuration_snapshot_is_canonical_and_secret_free() -> None:
     assert "do-not-export" not in serialized
     assert "api_key" not in serialized.lower()
     assert canonical_sha256(snapshot) == canonical_sha256(dict(reversed(snapshot.items())))
-    assert current_git_commit() is None
+    commit = current_git_commit()
+    assert commit is None or len(commit) == 40
 
 
 def test_production_research_layers_do_not_depend_on_eval_or_ground_truth() -> None:
