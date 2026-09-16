@@ -25,7 +25,9 @@ cross-origin callbacks, and credential/data access are fail-closed.
 ## Consequences
 
 - This foundation deliberately starts no browser process and creates no Finding.
-- A later Playwright executor must consume the typed plan, re-check approval and
-  scope, use an ephemeral profile, and redact browser output before persistence.
+- The in-progress Playwright executor consumes the typed plan, re-checks
+  approval and scope, uses an ephemeral profile, and redacts browser output.
+  Phase 16.2 must persist its lifecycle and evidence through the established
+  control plane before it becomes an enabled product capability.
 - A successful marker is evidence for a controlled hypothesis only; the existing
   Verification Engine remains the sole Finding authority.

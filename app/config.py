@@ -54,6 +54,10 @@ class Settings(BaseSettings):
     nuclei_safe_template: Path = Path("app/active_web/nuclei/aegis-safe-lab.yaml")
     active_web_output_max_bytes: int = Field(default=1_000_000, ge=1_024, le=10_000_000)
     active_web_max_results: int = Field(default=2_000, ge=1, le=100_000)
+    client_verification_enabled: bool = False
+    client_verification_browser_executable: Path | None = None
+    client_verification_navigation_timeout_ms: int = Field(default=10_000, ge=1, le=60_000)
+    client_verification_max_dom_characters: int = Field(default=20_000, ge=1_000, le=200_000)
     llm_provider: Literal["fake", "anthropic", "nvidia_nim"] = "fake"
     llm_model: str = "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
     llm_timeout_seconds: float = Field(default=30.0, ge=1.0, le=300.0)

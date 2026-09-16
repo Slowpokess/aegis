@@ -11,6 +11,11 @@ from app.domain.client_verification import (
     CsrfHandling,
     CsrfTokenSource,
 )
+from app.client_verification.executor import (
+    BrowserExecutionStatus,
+    PlaywrightClientVerificationExecutor,
+)
+from app.config import Settings
 
 
 def _proposal(**updates: object) -> ClientVerificationProposal:
@@ -18,6 +23,8 @@ def _proposal(**updates: object) -> ClientVerificationProposal:
     values = {
         "web_resource_id": uuid4(),
         "evidence_ids": [evidence_id],
+        "navigation_path": "/feedback",
+        "input_name": "comment",
         "context": ClientSideContext.HTML_TEXT,
         "target_environment": BrowserTargetEnvironment.ISOLATED_LAB,
         "csrf": CsrfHandling(required=False, source=CsrfTokenSource.NOT_REQUIRED),
@@ -78,3 +85,30 @@ def test_validator_rejects_freeform_probe_unknown_context_and_egress() -> None:
         "EXTERNAL_EGRESS_NOT_ALLOWED",
         "OPERATOR_APPROVAL_REQUIRED",
     } <= set(result.errors)
+
+
+@pytest.mark.asyncio
+async def test_executor_fails_closed_before_browser_startup() -> None:
+    proposal = _proposal()
+    result = await PlaywrightClientVerificationExecutor(Settings()).execute(
+        proposal,
+        target_base_url="http://127.0.0.1:8001",
+        available_evidence_ids=frozenset(proposal.evidence_ids),
+        persisted_operator_approval=True,
+    )
+    assert result.status is BrowserExecutionStatus.REJECTED
+    assert result.error_code == "CLIENT_VERIFICATION_DISABLED"
+
+    unavailable = await PlaywrightClientVerificationExecutor(
+        Settings(
+            client_verification_enabled=True,
+            client_verification_browser_executable="/missing/chromium",
+        )
+    ).execute(
+        proposal,
+        target_base_url="http://127.0.0.1:8001",
+        available_evidence_ids=frozenset(proposal.evidence_ids),
+        persisted_operator_approval=True,
+    )
+    assert unavailable.status is BrowserExecutionStatus.FAILED
+    assert unavailable.error_code == "BROWSER_UNAVAILABLE"

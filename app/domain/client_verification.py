@@ -1,6 +1,7 @@
 """Typed, non-executable proposals for controlled client-side verification."""
 
 from enum import StrEnum
+from urllib.parse import urlsplit
 
 from pydantic import Field, model_validator
 
@@ -64,6 +65,8 @@ class ClientVerificationProposal(DomainModel):
 
     web_resource_id: Identifier
     evidence_ids: list[Identifier] = Field(min_length=1, max_length=20)
+    navigation_path: str = Field(min_length=1, max_length=2048)
+    input_name: str = Field(min_length=1, max_length=100, pattern=r"^[A-Za-z0-9_.-]+$")
     context: ClientSideContext
     target_environment: BrowserTargetEnvironment
     csrf: CsrfHandling
@@ -73,6 +76,19 @@ class ClientVerificationProposal(DomainModel):
     isolated_browser_context: bool = True
     same_origin_only: bool = True
     external_network_egress: bool = False
+
+    @model_validator(mode="after")
+    def validate_navigation(self) -> "ClientVerificationProposal":
+        parsed = urlsplit(self.navigation_path)
+        if (
+            not self.navigation_path.startswith("/")
+            or self.navigation_path.startswith("//")
+            or parsed.scheme
+            or parsed.netloc
+            or parsed.fragment
+        ):
+            raise ValueError("navigation path must be relative to the resolved WebResource origin")
+        return self
 
 
 class ClientVerificationValidation(DomainModel):

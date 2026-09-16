@@ -641,7 +641,35 @@ make phase8-test
 
 Executed phase results are recorded in `CHANGELOG.md`.
 
-Phases 0–15.3 are complete. Phase 15.4 is not implemented.
+Phases 0–15.3 are complete. Phase 16 is in progress: its typed client-side
+verification boundary is implemented, and the Playwright executor vertical
+slice is disabled by default pending persisted control-plane integration and a
+supported Chromium runtime. See [the upgrade roadmap](docs/ROADMAP.md).
+
+## Controlled client-side verification
+
+Phase 16 extends the existing evidence lifecycle to browser-visible effects
+without giving a model browser control. The model may propose an evidence-backed
+context and a closed probe identifier. Deterministic code resolves the target,
+rechecks scope and persisted approval, and owns every browser operation.
+
+```text
+Evidence-backed WebResource + Hypothesis
+  → typed client-verification proposal
+  → deterministic validation + persisted approval
+  → ephemeral same-origin browser context
+  → candidate / baseline control evidence
+  → deterministic Verification Engine
+  → Finding only when verification supports it
+```
+
+CSRF values, cookies, Authorization headers, credentials, and browser storage
+are never accepted from model output and never appear in proposals, reports, or
+LLM context. A future enabled executor can obtain an observed CSRF token only in
+memory from a same-origin page in its new browser context. It may run only on
+`ISOLATED_LAB` or `STAGING`, blocks external browser egress, and fails closed
+when approval, a scoped evidence reference, or a configured Chromium binary is
+missing.
 
 ## Operator Control Plane and Evidence-Backed Reports
 

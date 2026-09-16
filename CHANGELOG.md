@@ -2,6 +2,27 @@
 
 This file records completed phases and commands that were actually executed. Planned work is not reported as completed.
 
+## Unreleased — Phase 16 Client-Side Verification Foundation
+
+- Added ADR-0008 and typed client-verification proposal/validator boundaries:
+  evidence grounding, mandatory persisted approval, isolated lab/staging only,
+  same-origin execution, no external egress, closed probe identifiers, and a
+  candidate/control model.
+- Added a disabled-by-default Playwright executor vertical slice with a fresh
+  browser context per candidate/control run, same-origin request interception,
+  in-memory CSRF observation, and bounded redacted DOM evidence. It neither
+  accepts nor persists browser secrets or model-supplied commands.
+- Added explicit browser runtime configuration. Python Playwright was installed
+  locally for development, but Chromium could not be installed on the macOS 12
+  host; no live browser execution is claimed.
+- Updated evaluation tests to record the current Git SHA when a repository is
+  present rather than assuming an unversioned checkout.
+
+Actual verification so far: focused client-verification tests passed 4/4; Ruff,
+compile checks, and `git diff --check` passed. Before Phase 16 can be declared
+complete, its full persisted control plane and a real supported-browser
+controlled-lab proof remain required.
+
 ## Phase 15.3 — Active Web Assessment Stabilization
 
 - Registered bounded ffuf and Nuclei `tool-integration-v1` integrations with

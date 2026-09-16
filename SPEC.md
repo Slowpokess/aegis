@@ -1339,3 +1339,24 @@ approval identifiers needed by the existing approve/reject endpoints. The Web
 Surface dashboard polls this lifecycle, displays waiting/running/completed/failed
 state using backend vocabulary, and treats frontend approval state as display
 state only.
+
+### Phase 16 — Controlled Client-Side Verification
+
+Phase 16 adds a trusted browser execution plane for evidence-backed client-side
+verification. It is not an LLM browser agent. The reasoning layer can create
+only a strict declarative proposal containing WebResource/Evidence lineage,
+context classification, a closed probe identifier, and required browser
+capabilities. It cannot provide a payload, selector, shell command, URL outside
+the resolved origin, cookie, Authorization header, CSRF value, or approval.
+
+A deterministic Playwright executor creates a new ephemeral context per
+candidate and control run, validates persisted approval and immutable scope
+again immediately before use, blocks external egress, and keeps browser secrets
+in memory only. The first admissible target environments are `ISOLATED_LAB` and
+`STAGING`. Browser observations are bounded and redacted; the existing
+Verification Engine remains the only Finding authority.
+
+Phase 16 is complete only after its browser action/run/evidence persistence,
+migrations, server-side approval flow, report integration, cancellation/budget
+handling, and a controlled supported-browser proof are implemented and tested.
+The detailed sequence and exit criteria are in `docs/ROADMAP.md`.
